@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link href="css/xg.css" rel="stylesheet">
+    <script src="http://www.idsforex.cn/skin/ids/js/min/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+
+<!--客服-->
+<div class="kf">
+    <a href="javascript:;" class="kf_a1"></a>
+    <a href="http://www.idsforex.cn/page/lxwm7.html" class="kf_a2">
+        <span>联系我们</span>
+        <img src="http://www.idsforex.cn/skin/ids/images/kf_07.png" title="" alt=""/>
+        <i></i>
+    </a>
+    <a href="javascript:;" class="kf_a6" id="BizQQWPA">
+        <span>咨询</span>
+        <img src="http://www.idsforex.cn/skin/ids/images/qq.png" title="" alt=""/>
+        <i></i>
+    </a>
+    <a href="http://www.idsforex.cn/sitemap.htm" class="kf_a3">
+        <span>网站导航</span>
+        <img src="http://www.idsforex.cn/skin/ids/images/kf_11.png" title="" alt=""/>
+        <i></i>
+    </a>
+    <a href="javascript:;" class="kf_a4">
+        <span>官方微信</span>
+        <img src="http://www.idsforex.cn/skin/ids/images/kf_15.png" title="" alt=""/>
+        <i></i>
+        <div>
+            <img src="http://www.idsforex.cn/include/upload/kind/image/20161014/20161014183822_6551.jpg" title="" alt=""/>
+            关注IDS微信平台
+            <span></span>
+        </div>
+    </a>
+    <a href="javascript:;" class="kf_a5">
+        <span>回到顶部</span>
+        <img src="http://www.idsforex.cn/skin/ids/images/kf_18.png" title="" alt=""/>
+    </a>
+</div>
+
+<script>
+    //客服
+    //下拉显示客服
+    $(window).scroll(function () {
+        var t = $(window).scrollTop();
+        if (t > 10) {
+            $(".kf").show();
+        } else {
+            $(".kf").hide();
+        }
+    });
+
+    $(".kf a").hover(function () {
+        $(this).find("div").stop(true, true).fadeIn();
+    }, function () {
+        $(this).find("div").stop(true, true).fadeOut();
+    });
+
+    //返回顶部
+    $(".kf_a5").click(function () {
+        $("html,body").animate({"scrollTop": 0}, 1000);
+    })
+</script>
+
+
+</body>
+</html>

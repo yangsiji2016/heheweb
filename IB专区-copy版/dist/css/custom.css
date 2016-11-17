@@ -1,0 +1,246 @@
+/* 404 style begin */
+.error_page_background_404{
+    background: url("../images/404_bg.jpg") no-repeat top center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+.error_background_404{
+}
+.error_page_background_404 > .layout{
+    background: transparent;
+}
+.error_message_404, .send_report_button{
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 24px;
+    line-height:30px;
+}
+.circle-404 {
+    text-align: center;
+    border: 1px solid #30353a;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    color: #30353a;
+    border-radius: 500px;
+    padding: 36px;
+}
+.title-404 {
+    font: 100 26px/36px Open Sans;
+    color: #30353a;
+    margin: 5px 0 0px 0;
+}
+.text-404 {
+    display:none
+}
+/* 404 style end */
+
+
+.required_docs .div-block {margin-bottom:25px}
+.required_docs .list-group {margin-bottom:0}
+.required_docs .submitbutton {margin-top:20px;margin-bottom: 0}
+.required_docs .uploaded-image {margin-top:15px}
+.required_docs .btn {background:#fff;color:#222;border:1px solid #ccc}
+.required_docs .btn:hover {background:#f5f7f9;}
+.required_docs .btn-file {position: relative;overflow: hidden;}
+.required_docs .btn-file input[type=file] {position: absolute;top: 0;right: 0;min-width: 10%;min-height: 100%;font-size: 100px;text-align: right;filter: alpha(opacity=0);opacity: 0;outline: none;background: white;cursor: inherit;display: block;}
+
+.browse-file .btn,
+.browse-file .btn:active,
+.browse-file .btn:focus {background:#fff;color:#222;border:1px solid #ccc}
+.browse-file .btn:hover {background:#f5f7f9;}
+.browse-file .btn-file {position: relative;overflow: hidden;}
+.browse-file .btn-file input[type=file] {position: absolute;top: 0;right: 0;min-width: 10%;min-height: 100%;font-size: 100px;text-align: right;filter: alpha(opacity=0);opacity: 0;outline: none;background: white;cursor: inherit;display: block;}
+#pa_internal {margin-top:15px}
+
+.dl-horizontal dt {width:180px;text-align:left;}
+.dl-horizontal dd {margin-left:180px;margin-bottom:10px}
+
+/*table layout - last column except datepicker*/
+table:not(.ui-datepicker-calendar, .responsive_sortable) tr td:last-child {
+    white-space: nowrap;
+    width: 1px;
+    text-align:left;
+    min-width:70px
+}
+.dropdown-menu li a {cursor:pointer}
+
+.container-fluid.mainnav {background:#303437}
+.secondary_header {margin-bottom:50px}
+.secondary-nav.navbar {border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;height:30px;min-height:32px}
+.secondary-nav .navbar-nav > li > a {padding-top:5px;padding-bottom:5px}
+.secondary-nav.navbar-inverse .navbar-nav > li > a {color:#ddd}
+.secondary-nav.navbar-inverse .navbar-nav > li > a:hover {color:#fff;}
+.secondary-nav.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus {color:#66ac66;background-color: transparent}
+
+.secondary-nav.navbar-inverse .dropdown-menu {background:#222;}
+.secondary-nav.navbar-inverse .dropdown-menu > li > a {color:#efefef;font-size:13px}
+.secondary-nav.navbar-inverse .dropdown-menu > li > a:focus,.secondary-nav.navbar-inverse .dropdown-menu > li > a:hover {background-color:#5cb85c;color:#fff}
+
+.mainnav {margin-bottom:0}
+
+#carousel-ib {padding-bottom:40px;}
+#carousel-ib h3 {margin-bottom:10px}
+#carousel-ib .carousel-indicators {margin-bottom:20px;}
+#carousel-ib .carousel-indicators li {background: #ddd;border:none;height:16px;width:16px;margin:0 2px}
+#carousel-ib .carousel-indicators .active {background: #66ac66;border:none;height:16px;width:16px;margin:0 2px}
+.carousel-inner > .item > img, .carousel-inner > .item > a > img{margin:auto}
+
+.ib-program-table,.approved-docs-table {border:1px solid #ddd;margin:0}
+.ib-program-table td:first-child {font-weight:bold}
+.ib-program-table td {text-align:left !important;width:46%}
+.ib-program-table i {float:right;margin-top:2px;cursor:pointer}
+.approved-docs-table td {text-align:left !important}
+
+.material-switch > input[type="checkbox"] {
+    display: none;
+}
+
+.buildtracktools img {display:inline-block;padding:20px;border:1px dashed #eee;transition:all 0.3 ease-in-out}
+.buildtracktools > div:hover img {border-color:#66ac66}
+.margin-0  {margin-bottom:0px !important}
+.margin-10 {margin-bottom:10px}
+.margin-15 {margin-bottom:15px}
+.margin-20 {margin-bottom:20px}
+.margin-25 {margin-bottom:25px}
+.margin-30 {margin-bottom:30px}
+.margin-35 {margin-bottom:35px}
+.margin-40 {margin-bottom:40px}
+.margin-45 {margin-bottom:45px}
+.margin-50 {margin-bottom:50px}
+.margin-55 {margin-bottom:55px}
+.margin-60 {margin-bottom:60px}
+
+.font-11 {font-size:11px}
+.font-12 {font-size:12px}
+.font-13 {font-size:13px}
+.font-14 {font-size:14px}
+.font-15 {font-size:15px}
+.font-16 {font-size:16px}
+
+.margin-bottom {
+    margin-bottom:10px;
+    padding-bottom:10px
+}
+
+.border-bottom {
+    border-bottom:1px dashed #aaa;
+}
+
+.cat_trading_room .ajax_div {float:left;width:100%}
+
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative;
+    width: 36px;
+}
+
+.material-switch > label::before {
+    background: rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 12px;
+    margin-top: -8px;
+    position:absolute;
+    opacity: 0.3;
+    transition: all 0.4s ease-in-out;
+    width: 36px;
+}
+.material-switch > label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    height: 20px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    transition: all 0.3s ease-in-out;
+    width: 20px;
+}
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: inherit;
+    opacity: 0.5;
+}
+.material-switch > input[type="checkbox"]:checked + label::after {
+    background: inherit;
+    left: 20px;
+}
+
+.delete-doc {color:#f00}
+.input-field-error{border:1px solid red}
+
+.divider-with-border {display:block;margin:50px auto;border:none;border-bottom:2px dashed #66ac66}
+img {max-width:100%}
+
+.promo_landing_pages {margin-bottom:25px}
+.promo_landing_pages img {width:187px}
+.promo_landing_pages label > input{display:none}
+.promo_landing_pages label > input +img{cursor:pointer;opacity:0.4;border:1px solid #eee}
+.promo_landing_pages label > input:checked + img{opacity:1;border:1px solid #fff}
+.promo_landing_pages .landing_page_name {text-align:center;display:block;margin:0;font-size:11px;padding-top:3px}
+
+.banners_wrapper {float:left;background:#f5f7f9;border:1px solid #ddd;padding:10px;border-radius:5px;}
+.size_160x600 {width:360px;margin:0 10px 25px;max-width:100% !important}
+.size_160x600 img,.size_160x600 iframe {float:left;margin-right:15px;width:160px}
+.size_160x600 textarea {width:163px;height:600px;padding:10px 10px 0}
+
+.size_728x90 {width:100%;margin:0 0 25px;max-width:100% !important}
+.size_728x90 img,.size_728x90 iframe {float:left;margin-right:15px;width:728px;max-width:100% !important}
+.size_728x90 textarea {width:375px;height:90px;padding:10px 10px 0;max-width:100% !important}
+
+.size_300x250 {width:322px;margin:0 29px 25px;max-width:100% !important}
+.size_300x250 img,.size_300x250 iframe {float:left;margin-right:15px;margin-bottom:10px;width:300px;max-width:100% !important}
+.size_300x250 textarea {width:300px;height:140px;padding:10px 10px 0;max-width:100% !important}
+
+.size_120x600 {width:360px;margin:0 10px 25px;max-width:100% !important}
+.size_120x600 img,.size_160x600 iframe {float:left;margin-right:15px;width:120px;max-width:100% !important}
+.size_120x600 textarea {width:200px;height:255px;padding:10px 10px 0;max-width:100% !important}
+
+.size_468x60 {width:490px;margin:0 40px 25px;max-width:100% !important}
+.size_468x60 img,.size_468x60 iframe {float:left;margin-right:15px;margin-bottom:10px;width:468px;max-width:100% !important}
+.size_468x60 textarea {width:100%;height:95px;padding:10px 10px 0;max-width:100% !important}
+
+.logo_wrapper {float:left;background:#aaa;border:1px solid #ddd;padding:10px;border-radius:5px;}
+
+.size_100x33 {width:360px;margin:0 10px 25px;max-width:100% !important}
+.size_100x33 img,.size_100x30 iframe {display:block;margin:15px auto 25px;width:100px;max-width:100% !important}
+.size_100x33 textarea {display:block;width:100%;height:140px;padding:10px 10px 0;max-width:100% !important}
+
+
+.size_120x60 {width:360px;margin:0 10px 25px;max-width:100% !important}
+.size_120x60 img,.size_120x60 iframe {display:block;margin:0 auto 10px;width:120px;max-width:100% !important}
+.size_120x60 textarea {display:block;width:100%;height:140px;padding:10px 10px 0;max-width:100% !important}
+
+
+.pa_ajax i.fa-times{
+    display:none;
+}
+.trading_account_plate_footer div {cursor:pointer}
+
+.dropdown-backdrop {
+    position: static;
+}
+
+
+/*temp*/
+#registration-form label {margin-bottom:5px}
+.btn-default.selectpicker.active.focus,
+.btn-default.selectpicker.active:focus,
+.btn-default.selectpicker.active:hover,
+.btn-default.selectpicker.focus:active,
+.btn-default.selectpicker:active:focus,
+.btn-default.selectpicker:active:hover,
+.open > .dropdown-toggle.selectpicker.btn-default.focus,
+.open > .dropdown-toggle.selectpicker.btn-default:focus,
+.open > .dropdown-toggle.selectpicker.btn-default:hover,
+.selectpicker.btn-group.open .dropdown-toggle,
+.btn-default.selectpicker.active,
+.btn-default.selectpicker:active,
+.open > .dropdown-toggle.selectpicker.btn-default {background:#fff}

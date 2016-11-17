@@ -1,0 +1,32 @@
+.login-nav{
+    background-color: #222;
+}
+
+.login-content{
+    margin-top: 160px;
+    .welcome-txt{
+        color: #fff;
+        h1{
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .login-content{
+        margin-top: 0;
+        .welcome-txt{
+            h1{
+                font-size: 26px;
+                text-align: center;
+            }
+            .hideonmobile{
+                display: none;
+            }
+        }
+        .intro-divider{
+            border-width: 6px;
+            width: 40%;
+        }
+    }
+}

@@ -1,0 +1,1159 @@
+/* --------------------------------------------------------------------------------------------
+[1. GENERIC]
+---------------------------------------------------------------------------------------------*/
+html {
+    height: 100vh;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    background:#efefef;
+    position:relative;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 13px;
+    line-height:20px;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+@media (min-width:1200px){
+    .container{width:1236px}
+    .sidebar {width:29%}
+    .main-content {width:71%}
+    .page-5010 .main-content,
+    .page-5012 .main-content { width:100%}
+}
+
+.content {padding-bottom:50px}
+.white {color:#fff}
+.black {color:#000}
+.pointer {cursor:pointer}
+.fullwidth{width:100%}
+.no-margin {margin:0}
+.small-dev-only {display:none}
+.animated-fast {-webkit-animation-duration: .1s;animation-duration: .1s}
+.blurring {opacity:0.1}
+.pagination a.button {cursor:pointer}
+.cursor_pointer {cursor:pointer}
+.bootgrid-table td {white-space:auto !important}
+.close,.close:hover {color:#fff !important;text-shadow:none}
+.modal-header .close, .alert-danger .close,.alert.alert-error .close:hover {color:#222 !important;text-shadow:none}
+.btn.btn-warning.btn-xs {white-space:normal;}
+.showonsmallscreen {display:none}
+.validation_message {padding-top:30px;padding-bottom:30px}
+span.show_tooltip {cursor:pointer}
+hr {border-bottom:1px solid #efefef;width:100%;margin:15px 0}
+img, iframe {max-width: 100%}
+dt,dd {line-height:1.5}
+table {font-size:13px}
+
+a,
+a:hover,
+a:active,
+a:focus,
+input,
+input:focus {
+    text-decoration:none;
+    -webkit-transition:all .2s ease-in-out;
+    -moz-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out;
+    outline:0px !important;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover{
+    outline:0px !important;
+}
+
+select.has-success, .has-success input {border:1px solid #66ac66 !important;border-radius:3px}
+select.has-error, .has-error input {border:1px solid #cc0000 !important;border-radius:3px}
+.has-success .help-block {display:none}
+.required-field label:after {color: #cc0000;content:" *";}
+.form-has-errors .hide-on-submit {display:none !important}
+
+.h1, .h2, .h3, h1, h2, h3 {margin-top: 0;margin-bottom: 0}
+.page-title {color:#66ac66;margin:0 0 25px;/*text-shadow:0 1px 1px rgba(0,0,0,0.3)*/}
+.page-sub-title {margin-bottom:15px;color:#66ac66}
+h1{font-size:25px;text-transform:uppercase;}
+h2{font-size:21px;}
+h3{font-size:19px;}
+label{font-weight: 400;}
+
+.screen-reader-text {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    position: absolute !important;
+}
+
+:focus,
+.btn,
+.btn:active,
+.btn:focus {
+    outline:none
+}
+
+ul,ol,li {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.page_background > .layout{background: transparent !important;}
+.page_background .secondary_header{display: none !important;}
+.page_background #hidden_sidebar{display: none !important;}
+
+.modal-content {
+    -webkit-border-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0;
+    -moz-background-clip: padding;
+    border-radius: 6px;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 0 40px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 0 40px rgba(0,0,0,.5);
+    box-shadow: 0 0 40px rgba(0,0,0,.5);
+    color: #000;
+    background-color: #fff;
+    border: rgba(0,0,0,0);
+}
+.modal-message .modal-dialog {
+    width: 300px;
+}
+.modal-message .modal-body, .modal-message .modal-footer, .modal-message .modal-header, .modal-message .modal-title {
+    background: 0 0;
+    border: none;
+    margin: 0;
+    padding: 0 20px;
+    text-align: center!important;
+}
+
+.modal-message .modal-title {
+    font-size: 17px;
+    color: #737373;
+    margin-bottom: 3px;
+}
+
+.modal-message .modal-body {
+    color: #737373;
+}
+
+.modal-message .modal-header {
+    color: #fff;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+}
+.modal-message .modal-header .fa,
+.modal-message .modal-header
+.glyphicon, .modal-message
+.modal-header .typcn, .modal-message .modal-header .wi {
+    font-size: 30px;
+}
+
+.modal-message .modal-footer {
+    margin: 25px 0 20px;
+    padding:0 0 10px !important;
+}
+.modal-message .modal-footer .btn {
+    padding:6px 8px;
+    font-size:13px
+}
+.closeme {margin:5px 10px 0 0}
+
+/* --------------------------------------------------------------------------------------------
+[2. MASTHEAD NAV]
+---------------------------------------------------------------------------------------------*/
+.masthead .navbar-nav > li > a, .navbar-brand {
+    padding-top:10px !important;
+    padding-bottom:0 !important;
+    height: 40px;
+}
+.masthead.navbar {min-height:40px !important;margin-bottom: 0;border-radius: 0px;}
+.masthead.navbar .dropdown-menu {background:#222;padding:0;overflow:hidden}
+.masthead.navbar .dropdown-menu > li > a {color:#efefef;padding:0 10px;font-size:12px;line-height:30px}
+.navbar-inverse .navbar-nav > li > a.text-success {color:#66ac66}
+.masthead.navbar .dropdown-menu > li > a:focus,.masthead.navbar .dropdown-menu > li > a:hover {background-color:#5cb85c;color:#fff}
+.masthead_logo {height:23px}
+
+
+/* --------------------------------------------------------------------------------------------
+[3. LOGIN PAGE]
+---------------------------------------------------------------------------------------------*/
+.page_background {
+    background: url('../images/backgrounds/background.jpg') no-repeat top center;
+    background-attachment: fixed;
+    width: 100vw;
+    padding-bottom:70px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+.big_logo {width:220px;margin:70px 0 0}
+.login_page {padding-bottom:75px}
+.login_page .masthead_logo {display:none}
+.login_ca {margin-top:100px}
+.loginform {padding-bottom:25px}
+.welcome-message {margin-top:50px;color:#fff}
+.welcome-message h1 {margin:0;font-weight:bold;}
+.welcome-message .intro-divider {width:70px;height:7px;background:#fff;border:none}
+.welcome-message p {font-size:23px;line-height:1.2;font-weight:300}
+.logic_ca .input-group {height:35px;overflow:hidden;background:#fff}
+.login_ca input {
+    height: 35px;
+    margin: 0;
+    outline: 0;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: none;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 35px;
+    color: #888;
+    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+.bg-white {background:#fff;border-radius:4px;}
+
+.login_ca input[type="text"]:focus,
+.login_ca input[type="password"]:focus {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.login_ca input[type="text"]:-moz-placeholder,.login_ca  input[type="password"]:-moz-placeholder { color: #888; }
+.login_ca input[type="text"]:-ms-input-placeholder,.login_ca  input[type="password"]:-ms-input-placeholder { color: #888; }
+.login_ca input[type="text"]::-webkit-input-placeholder,.login_ca  input[type="password"]::-webkit-input-placeholder { color: #888; }
+
+.login_ca button.btn {
+    height: 40px;
+    margin: 0;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 40px;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+
+.login_ca .tooltip-arrow {bottom:1px !important}
+.login_ca .tooltip-inner {padding:10px;max-width:300px;margin-right:15px}
+.login_ca .login_ca_titles {margin-bottom:25px;}
+.login_ca .login_ca_titles div {padding:0;}
+.login_ca h4 {
+    color:#fff;
+    border-bottom:3px solid #fff;
+    line-height:2.4
+}
+.login_ca h4.login-account {
+    border-color:#5cb85c;
+    color:#5cb85c
+}
+.login_ca h4:after {
+    content: "\f0d8";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    text-align:center;
+    display:block;
+    margin:0;
+    line-height:6px;
+}
+.login_ca h4.open-account a {
+    color:#fff;
+    -o-transition: all 0s;
+    -moz-transition: all 0s;
+    -webkit-transition: all 0s;
+    -ms-transition: all 0s;
+    transition: all 0s;
+}
+.login_ca h4.open-account:hover {
+    border-color:#5cb85c;
+}
+.login_ca h4.open-account:hover  a,
+.login_ca h4.open-account:hover:after {
+    color:#5cb85c;
+}
+
+/* --------------------------------------------------------------------------------------------
+[4. MAIN NAVIGATION]
+---------------------------------------------------------------------------------------------*/
+.mainnav {
+    background: #303539;
+    padding-top:20px;
+    padding-bottom:20px;
+    margin-bottom: 50px
+}
+.banner-nav img{float:right;margin-right:15px}
+
+.secondary-nav ul {margin:0}
+
+.secondary-nav .iblogo {display:none}
+.secondary-nav .navbar-toggle {padding:5px;margin-top:2px}
+.secondary_header div .fa {
+    display:block;
+    margin:0 0 10px;
+}
+.secondary_header .nav_item a {
+    width:23%;
+    float:left;
+    margin:0 1%;
+    padding:15px;
+    color:#efefef;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px
+}
+.secondary_header .selected_nav_item a {
+    background:#3C4147
+}
+.secondary_header .nav_item a:hover {
+    color:#fff;
+    background:#363a3f
+}
+.no-ib-client {background:green;padding:0 4px 1px;margin-left:2px;border-radius:2px}
+/* --------------------------------------------------------------------------------------------
+[5. SIDEBAR]
+---------------------------------------------------------------------------------------------*/
+.sidebar-table {
+    width: 100%;
+    color: #ddd;
+    margin: 0 0 25px;
+}
+
+.sidebar-table th {
+    background:#303539;
+    padding: 12px 10px;
+    color:#eee;
+}
+
+.sidebar-table th,
+.sidebar-table td {
+    text-align:center !important
+}
+.sidebar-table th:first-child,
+.sidebar-table td:first-child {
+    width:110px !important
+}
+
+.sidebar-table th:nth-child(2),
+.sidebar-table td:nth-child(2),
+.hidden_sidebar th:nth-child(2),
+.hidden_sidebar td:nth-child(2) {
+    width:90px !important
+}
+
+.sidebar-table th:nth-child(3),
+.sidebar-table td:nth-child(3) {
+    width:33.333333%!important /*changed*/
+}
+
+
+.sidebar-table td {
+    position:relative;
+    padding: 10px 0;
+    background: #3c4147
+}
+
+.sidebar-table .icon {
+    position:absolute;
+    left:-6px;
+    top:13px;
+    color:#000;
+    border-radius:50%;
+    padding:0;
+    background:#efefef;
+    padding:0px 3px 1px 0;
+    font-size:15px;
+    line-height:18px;
+    cursor:pointer;
+}
+.sidebar-table .dropdown-menu {min-width:65px}
+.sidebar-table .dropdown-menu a {font-size:13px}
+
+.sidebar-table .dropdown-menu li,
+.sidebar-table .dropdown-menu a,
+.sidebar-table .dropdown-menu a:active,
+.sidebar-table .dropdown-menu a:focus {
+    background-color: none !important;
+    background-image: none !important;
+    background: none !important;
+}
+
+.sidebar-table .dropdown-menu li a:hover {background-color: #eee !important}
+
+.sidebar-table .dropdown-toggle .caret,
+.sidebar-table .dropdown-toggle .left_table_current_currency {color:#fff}
+.sidebar-table .dropdown-menu {z-index:21}
+.sidebar-table th.header {
+    position:relative;
+    cursor:pointer;
+}
+
+.sidebar-table th.header:after {
+    content: "\f0dc";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #66ac66;
+    width:15px;
+    display:inline-block;
+}
+
+.sidebar-table th.headerSortDown:after {
+    content: "\f0dd";
+}
+
+.sidebar-table th.headerSortUp:after {
+    content: "\f0de";
+}
+.sidebar-table .caret {margin-left:4px}
+
+/* --------------------------------------------------------------------------------------------
+[6. CONTENT - PAYMENT OPTIONS & FORM CONTAINING PAGES]
+---------------------------------------------------------------------------------------------*/
+.main-content {padding-bottom:50px}
+
+.content_top_margin{margin-top:25px;}
+.content_block{
+    background: #fff;
+    padding: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.payment-agent.content_block .col-lg-offset-2 .row > div:first-child {padding-right:0}
+.content_block h2 {margin:0 0 25px}
+
+.content_block_header {margin:0 0 25px}
+.content_block_header div h1{margin: 0px;}
+.content_block_header .btn {font-size:14px}
+.content_block_subheader{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.content_block_holder{
+    max-width: 500px;
+    margin: 0 auto;
+}
+.content_tab_bank_transfer {
+    padding:20px;
+    border:1px solid #ddd;
+    border-top:none;
+    margin-top:-15px
+}
+.content_block_holder_row{padding-bottom: 15px;}
+.content_block_holder_row input,
+.content_block_holder_row select {
+    background: #efefef !important;
+}
+.content_block_button, .content_block_description{
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+}
+.content_block_description{font-size: 11px;}
+.content_block_description_paragraph,
+.content_block_description ol,
+.content_block_description ul {
+    font-size: 11px;
+    text-align: left;
+}
+
+/* --------------------------------------------------------------------------------------------
+[7.1 TRADING ACCOUNTS - ACCOUNT ROW - HORIZONTAL LINES - SHOWS ON DESKTOP ONLY]
+---------------------------------------------------------------------------------------------*/
+.trading_accounts_row{
+    background: #fff;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    transition: all .6s ease;
+}
+.trading_accounts_header {
+    background:#3c4147;
+    color:#fff;
+    float:left;
+    width:100%;
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-topright: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.trading_accounts_header div {padding:7px 0 7px 5px}
+.trading_acc_nr {width:110px}
+.trading_acc_type{width:100px}
+.trading_acc_lev{width:105px}
+.trading_acc_bal{width:105px}
+.trading_acc_equ{width:102px}
+.trading_acc_opt{width:325px}
+.trading_acc_opt span {cursor:pointer}
+.trading_acc_sub_opt {width:50%}
+
+.ajax_div{
+    background: #fff;
+    border: 1px solid #66ac66;
+    padding:0 20px 20px;
+    margin-bottom:5px;
+}
+.trading_accounts_options {width:100%}
+.trading_accounts_options_header {
+    margin:0 -20px 20px 0;
+    display:block;
+    float:left;
+    padding-top:20px;
+    width:100%;
+}
+.trading_accounts_options_header h2{
+    text-transform: uppercase;
+    color: #66ac66;
+    float:left;
+    width:80%;
+    margin:0
+}
+.trading_accounts_options_header i {
+    font-size:20px;
+    color: #66ac66;
+    float:right;
+    width:20px;
+    text-align:right;
+    cursor:pointer;
+}
+
+.cat_trading_room .main-content .row .alert {margin: 5px 0 10px}
+.cat_trading_room .main-content .row .alert.withdraw-bottom-notification {margin:20px 0 0}
+
+.cat_payment_agent .ajax_div.pa_ajax .alert-warning.withdraw-bottom-notification {margin:20px 0 0 !important}
+
+
+.tos_checkbox {padding:0 20px}
+.tos_checkbox label,.tos_checkbox input {display:inline;width:auto;margin-top:3px;padding:0 !important}
+
+/* --------------------------------------------------------------------------------------------
+[7.2 TRADING ACCOUNTS - VERTICAL BOXES - SHOWS ON MOBILE ONLY]
+---------------------------------------------------------------------------------------------*/
+.trading_account_plate {
+    margin-bottom: 15px;
+    background:#fff;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+}
+.trading_account_plate_header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom:1px solid #efefef;
+}
+
+.trading_account_plate_content_balance{
+    text-align: left;
+    color: #b7b7b7;
+    font-size: 12px;
+    padding:12px 12px 0;
+    display:block
+}
+.trading_account_plate_content_amount{
+    font-size: 30px;
+    margin:0;
+}
+
+.trading_account_plate_footer {
+    margin-top: 15px;
+    background: #66ac66;
+    padding:7px 0;
+    -webkit-border-bottom-right-radius: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -moz-border-radius-bottomright: 6px;
+    -moz-border-radius-bottomleft: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.trading_account_plate_footer div{
+    color: #fff;
+}
+
+/* --------------------------------------------------------------------------------------------
+[7.3 TRADING ACCOUNTS - ACCOUNT ROW - HORIZONTAL LINES - SHOWS ON DESKTOP ONLY]
+---------------------------------------------------------------------------------------------*/
+.trading_accounts_options_column_container_item{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #efefef;
+    opacity: .2;
+    transition: all .6s ease;
+    cursor: pointer;
+    overflow:hidden;
+}
+.trading_accounts_options_column_container_item:hover,
+.selected_trading_accounts_options_column_container_item{opacity: 1;}
+
+.trading_accounts_options_column_container_item a{
+    font-size: 16px;
+    color: #acacac;
+    text-decoration: none;
+    font-weight: normal;
+}
+.trading_accounts_options_column_container_item p {margin:0}
+.blurring {opacity:.1}
+
+/* --------------------------------------------------------------------------------------------
+[7.3 TRADING ACCOUNTS - PAYMENT OPTIONS STYLE]
+---------------------------------------------------------------------------------------------*/
+.withdraw-deposit-forms > div {margin-bottom:30px}
+.withdraw-deposit-forms > div:last-child {margin-bottom:0}
+.withdraw-deposit-forms ul {display:block;margin:10px 0 10px !important}
+.list-with-chevron li {padding-left: 25px;}
+.list-with-chevron li:before {
+    content: "\f054";
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -10px;
+    color:#66ac66;
+    width:20px;
+}
+.list-with-numbers li {
+    list-style-type:decimal;
+    list-style-position: inside;
+}
+.list-with-discs {margin-bottom:10px;}
+.list-with-discs li {
+    list-style-type:disc !important;
+    list-style-position: inside;
+}
+
+.payment_option_image{
+    width: 40%;
+    float: left;
+    text-align: left;
+    clear: right;
+}
+.payment_option_image img{width: 80px;}
+.payment_option_description{
+    width: 60%;
+    float: left;
+    font-size: 11px;
+}
+.modal-body ol {margin-left:25px}
+.modal-body li {list-style-type: decimal}
+
+/* --------------------------------------------------------------------------------------------
+[7.3 TRADING ACCOUNTS - ACCOUNT SETTINGS]
+---------------------------------------------------------------------------------------------*/
+.account_settings .nav.nav-tabs,
+.account_settings .nav-tabs > li > a,
+.account_settings .nav-tabs > li > a:focus,
+.account_settings .nav-tabs > li > a:hover,
+.account_settings .nav-tabs > li.active > a,
+.account_settings .nav-tabs > li.active > a:focus,
+.account_settings .nav-tabs > li.active > a:hover {
+    border:none;
+    color:#222;
+    font-size:14px;
+    font-weight:300
+}
+.account_settings li {display:block;width:100%;border:none}
+.account_settings .nav-tabs > li > a:hover {background:#f5f7f9}
+.account_settings .nav-tabs > li.active > a,
+.account_settings .nav-tabs > li.active:hover > a {background:#efefef}
+.account_settings .content_block_holder_row {padding-bottom:20px}
+
+/* --------------------------------------------------------------------------------------------
+[8. REGISTRATION FORM]
+---------------------------------------------------------------------------------------------*/
+
+.registration_form_header {
+    margin:30px 0 30px;
+}
+.registration-form-body h3 {
+    margin-bottom:25px;
+    font-weight:bold;
+}
+
+.registration-form-body .row {
+    margin-bottom:25px;
+}
+
+.registration-form-body .registration-form-row-nomargin .row,
+.registration-form-body .form-group {
+    margin-bottom:0
+}
+
+.registration-form-body #welcome_bonus_row {
+    margin-bottom:0
+}
+
+.registration-form-body .row:last-child {
+    margin-bottom:0
+}
+
+.registration-form-body .btn-group.bootstrap-select {
+    width:100% !important
+}
+
+.registration-form-body .btn.selectpicker {
+    padding:9px;
+    font-size:13px;
+    color:#555;
+}
+
+.registration-form-body .btn-group.bootstrap-select.input-field-error {
+    border-radius:4px
+}
+
+.registration-form-body div.bootstrap-select.input-field-error {
+    border-color:transparent
+}
+
+.registration-form-body .help-block {
+    color:#cc0000 !important
+}
+
+.registration-form-body input.input-field-error,
+.registration-form-body .input-field-error button {
+    border:1px solid #cc0000 !important
+}
+
+.registration-form-body .has-success input.input-field-error,
+.registration-form-body .has-success .input-field-error button {
+    border:1px solid #66ac66 !important
+}
+
+.registration-form-body input.input-field-error, .registration-form-body .input-field-error button
+
+.registration-form-body .input-field-error {
+    border-color:#ccc
+}
+
+.registration-form-body .btn-group.bootstrap-select.input-field-error .btn {
+    border:none
+}
+
+.registration-form-body .dropdown-menu .input-block-level.form-control {
+    padding:8px 10px;
+    font-size:13px;
+}
+
+.registration-form-body .dropdown-menu {
+    font-size:13px
+}
+
+.registration-form-body select .form-control-feedback {
+    display:none !important
+}
+
+.regulator-container {
+    display:block;
+    float:left;
+    width:100%;
+    margin:0 0 30px
+}
+
+.regulator-container .regulator-block {
+    display:inline-block;
+    width:200px;
+    font:13px "Open Sans",sans-serif;
+    text-align:center;
+    float:left
+}
+.regulator-container .regulator-block small {
+    font:11px arial,sans-serif;
+}
+
+.regulator-container .regulator-block a {
+    padding:6px 0;
+    background:#fff;
+    text-decoration:none;
+    display:block;
+    border:1px solid #ccc;
+    color:#555;
+    margin: 0 0 3px;
+    cursor:pointer
+}
+
+.regulator-container .regulator-block:first-child a {
+    border-right:none
+}
+
+.regulator-container .regulator-block.active-regulator a {
+    background:#cc0000;
+    color:#fff;
+    cursor:default
+}
+.regulator-label {margin:0 0 4px;font-size:13px}
+.payment-options-reg {margin:0 0 30px;float:left;width:100%}
+.payment-options-reg img {float:left;display:block;margin:0 15px 0 0;}
+.payment-options-reg img.grayedout {opacity:0.1}
+
+.fancy-forms label{
+    display: block;
+    margin:0 0 25px
+}
+
+.fancy-forms .birthdate label,
+.extra_checkbox label {margin-bottom:0}
+.fancy-forms .birthdate p {margin-left:15px}
+.fancy-forms select,
+.fancy-forms input[type="text"],
+.fancy-forms input[type="password"] {
+    margin-top:5px;
+    color: #555;
+    border-radius: 3px;
+    font-family: "Open Sans", Arial, sans-serif;
+    line-height: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    display: block;
+    border:1px solid #ccc;
+}
+.fancy-forms input[type="text"],
+.fancy-forms input[type="password"] {
+    width: 100%;
+    padding: 11px 12px;
+    border-radius: 3px;
+    background: #fff;
+}
+.fancy-forms select{
+    width:408px;
+    cursor: pointer;
+    padding: 9px;
+    background: #fff;
+    border:1px solid #ccc;
+    background-image:
+            linear-gradient(45deg, transparent 50%, gray 50%),
+            linear-gradient(135deg, gray 50%, transparent 50%),
+            linear-gradient(to right, #ccc, #ccc);
+    background-position:
+            calc(100% - 20px) calc(1em + 4px),
+            calc(100% - 15px) calc(1em + 4px),
+            calc(100% - 2.5em) 8px;
+    background-size:
+            5px 5px,
+            5px 5px,
+            1px 1.5em;
+    background-repeat: no-repeat;
+}
+
+.fancy-forms .birthdate select {width:117px}
+
+.fancy-forms textarea{
+    width: 90%;
+    resize: none;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 3px;
+    background: #efefef;
+    color: #ababab;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: FontAwesome, "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    line-height: 16px;
+}
+
+.fancy-forms input[type=radio] {
+    display: none;
+    margin: 10px;
+}
+.fancy-forms input[type=radio] + label{
+    display: inline-block;
+    padding: 10px;
+    background: #fff;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+}
+.fancy-forms input[type=radio]:checked + label,
+.fancy-forms input[type=radio]:checked + label.no {
+    background-image: none;
+    background: #66ac66;
+    color: #fff;
+}
+.fancy-forms input[type=radio]:checked + label.no{
+    background: #ccc;
+}
+/*helper*/
+.nopadding-right {padding-right:0}
+.nopadding-left {padding-left:0}
+.nopadding-right label,
+.nopadding-left label {margin-bottom:5px}
+.submit-button {margin-top:40px;margin-bottom:0px;}
+
+.page-1052.user_not_logged_in .alert {
+    margin-top:50px
+}
+#create_experiences_qualifications {padding-right:40px !important}
+
+/* --------------------------------------------------------------------------------------------
+[9 FOOTER]
+---------------------------------------------------------------------------------------------*/
+footer{
+    position:fixed;
+    z-index:20;
+    width:100%;
+    bottom:0;
+    min-height:50px;
+    padding:15px 0;
+    clear: both;
+    background: #232428;
+}
+footer p {margin:0}
+.footer_content{
+    color: #848587;
+    font-size: 11px;
+}
+/* end *
+
+/* --------------------------------------------------------------------------------------------
+[10 DOC UPLOAD]
+---------------------------------------------------------------------------------------------*/
+.upload-drop-zone {
+    height: 200px;
+    border-width: 2px;
+    margin-bottom: 20px;
+}
+
+.upload-drop-zone {
+    color: #ccc;
+    border-style: dashed;
+    border-color: #ccc;
+    line-height: 200px;
+    text-align: center
+}
+.upload-drop-zone.drop {
+    color: #222;
+    border-color: #222;
+}
+.doc_upload_error {overflow:hidden}
+.processing_header{margin-bottom:10px;}
+
+/* --------------------------------------------------------------------------------------------
+[11 IB ROOM]
+---------------------------------------------------------------------------------------------*/
+/* Clients */
+.fancy-forms.ib_room_form {margin-bottom:35px;}
+.fancy-forms.ib_room_form select,
+.fancy-forms.ib_room_form input {width:100%;margin:0}
+.fancy-forms.ib_room_form button{
+    cursor: pointer;
+    padding: 10px 12px 9px;
+    width:100%;
+    border:none;
+}
+.fancy-forms.ib_room_form label {margin:0}
+.fancy-forms button.btn-default{
+    background:#fff;
+    color:#222;
+}
+.fancy-forms.ib_room_form .alert {
+    padding: 9px 12px;
+    border:none;
+    background:#fff;
+    margin:0;
+}
+
+/* Client List Form */
+.fancy-forms.ib_room_form .all_countries {width:150px;float:left;margin-right:10px;}
+.fancy-forms.ib_room_form .all_month {width:150px;float:left;margin-right:10px;}
+.fancy-forms.ib_room_form .custom_month {width:126px;float:left;margin-right:10px;}
+.fancy-forms.ib_room_form .csv {width:65px;float:left;margin-right:10px;}
+.fancy-forms.ib_room_form .filter {width:105px;float:left}
+
+/*Income and Money Transactions Forms */
+.fancy-forms.ib_room_form.income_transactions_form .all_month {width:200px}
+.fancy-forms.ib_room_form.income_transactions_form .custom_month {width:195px}
+.fancy-forms.ib_room_form.income_transactions_form .csv {width:105px}
+.fancy-forms.ib_room_form.income_transactions_form .filter {width:110px}
+
+.fancy-forms.ib_room_form .ib_clients_header {
+    background:#3c4147;
+    color:#fff;
+    float:left;
+    width:100%;
+    padding:7px 0;
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-topright: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+/* --------------------------------------------------------------------------------------------
+[12 PROMO MATERIALS]
+---------------------------------------------------------------------------------------------*/
+.promo_banner_cats {
+    float:left;
+    width:100%
+}
+.promo_banner_cats .btn {
+    margin-right:10px;
+    float:left;
+
+}
+.promo_banner_cats .btn.selected {
+    background:transparent;
+    color:#66ac66;
+    border:1px solid #66ac66;
+    margin-bottom:25px;
+}
+
+.banner_form_dropdown {
+    float:left;
+    margin-right:10px;
+    width:130px
+}
+.fancy-forms select.promo_lang_selector {
+    display:block;
+    width:160px
+}
+
+/* --------------------------------------------------------------------------------------------
+[13 LEGAL DOCUMENTS]
+---------------------------------------------------------------------------------------------*/
+#carousel-ib .item {
+    min-height:251px
+}
+
+/* --------------------------------------------------------------------------------------------
+[13 PAYMENT AGENT]
+---------------------------------------------------------------------------------------------*/
+.pa-balance {display:inline-block;text-align:center;}
+table.graytable {
+    color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+    display:block;
+    border-collapse:collapse;
+    border-spacing: 0;
+    box-sizing: border-box;
+    width:100%;
+}
+
+table.graytable td, table.graytable th {
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    text-align:left;
+    padding:5px 10px;
+}
+
+table.graytable th {
+    background: #DFDFDF;  /* Darken header a bit */
+    font-weight: bold;
+}
+
+table.graytable td {
+    background: #FAFAFA;
+    text-align: left;
+    padding:5px 10px;
+    box-sizing: border-box;
+    width:300px
+}
+
+table.graytable tr:nth-child(even) td { background: #F1F1F1; }
+table.graytable tr:nth-child(odd) td { background: #FEFEFE; }
+.pabalance {padding-left:15px}
+.extra_notification ul {clear:both}
+.pa_deposit_terms {width:95%}
+.pa_deposit_terms ol {list-style-type:none}
+.statement-history .first-col {width:20%}
+.statement-history .second-col {width:20%}
+.statement-history .third-col {width:20%}
+.statement-history .fourth-col {width:15%}
+.statement-history .fifth-col {width:25%}
+input[type=submit]:disabled {cursor:not-allowed;opacity:0.65}
+
+/* bootstrap custom styles */
+.alert h3{margin-bottom:10px;}
+.alert-success  {color: #ffffff;border: none;}
+.alert.no_radius{margin: 0px;}
+.alert h3{font-size: 18px;}
+.alert-success .no_radius,
+.alert-info .no_radius,
+.alert-danger .no_radius{border-radius: 0px;}
+.alert-success{background: #66ac66;}
+.has-warning{border: 1px solid #51aed0;}
+.close{opacity: 1;}
+.input-group-addon{background-color:#ffffff;border:none;}
+.dropdown-menu{border:none;}
+.btn-default.disabled,
+.btn-default[disabled] {background:#66ac66 !important;}
+
+.lang-code-ar #masthead-nav .navbar-nav {float:left !important}
+.lang-code-ar .banner-nav img {float:left}
+.lang-code-ar .fancy-forms select {background-position:12px 17px, 16px 17px, 30px 8px}
+.lang-code-ar #create_experiences_qualifications {padding-right:0 !important;padding-left:40px !important}
+.lang-code-ar .sidebar-table .icon {left:auto;right:-7px;padding-left:3px}
+.lang-code-ar .left_panel_footer_total {direction:ltr}
+.lang-code-ar .secondary_header .nav_item a {float:right}
+.lang-code-ar .secondary_header .nav_item:first-child a {margin-right:0}
+.lang-code-ar .text-left,
+.lang-code-ar .approved-docs-table td {text-align:right !important}
+.lang-code-ar .promo_banner_cats .btn,
+.lang-code-ar #banner_filters > div,
+.lang-code-ar .fancy-forms.ib_room_form > div  {float:right;margin-right:0;margin-left:10px}
+.lang-code-ar .fancy-forms.ib_room_form {overflow:hidden}
+.lang-code-ar .fa-chevron-right:before{content:"\f053";margin-left:3px;}
+.lang-code-ar .pa-terms .fa-chevron-right:before {content:"\f054";margin-left:0;margin-right:3px}
+.lang-code-ar .pa-terms .fa-chevron-right {float:left !important;margin-top:5px}
+.lang-code-ar .pa-terms {text-align:left !important;}
+.lang-code-ar .withdraw-deposit-forms table,
+.lang-code-ar.page-8000 .main-content,
+.lang-code-ar.page-8003 .main-content,
+.lang-code-ar.page-8004 .main-content {direction:ltr !important}
+.lang-code-ar .trading_accounts_options_header .pull-left {float:right !important}
+.lang-code-ar .trading_accounts_options_header .pull-right {float:left !important}
+.lang-code-ar #ib-navbar ul.nav.navbar-nav.pull-right {float:left !important}
+.lang-code-ar #ib-navbar {padding-left:0}
+.lang-code-ar .trading_acc_nr,
+.lang-code-ar .trading_acc_type,
+.lang-code-ar .trading_acc_lev,
+.lang-code-ar .trading_acc_bal,
+.lang-code-ar .trading_acc_equ,
+.lang-code-ar .trading_acc_opt,
+.lang-code-ar .trading_acc_opt span {float:right !important}
+.lang-code-ar .fancy-forms.ib_room_form .all_countries {float:right;margin-right:0;margin-left:10px}
+.lang-code-ar .fancy-forms.ib_room_form .all_month {float:right;margin-right:0;margin-left:10px}
+.lang-code-ar .fancy-forms.ib_room_form .custom_month {float:right;margin-right:0;margin-left:10px}
+.lang-code-ar .fancy-forms.ib_room_form .csv {float:right !important;margin-right:0;margin-left:10px}
+.lang-code-ar .fancy-forms.ib_room_form .filter {float:right;margin-left:0}
+.lang-code-ar .payment-agent table.table-bordered  th[class*="col-"] {text-align:left}
+.lang-code-ar input["type=text"] {direction:ltr !important}
+.help-block {color:#cc0000;font-size:13px}
+.lang-code-ar textarea {direction:ltr}
+.lang-code-ar.page-5011 .page-title i,
+.lang-code-ar.page-5012 .page-title i,
+.lang-code-ar.page-5010 .page-title i {display:none}
+.lang-code-ar .fa-chevron-down:before {content: "\f107";font-size:22px;font-weight:bold;}
+.lang-code-ar .modal-body ol {margin-left:0;margin-right:18px !important}
+.lang-code-ar .regulator-container .regulator-block {float:right}
+.lang-code-ar .payment-options-reg img {float:right;margin:0 0 0 15px}
+.help-block {color:#cc0000;font-size:13px}

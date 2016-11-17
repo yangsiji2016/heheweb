@@ -1,0 +1,236 @@
+/*公司简介*/
+.intro {
+    padding-top: 60px;
+    padding-bottom: 55px;
+    width: 100%;
+    border-bottom: 3px solid #f2f2f2;
+}
+
+.intro h1 {
+    font-size: 30px;
+    font-family: Arial;
+    color: #222429;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.intro .line {
+    width: 40px;
+    height: 5px;
+    background-color: #e73434;
+    margin: 13px auto;
+}
+
+.intro .para {
+    width: 100%;
+    text-align: center;
+}
+
+.intro .para p {
+    line-height: 26px;
+    color: #222429;
+}
+
+/*折叠选项卡*/
+.choose-tab {
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 55px;
+}
+
+.choose-list {
+    width: 100%;
+    overflow: hidden;
+}
+
+.choose-list li {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+    padding-left: 40px;
+}
+
+.choose-list li:first-child {
+    margin-top: 0;
+}
+
+.choose-list li .ico {
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+.choose-list li.li1 .ico {
+    background: url(../images/choose_05.png) no-repeat center;
+}
+
+.choose-list li.li1:hover .ico, .choose-list li.li1.current .ico {
+    background: url(../images/index_06.png) no-repeat -100px 0;
+}
+
+.choose-list li.li2 .ico {
+    background: url(../images/choose_08.png) no-repeat center;
+}
+
+.choose-list li.li2:hover .ico, .choose-list li.li2.current .ico {
+    background: url(../images/index_06.png) no-repeat -300px 0;
+}
+
+.choose-list li.li3 .ico {
+    background: url(../images/choose_10.png) no-repeat center;
+}
+
+.choose-list li.li3:hover .ico, .choose-list li.li3.current .ico {
+    background: url(../images/index_06.png) no-repeat -100px -100px;
+}
+
+.choose-list li.li4 .ico {
+    background: url(../images/choose_12.png) no-repeat center;
+}
+
+.choose-list li.li4:hover .ico, .choose-list li.li4.current .ico {
+    background: url(../images/index_06.png) no-repeat -300px -100px;
+}
+
+.choose-right {
+    width: 1220px;
+    float: left;
+    margin-left: 20px;
+}
+
+.choose-title {
+    width: 100%;
+    height: 99px;
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.choose-title i {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../images/choose_14.png) no-repeat center;
+    position: absolute;
+    right: 8px;
+    top: 48px;
+    -webkit-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.choose-title.active i {
+    background: url(../images/choose_18.png) no-repeat center;
+}
+
+.choose-title h3 {
+    font-size: 24px;
+    color: #101010;
+    line-height: 36px;
+    margin-top: 18px;
+    -webkit-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.choose-title:hover h3, .choose-title.active h3 {
+    color: #e73434;
+}
+
+.choose-title h4 {
+    font-size: 16px;
+    color: #7a7a7a;
+    line-height: 24px;
+    padding-right: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.choose-content {
+    width: 100%;
+    padding-top: 30px;
+    display: none;
+}
+
+.choose-content p {
+    line-height: 24px;
+    color: #bbbbbb;
+}
+
+.choose-content h5 {
+    margin-top: 50px;
+    font-size: 18px;
+    line-height: 24px;
+    color: #27282c;
+    margin-bottom: 15px;
+}
+
+.choose-content dl {
+    width: 100%;
+    overflow: hidden;
+}
+
+.choose-content dl dd {
+    float: left;
+    margin-right: 18px;
+    margin-bottom: 10px;
+}
+
+.choose-content dl dd .img {
+    width: 256px;
+    height: 140px;
+    border: 3px solid #bfbfbf;
+}
+
+.choose-content dl dd h6 {
+    margin-top: 10px;
+    text-align: center;
+    line-height: 36px;
+    font-size: 16px;
+    color: #27282c;
+}
+
+@media screen and (max-width: 1400px) {
+    .choose-right {
+        width: 1020px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .choose-right {
+        width: 820px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .choose-right {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .choose-tab {
+        padding: 20px 0;
+    }
+
+    .choose-list li .ico {
+        display: none;
+    }
+
+    .choose-right {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }
+
+    .choose-list li {
+        margin-top: 0px;
+    }
+}

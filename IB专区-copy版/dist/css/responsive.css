@@ -1,0 +1,223 @@
+/***** Media queries *****/
+@media (min-width: 768px) and (max-width: 1920px) {
+    .page_background .little_logo{
+        display:none;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .trading_acc_nr {width:120px}
+    .trading_acc_type{width:120px}
+    .trading_acc_lev{width:120px}
+    .trading_acc_bal{width:120px}
+    .trading_acc_equ{width:120px}
+    .trading_acc_opt{width:340px}
+    .fancy-forms select {width:452px}
+    .fancy-forms .birthdate select {width:130px}
+    .trading_accounts_options{background: #fff;float:left}
+    /*Cliet List Form*/
+    .fancy-forms.ib_room_form .all_countries,
+    .fancy-forms.ib_room_form .all_month,
+    .fancy-forms.ib_room_form .custom_month {width:160px}
+    .fancy-forms.ib_room_form .csv {width:65px}
+    .fancy-forms.ib_room_form .filter {width:105px}
+
+    /*Income and Money Transactions Forms */
+    .fancy-forms.ib_room_form.income_transactions_form .all_month {width:200px}
+    .fancy-forms.ib_room_form.income_transactions_form .custom_month {width:200px}
+    .fancy-forms.ib_room_form.income_transactions_form .csv {width:150px}
+    .fancy-forms.ib_room_form.income_transactions_form .filter {width:150px}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .fancy-forms .birthdate select {width:219px}
+    .fancy-forms.ib_room {margin-bottom:0}
+    .fancy-forms.ib_room > div  {margin-bottom:20px}
+
+    /*Cliet List Form*/
+    .fancy-forms.ib_room_form .all_countries,
+    .fancy-forms.ib_room_form .all_month {width:140px}
+    .fancy-forms.ib_room_form .custom_month {width:100px}
+    .fancy-forms.ib_room_form .csv {width:60px}
+    .fancy-forms.ib_room_form .filter {width:60px}
+
+    /*Income and Money Transactions Forms */
+    .fancy-forms.ib_room_form.income_transactions_form .all_month {width:150px}
+    .fancy-forms.ib_room_form.income_transactions_form .custom_month {width:145px}
+    .fancy-forms.ib_room_form.income_transactions_form .csv {width:120px}
+    .fancy-forms.ib_room_form.income_transactions_form .filter {width:120px}
+    .form-bottom h4 {font-size:15px !important}
+    .birthdate {margin-bottom:25px}
+    .registration-form-body .row .col-lg-6 {margin-bottom:25px}
+    .registration-form-body .row .col-lg-6:last-child {margin-bottom:0}
+    .registration-form-body .row.nomargin-smallscreen {margin-bottom:0 !important}
+    .registration-form-body .row.nomargin-smallscreen .col-lg-6:last-child {margin-bottom:25px}
+}
+
+@media (max-width: 767px) {
+    .login_page .welcome-message {margin-top:0}
+
+    .login_page .secondary_header_content,.secondary_header {height:auto;text-align:center}
+    .login_page .secondary_header_content .secondary_header_menu_item.logo {display:inline-block;width:100%;margin:20px auto 0;text-align:center}
+    .login_page .secondary_header_content .secondary_header_menu_item.logo img {padding-top:0}
+
+    .login_page .welcome-message h1 {font-size:30px}
+    .login_page .welcome-message p {margin:0 auto 25px}
+
+    .login_ca {text-align:center;margin-top:50px}
+    .login_ca .welcome-message .intro-divider {margin-left: auto;margin-right:auto; float:none}
+    .login_ca .login_ca_titles > div:first-child {padding-left:15px;}
+    .login_ca .login_ca_titles > div:last-child {padding-right:15px;}
+    .login_ca h1, .login_ca p{text-align: center;}
+
+    .secondary-nav .iblogo {display:inline-block;}
+    .secondary-nav .navbar-brand {height:auto;padding-top:5px !important;font-size:12px;font-weight:bold;color:#efefef}
+    .secondary-nav #ib-navbar {margin:0;padding:0;border:none;position:relative;z-index:999}
+    .secondary-nav ul{ background:#222}
+    .secondary-nav ul li {display:inline-block;}
+    .desktop {display:none !important;}
+    .responsive {display: block;}
+    .trading_accounts_options {float:left}
+    .content_block_header_item{width: 100% !important;text-align: center}
+    .content_block_header_item_button{padding-top: 20px;}
+    .content_block_holder_columns_item{text-align:left !important;}
+    .fancy-forms select,
+    .fancy-forms .birthdate select {width:100%}
+    .nopadding-right {width:25%}
+    .nopadding-left {width:75%}
+    .fancy-forms.ib_room {margin-bottom:0}
+    .fancy-forms.ib_room > div  {margin-bottom:20px}
+
+    /*Cliet List Form*/
+    .fancy-forms.ib_room_form .all_countries,
+    .fancy-forms.ib_room_form .all_month {width:100%;margin-bottom:15px}
+    .fancy-forms.ib_room_form .custom_month,
+    .fancy-forms.ib_room_form .csv,
+    .fancy-forms.ib_room_form .xls {width:48%;margin-bottom:15px}
+    .fancy-forms.ib_room_form .xls {float:right !important;margin-right:0}
+    .fancy-forms.ib_room_form .filter {width:100%;margin:15px 0}
+    .fancy-forms.ib_room_form .custom_month.even,
+    .fancy-forms.ib_room_form .filter.even {float:right;margin-right:0}
+    .fancy-forms.ib_room_form .csv,
+    .fancy-forms.ib_room_form .filter {margin-bottom:0}
+
+    /*Income and Money Transactions Forms */
+    .fancy-forms.ib_room_form.income_transactions_form .all_month,
+    .fancy-forms.ib_room_form.income_transactions_form .custom_month {width:32%}
+    .fancy-forms.ib_room_form.income_transactions_form .csv,
+    .fancy-forms.ib_room_form.income_transactions_form .filter {width:48%;margin-bottom:0}
+
+    .ajax_div {clear:both}
+    .birthdate {margin-bottom:25px}
+    .dl-horizontal dt {width:100%;text-align:left;}
+    .dl-horizontal dd {margin-left:0;margin-bottom:20px}
+    .ib-program-table {margin-bottom:25px}
+    .ib-agreement-checks > div {margin:5px 0;padding:5px 0}
+    .register-as-ib {text-align:center}
+    .register-as-ib button {display:inline-block}
+    .padding-top {padding-top:10px !important}
+    .page-5012 #banner_filters .banner_form_dropdown {width:130px;margin-top:0}
+    .page-5012 #banner_filters .filter {width:120px;margin-top:0}
+
+    .page-5010 #banner_filters .filter {width:120px;margin-top:0}
+
+    .registration-form-body .row .col-lg-6 {margin-bottom:25px}
+    .registration-form-body .row .col-lg-6:last-child {margin-bottom:0}
+
+    .registration-form-body .row.nomargin-smallscreen {margin-bottom:0 !important}
+    .registration-form-body .row.nomargin-smallscreen .col-lg-6:last-child {margin-bottom:25px}
+}
+
+@media (max-width: 630px) {
+    .hideonmobile {display:none}
+    .fancy-forms.ib_room_form.income_transactions_form .all_month {width:100%}
+    .fancy-forms.ib_room_form.income_transactions_form .custom_month {width:48%}
+    .withdraw-deposit-options,
+    .withdraw-deposit-forms {width: 100%}
+    .withdraw-deposit-options p {display:none}
+    .trading_accounts_options_column_container_item {width:25%;float:left;border:none}
+    .loginform {padding-bottom:50px}
+    .withdraw-deposit-options {margin-bottom:25px}
+    .payment_option_image{width: 100%}
+    .payment_option_image img{max-width: 100%;margin:0 0 7px}
+    .payment_option_description{width: 100%}
+    .bank-transfer-col 	{width:100% !important;text-align:left}
+    .account_settings .tab-titles {margin-bottom:30px;width:100%}
+    .account_settings .tab-content {width:100%}
+    .account_settings .tab-pane .row,
+    .content_block .row,
+    .change_password .row {padding:0 0 20px;margin:0}
+    .account_settings .tab-pane .row > div,
+    .content_block .row > div,
+    .change_password .row > div	{padding:0;margin:0}
+    .secondary_header .nav_item a {width: 100%;display: block}
+    .secondary_header .nav_item i {display:none}
+    .content_block_header .btn {margin:5px 0}
+    .trading_account_plate_content_amount {font-size:22px}
+    #form_messages {text-align:center}
+    #form_messages .pull-right {float:none !important;display:inline-block;margin:0 0 7px !important;}
+    .doc-upload-string {display:block;text-align:left;clear:both;}
+    .showonsmallscreen {display:block !important}
+    #bfo_deposit_form div .row {padding-bottom:0 !important}
+    .profile-table{max-width:100%;overflow:hidden;}
+    .profile-table span {display:block}
+    .pagination > li > a, .pagination > li > span {padding:3px 9px}
+    .page-5010 #banner_filters .banner_size {width:48%;float:left;margin:0 0 20px}
+    .page-5010 #banner_filters .banner_type {width:48%;float:right;margin:0 0 20px}
+    .page-5010 #banner_filters .banner_qty {width:48%;float:left;margin:0}
+    .page-5010 #banner_filters .filter {width:48%;float:right;margin:0px}
+}
+
+@media (max-width: 450px) {
+    .rectangle_trading_accounts {width:100% !important}
+    .login_page .welcome-message h1 {font-size:26px}
+    .login_page .welcome-message p {font-size:16px;max-width:400px}
+    .content_block_header h1{padding-bottom:10px;}
+    .content_block_header .pull-right{float:left !important;}
+    .content_block_header_item_button{
+        width: 100% !important;
+        padding-top: 10px;
+    }
+
+    .trading_account_plate_header .col-xs-6{width: 100%}
+    .trading_account_plate_content_amount {font-size:20px}
+    .small-dev-only {display:block;margin:0 0 15px}
+
+    .widgets-button{
+        display: inline-block;
+    }
+
+    .ib-agreement-checks .margin-bottom {padding-top:15px}
+    .trading_accounts_options_column_container_item {width:33%;}
+    .content_block_holder_row,
+    .bank-transfer-col 	{width:100% !important;text-align:left}
+    .nopadding-right {width:35%}
+    .nopadding-left {width:65%}
+    .additional_ib_account {display:none}
+    .current_ib_accounts {width:100%;}
+    .dl-horizontal dt {width:100%;text-align:left;}
+    .dl-horizontal dd {margin-left:0;margin-bottom:20px}
+    .form-bottom h4 {font-size:15px !important}
+}
+
+@media (max-width: 350px) {
+    .rectangle_trading_accounts {width:100% !important}
+    .trading_account_plate_header .col-xs-6{width: 50%;}
+    .trading_account_plate_content_amount {font-size:22px}
+    .trading_account_plate_content_amount span {display:inline-block}
+}
+
+/* Landscape */
+@media only screen and (width : 1024px) and (orientation: landscape){
+    .content_block_header{
+        width: 100%;
+        text-align: left;
+    }
+    .content_block_header_item{
+        width: 100%;
+        text-align: left;
+    }
+    .content_block_header_item_button{
+        width: 25%;
+        padding-top: 20px;
+    }
+}

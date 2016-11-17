@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IB专区登陆</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body style="background: url(images/background.jpg)">
+
+<nav class="navbar navbar-inverse login-nav" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">SENSE LEADER</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://sldforex.com/" target="_blank">SENSE LEADER首页</a></li>
+                <li><a href="#">客户支持</a></li>
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        语言选择 <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">中文</a></li>
+                        <li><a href="#">English</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container login-content">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 welcome-txt">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                    <h1 class="text-uppercase animated slideInDown">欢迎来到代理专区！</h1>
+                    <hr class="intro-divider">
+                    <div class="clearfix"></div>
+                    <p class="animated slideInUp hideonmobile">在客户专区，您可以管理您的账户和资金。体验新的功能，让您的交易更加愉快。</p>
+                </div>
+                <div class="clearfix visible-xs"></div>
+                <div class="col-lg-3 col-lg-offset-2 col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12 col-xs-offset-0 form-box">
+                    <div class="form-bottom">
+                        <div class="row">
+                            <div>
+                                <h4 class="text-center login-account text-uppercase">登录</h4>
+                            </div>
+                        </div>
+                        <form role="form" action="index.php" method="POST" class="loginform animated fadeIn">
+                            <fieldset>
+                                <input name="task" value="1000" type="hidden">
+                                <input name="form_send" value="1" type="hidden">
+                                <div class="form-group">
+                                    <div class="input-group">
+										<span class="input-group-addon">
+											<i class="glyphicon glyphicon-user"></i>
+										</span>
+                                        <label for="form-password" class="sr-only">登录</label>
+                                        <input class="form-control" id="form-username" placeholder="登录" name="log_in_email" data-toggle="tooltip" data-trigger="focus" title="邮箱地址或您注册客户专区的时候发送到您的邮箱的6位数字。" data-placement="top" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <label for="form-password" class="sr-only">密码</label>
+                                        <input class="form-control" id="form-password" placeholder="密码" name="log_in_password" type="password">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-block btn-success text-uppercase"><i class="fa fa-sign-in" aria-hidden="true"></i> 登录</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--jquery引用-->
+<script src="lib/js/jquery-1.12.3.min.js"></script>
+<script src="lib/js/bootstrap.min.js"></script>
+
+</body>
+</html>
