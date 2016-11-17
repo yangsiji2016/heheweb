@@ -12,10 +12,10 @@ body {
     background: #fff;
 }
 
-/*table {
+table {
     border-collapse: collapse;
     border-spacing: 0;
-}*/
+}
 
 img {
     border: 0;
@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
     text-decoration: none;
     color: #666;
+    font-size: 14px;
 }
 
 input {
@@ -216,6 +217,7 @@ nav {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
+    color: #666 !important;
 }
 
 .nav-box li:hover > a, .nav-box li.active > a {
@@ -225,9 +227,9 @@ nav {
 .navbox-pull {
     position: absolute;
     top: 48px;
-    width: 160px;
+    width: 200px;
     left: 50%;
-    margin-left: -80px;
+    margin-left: -100px;
     display: none;
     z-index: 99;
     -webkit-transition: .5s;
@@ -239,8 +241,8 @@ nav {
 
 .navbox-pull a {
     display: block;
-    width: 160px;
-    padding-left: 28px;
+    width: 200px;
+    padding-left: 30px;
     height: 58px;
     line-height: 58px;
     border-top: 1px solid #24262b;
@@ -255,7 +257,7 @@ nav {
 }
 
 .navbox-pull a:hover {
-    padding-left: 42px;
+    padding-left: 70px;
     color: #fff;
     background: #1B1C1F url(../../images/pullbg.png) no-repeat 218px center;
 }
@@ -616,6 +618,8 @@ footer {
 
 .menu a {
     display: inline-block;
+    color: #666 !important;
+    font-size: 14px !important;
     height: 40px;
     line-height: 40px;
     margin-left: 30px;
@@ -764,9 +768,13 @@ footer {
     border-bottom: 2px dashed #646464;
 }
 
+.xg05 ul:nth-child(5) {
+    border-right: 2px dashed #646464;
+}
+
 .xg05 ul {
     float: left;
-    width: 20%;
+    width: 14.28571%;
     text-align: center;
     font-size: 16px;
     line-height: 40px;
@@ -804,4 +812,109 @@ footer {
 
 .xg05 .copyright .bdsharebuttonbox {
     float: right;
+}
+
+/*客服修改*/
+.kf {
+    display: none;
+    bottom: 50px;
+    right: 30px;
+    z-index: 10000;
+    position: fixed;
+    width: 76px;
+}
+
+.kf a {
+    transition: .5s;
+    -webkit-transition: .5s;
+    position: relative;
+    background-color: #20242b;
+    display: block;
+    height: 90px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.kf a img {
+    display: block;
+    margin: 0 auto;
+}
+
+.kf a > span {
+    display: block;
+    color: #fff;
+    margin: 0 0 11px 0;
+    padding-top: 17px;
+}
+
+.kf a i {
+    width: 56px;
+    height: 1px;
+    background-color: #373a41;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -28px;
+}
+
+.kf a.kf_a5 {
+    border-radius: 0 0 38px 38px;
+}
+
+.kf a.kf_a5 > span {
+    margin-bottom: 7px;
+}
+
+.kf a.kf_a2 {
+    height: 135px;
+}
+
+.kf a.kf_a1 {
+    margin: 0 0 -58px -11px;
+    z-index: 10001;
+    border-radius: 50%;
+    width: 96px;
+    height: 96px;
+    background: url("../../images/kf_03.png") no-repeat center #eabc06;
+}
+
+.kf a.kf_a2 > span {
+    padding-top: 72px;
+}
+
+.kf a:hover {
+    background-color: #0e0e0e;
+}
+
+.kf a.kf_a1:hover {
+    background-color: #eabc06
+}
+
+.kf a div {
+    display: none;
+    color: #f2f2f2;
+    top: -50px;
+    left: -168px;
+    width: 150px;
+    height: 165px;
+    background-color: #0e0e0e;
+    position: absolute;
+    z-index: 10001;
+}
+
+.kf a div img {
+    width: 91px;
+    height: 91px;
+    display: block;
+    margin: 23px auto 10px auto;
+}
+
+.kf a div span {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: -12px;
+    top: 103px;
+    background: url("../images/right.png") no-repeat center;
 }
