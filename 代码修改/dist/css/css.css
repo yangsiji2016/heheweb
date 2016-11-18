@@ -778,6 +778,8 @@ footer {
     text-align: center;
     font-size: 16px;
     line-height: 40px;
+    margin-top: 0;
+    padding-left: 0;
 }
 
 .xg05 ul li:first-child {
@@ -786,7 +788,7 @@ footer {
 }
 
 .xg05 ul li a {
-    color: #818080;
+    color: #818080 !important;
     white-space: nowrap;
 }
 
