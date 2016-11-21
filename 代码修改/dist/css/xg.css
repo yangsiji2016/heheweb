@@ -303,33 +303,50 @@
   margin-top: 55px; }
 
 /*表格滚动*/
-.form-roll td {
-  width: 12.5%; }
-
-.form-roll .form-header {
-  background-color: #ccc;
-  border: none;
-  width: 50%; }
-  .form-roll .form-header td {
-    color: #ff0;
-    text-align: center;
-    background-color: #000;
-    height: 50px; }
-
-.form-roll .form-content {
-  background-color: #ccc;
-  border: none;
-  width: 50%; }
-
-.form-roll #demohq {
-  height: 300px;
-  overflow: hidden; }
-  .form-roll #demohq table {
+.form-roll {
+  width: 50%;
+  float: left;
+  margin-left: 10%; }
+  .form-roll td {
+    width: 12.5%; }
+  .form-roll .form-header-title .w2 {
+    width: 25%; }
+  .form-roll .form-header-title .w3 {
+    width: 37.5%; }
+  .form-roll .form-header, .form-roll .form-header-title {
+    background-color: #f23333;
+    border: none;
     width: 100%; }
-  .form-roll #demohq tr {
-    background-color: #fff;
-    height: 36px;
-    text-align: center; }
+    .form-roll .form-header td, .form-roll .form-header-title td {
+      color: #fff;
+      text-align: center;
+      height: 50px;
+      border: solid #ddd;
+      border-width: 1px 1px 0 1px; }
+  .form-roll .form-header-title {
+    background-color: #3f3f3f; }
+    .form-roll .form-header-title .w2 {
+      width: 25%; }
+    .form-roll .form-header-title .w3 {
+      width: 37.5%; }
+  .form-roll .form-content {
+    background-color: #ccc;
+    border: none;
+    width: 100%; }
+  .form-roll #demohq {
+    height: 200px;
+    overflow: hidden; }
+    .form-roll #demohq table {
+      width: 100%; }
+    .form-roll #demohq tr {
+      background-color: #fff;
+      height: 36px;
+      text-align: center; }
+    .form-roll #demohq tr:nth-child(even) {
+      background-color: #edeeee; }
+    .form-roll #demohq .td1 {
+      border: solid #ddd;
+      border-width: 1px 1px 0 1px; }
 
 /*首页banner图*/
 .banner-link2 {

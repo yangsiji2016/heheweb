@@ -374,60 +374,68 @@
     margin-top: 55px;
 }
 
-
 /*表格滚动*/
-.form-roll{
-    td{
+.form-roll {
+    width: 50%;
+    float: left;
+    margin-left: 10%;
+    td {
         width: 12.5%;
     }
-    .form-header{
-        background-color: #ccc;
-        border: none;
-        width: 50%;
-        td{
-            color: #ff0;
-            text-align: center;
-            background-color: #000;
-            height: 50px;
+    .form-header-title{
+        .w2{
+            width: 25%;
+        }
+        .w3{
+            width: 37.5%;
         }
     }
-    .form-content{
+    .form-header, .form-header-title {
+        background-color: #f23333;
+        border: none;
+        width: 100%;
+        td {
+            color: #fff;
+            text-align: center;
+            height: 50px;
+            border: solid #ddd;
+            border-width: 1px 1px 0 1px;
+        }
+    }
+    .form-header-title{
+        background-color: #3f3f3f;
+        .w2{
+            width: 25%;
+        }
+        .w3{
+            width: 37.5%;
+        }
+    }
+    .form-content {
         background-color: #ccc;
         border: none;
-        width: 50%;
+        width: 100%;
     }
-    #demohq{
-        height:300px;
+    #demohq {
+        height: 200px;
         overflow: hidden;
-        table{
+        table {
             width: 100%;
         }
-        tr{
+        tr {
             background-color: #fff;
             height: 36px;
             text-align: center;
         }
+        tr:nth-child(even){
+            background-color: #edeeee;
+        }
+        .td1{
+            border: solid #ddd;
+            border-width: 1px 1px 0 1px;
+        }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*首页banner图*/
 .banner-link2 {
@@ -1243,37 +1251,37 @@
         }
     }
     .thead2 {
-        tr{
+        tr {
             color: #fff;
-            .bgc3{
+            .bgc3 {
                 background-color: #383b40;
             }
-            .bgc4{
+            .bgc4 {
                 background-color: #5e6068;
             }
         }
     }
-    tbody{
-        tr{
-            td{
+    tbody {
+        tr {
+            td {
                 color: #474950;
             }
         }
     }
 }
 
-.notes{
+.notes {
     font-size: 12px;
     color: #474950;
 }
 
-.create-account{
+.create-account {
     height: 390px;
     background: url("../images/bg16.jpg") left center no-repeat;
     background-size: 100% auto;
     position: relative;
     margin-top: 20px;
-    .create-account-btn{
+    .create-account-btn {
         background-color: #c4040d;
         border-radius: 5px;
         position: absolute;
