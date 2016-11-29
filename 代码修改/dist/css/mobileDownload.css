@@ -83,7 +83,7 @@ li {
 }
 
 .register {
-    background: #62BDC5 url(../img/bg-480.jpg) no-repeat;
+    background: #62BDC5 url(../images/bg-480.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -192,7 +192,7 @@ li {
 }
 
 .info {
-    background: url(../img/success-bg-480.jpg) no-repeat center bottom;
+    background: url(../images/success-bg-480.jpg) no-repeat center bottom;
     background-size: cover;
     color: #fff;
     padding: 13.75% 0 12.8%;
@@ -274,17 +274,18 @@ li {
 .footer-bg {
     background: #2D2D2D;
     color: #E4E4E4;
-    padding: 3.4% 2%;
+    padding: 3.4% 0;
     text-align: center;
     position: fixed;
     bottom: 0;
+    width: 100%;
 }
 
 .footer-bg .entry-con {
     font-size: 1.6em;
 }
 
-.app img {
+.app images {
     width: 85.15%;
     margin: 0 auto;
     display: block;
@@ -327,11 +328,11 @@ li {
 
 @media screen and (min-width: 481px) {
     .register {
-        background-image: url(../img/bg.jpg);
+        background-image: url(../images/bg.jpg);
     }
 
     .info {
-        background-image: url(../img/success-bg.jpg);
+        background-image: url(../images/success-bg.jpg);
     }
 }
 
@@ -379,7 +380,7 @@ li {
 
 @media screen and (max-width: 360px) {
     .register {
-        background-image: url(../img/bg-360.jpg);
+        background-image: url(../images/bg-360.jpg);
     }
 
     .intro {
