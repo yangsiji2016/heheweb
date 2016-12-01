@@ -159,6 +159,71 @@ header {
     background-color: #222429;
 }
 
+.header-box {
+    overflow: hidden;
+    display: none;
+    width: 100%;
+}
+
+.header-box a {
+    background-color: #2e2e2e;
+    display: block;
+    float: left;
+    width: 50%;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: #fff;
+    -webkit-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.header-box a:nth-of-type(2), .header-box a:nth-of-type(4) {
+    border-left: 1px solid #2b2b2b;
+}
+
+.header-box a:nth-of-type(3), .header-box a:nth-of-type(4) {
+    border-top: 1px solid #2b2b2b;
+}
+
+.header-box a:hover {
+    background-color: #161414;
+}
+
+#manageCtrl {
+    display: none;
+    width: 113px;
+    border: 1px solid #585863;
+    color: #fff;
+    background-color: #222429;
+}
+
+@media screen and (max-width: 375px) {
+    #manageCtrl {
+        width: 76px;
+        font-size: 12px;
+    }
+}
+
+#manageCtrl.on {
+    border: 1px solid #2a2d33;
+    background: #2a2d33;
+    color: #fff;
+}
+
+@media screen and (max-width: 992px) {
+    #manageCtrl {
+        display: inline-block;
+    }
+
+    .header-right .login-btn, .header-right .regis-btn {
+        display: none;
+    }
+}
+
 nav {
     width: 100%;
     background-color: #fff;
@@ -397,7 +462,7 @@ nav {
         padding-top: 102px;
     }
 
-    header, nav, .nav-pulldown {
+    header, nav, .nav-pulldown, .header-box {
         position: fixed;
         left: 0;
         top: 0;
@@ -407,6 +472,10 @@ nav {
     nav {
         top: 54px;
         border-bottom: 1px solid #DDDBDB;
+    }
+
+    .header-box {
+        top: 54px;
     }
 
     .nav-pulldown {
@@ -753,6 +822,47 @@ footer {
         width: 100%;
         padding: 0 15px;
     }
+}
+
+.page {
+    margin: 25px 0 45px 0;
+    text-align: center;
+}
+
+.page a {
+    background-color: #fff;
+    transition: .5s;
+    -webkit-transition: .5s;
+    margin: 0 2px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.page a.page_prev {
+    background: url("../../images/prev_03.png") no-repeat center #fff;
+}
+
+.page a.page_prev:hover {
+    background: url("../../images/prev2_03.png") no-repeat center #e73434;
+}
+
+.page a.page_next {
+    background: url("../../images/prev_05.png") no-repeat center #fff;
+}
+
+.page a.page_next:hover {
+    background: url("../../images/prev1_05.png") no-repeat center #e73434;
+}
+
+.page a:hover, .page a.on {
+    color: #fff;
+    background-color: #e73434;
+}
+
+.page .none {
+    display: none;
 }
 
 /*底部导航修改*/
