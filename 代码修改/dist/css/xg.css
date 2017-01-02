@@ -352,7 +352,7 @@
 .banner-link2 {
   width: 162px;
   position: absolute;
-  left: 8%;
+  left: 18%;
   top: 60%;
   z-index: 10; }
   .banner-link2 a {
@@ -1013,3 +1013,148 @@
     height: 40px;
     line-height: 40px;
     text-align: center; }
+
+/*赠金活动页面*/
+@font-face {
+  font-family: MFJinHei;
+  src: url("../fonts/MFJinHei_Noncommercial-Regular.ttf"); }
+
+.grant-banner {
+  position: relative; }
+  .grant-banner .ib-link {
+    width: 240px;
+    height: 60px;
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    margin-left: -113px;
+    border: 1px solid #a63132;
+    border-radius: 5px; }
+    .grant-banner .ib-link .wrap {
+      height: 48px;
+      width: 226px;
+      margin-top: 6px;
+      margin-left: 7px;
+      line-height: 48px;
+      text-align: center;
+      background-color: #c03131;
+      border-radius: 5px; }
+      .grant-banner .ib-link .wrap a {
+        font-size: 20px;
+        display: inline-block;
+        padding-top: 15px;
+        color: #fff; }
+
+.grant-title {
+  background: url("../images/grant-bg1.png") center bottom no-repeat;
+  height: 638px; }
+  .grant-title .grant-title-txt {
+    text-align: center;
+    height: 266px; }
+    .grant-title .grant-title-txt .txt1 {
+      width: 600px;
+      margin: 0 auto;
+      font-size: 32px;
+      line-height: 64px;
+      padding-top: 52px;
+      border-bottom: 2px solid #c20101; }
+      .grant-title .grant-title-txt .txt1 .txt1-s1 {
+        color: #2d2d2d; }
+      .grant-title .grant-title-txt .txt1 .txt1-s2 {
+        color: #c03131; }
+    .grant-title .grant-title-txt .txt2 {
+      color: #2d2d2d;
+      line-height: 42px;
+      padding-top: 30px; }
+      .grant-title .grant-title-txt .txt2 .txt2-s {
+        font-family: MFJinHei;
+        color: #dcac00;
+        font-size: 32px; }
+
+.grant-info {
+  height: 612px;
+  background: url("../images/grant-bg2.png") center center no-repeat #222; }
+  .grant-info .info {
+    width: 980px;
+    margin: 0 auto;
+    color: #fbfbfb;
+    text-align: center; }
+    .grant-info .info .p1 {
+      font-size: 32px;
+      padding-top: 46px; }
+    .grant-info .info .p2 {
+      font-size: 20px;
+      padding-bottom: 50px; }
+      .grant-info .info .p2 .color1 {
+        color: #ffffff; }
+      .grant-info .info .p2 .color2 {
+        color: #e40000; }
+    .grant-info .info .p3, .grant-info .info .p4, .grant-info .info .p5 {
+      font-size: 20px;
+      color: #fbfbfb; }
+    .grant-info .info .p4 {
+      width: 240px;
+      height: 50px;
+      line-height: 50px;
+      background-color: #c20101;
+      margin: 40px auto; }
+    .grant-info .info .p5 {
+      line-height: 40px; }
+    .grant-info .info .provisions-txt {
+      display: none;
+      padding-left: 90px;
+      text-align: left;
+      line-height: 20px; }
+      .grant-info .info .provisions-txt .show {
+        display: block; }
+
+.provisions {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #c20101;
+  font-size: 20px;
+  border-bottom: 1px dashed #c20101; }
+
+.grant-join {
+  width: 1250px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 20px;
+  color: #171717;
+  padding-bottom: 100px; }
+  .grant-join .grant-join-title {
+    text-align: center;
+    padding: 80px 0 60px; }
+    .grant-join .grant-join-title .p1 {
+      color: #171717;
+      font-size: 36px; }
+    .grant-join .grant-join-title .p2 {
+      font-size: 16px; }
+      .grant-join .grant-join-title .p2 .color1 {
+        color: #515151; }
+      .grant-join .grant-join-title .p2 .color2 {
+        color: #c03131; }
+  .grant-join .grant-join-txt {
+    text-align: left;
+    line-height: 34px; }
+    .grant-join .grant-join-txt .p6, .grant-join .grant-join-txt .p8 {
+      padding: 46px 0; }
+    .grant-join .grant-join-txt .left {
+      width: 52%;
+      padding-right: 4%;
+      float: left; }
+    .grant-join .grant-join-txt .right {
+      width: 48%;
+      float: right; }
+  .grant-join .gratn-join-img {
+    padding: 32px 0 80px; }
+  .grant-join .grant-join-faq {
+    line-height: 34px; }
+    .grant-join .grant-join-faq .provisions-txt {
+      display: none;
+      font-size: 14px;
+      line-height: 20px; }
+      .grant-join .grant-join-faq .provisions-txt .show {
+        display: block; }
