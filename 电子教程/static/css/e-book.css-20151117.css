@@ -1,0 +1,1195 @@
+/*e-book*/
+
+.e-book {
+    display: block;
+    width: 100%;
+    float: left;
+    height: 380px;
+    overflow: hidden;
+    margin-top: -778px;
+    margin-top: -780px!important;
+    margin-top: -779px\9;
+    *margin-top: -777px!important;
+    position: relative;
+    z-index: 1;
+
+    /*position: absolute;
+
+    
+    top: 566px;
+    top: 567px!important;
+    top: 569px\9;
+    *top: 557px!important;
+    bottom: 0;
+    left: 0;
+*/
+
+}
+
+.e-book h3 span {
+    color: #26678E;
+    font-size: 15px;
+    background: url("img/e-book/book-icon.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/book-icon.png*/ -10px -200px no-repeat;
+    padding: 1px 0 2px 24px;
+}
+
+.book-center {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.next,
+.prev {
+    position: absolute;
+    z-index: 2;
+}
+
+.prev {
+    top: 105px;
+    left: 25px;
+}
+
+.next {
+    top: 105px;
+    right: 25px;
+}
+
+.next,
+.prev {
+    display: block;
+    width: 22px;
+    height: 86px;
+    background-image: url("img/e-book/book-icon.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/book-icon.png*/;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.prev {
+    background-position: -10px -106px;
+}
+
+.next {
+    background-position: -10px -10px;
+}
+
+.book-box {
+    float: left;
+    margin: 0px 68px;
+    width: 860px;
+    padding-top: 25px;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.bk-list li {
+    position: relative;
+    width: 155px;
+    float: left;
+    z-index: 1;
+    margin: 0px 30px 0px 30px;
+    -webkit-perspective: 1800px;
+    -moz-perspective: 1800px;
+    perspective: 1800px;
+    display: inline;
+}
+
+.bk-list li:last-child {
+    margin-right: 0;
+}
+
+.bk-info {
+    position: relative;
+    margin-top: 250px;
+}
+
+.bk-list li .bk-book {
+    position: absolute;
+    width: 100%;
+    height: 219px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform .5s;
+    -moz-transition: -moz-transform .5s;
+    transition: transform .5s;
+}
+
+.bk-list li .bk-book.bk-bookdefault:hover {
+    -webkit-transform: rotate3d(0, 1, 0, 35deg);
+    -moz-transform: rotate3d(0, 1, 0, 35deg);
+    transform: rotate3d(0, 1, 0, 35deg);
+}
+
+.bk-list li .bk-book > div,
+.bk-list li .bk-front > div {
+    display: block;
+    position: absolute;
+}
+
+.bk-list li .bk-front {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 50%;
+    -moz-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-transition: -webkit-transform .5s;
+    -moz-transition: -moz-transform .5s;
+    transition: transform .5s;
+    -webkit-transform: translate3d(0, 0, 20px);
+    -moz-transform: translate3d(0, 0, 20px);
+    transform: translate3d(0, 0, 20px);
+    z-index: 10;
+}
+
+.bk-list li .bk-front > div {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.bk-list li .bk-page {
+    -webkit-transform: translate3d(0, 0, 19px);
+    -moz-transform: translate3d(0, 0, 19px);
+    transform: translate3d(0, 0, 19px);
+    display: none;
+    width: 150px;
+    height: 209px;
+    top: 5px;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 9;
+}
+
+.bk-list li .bk-front,
+.bk-list li .bk-back,
+.bk-list li .bk-front > div {
+    width: 155px;
+    height: 219px;
+}
+
+.bk-list li .bk-left,
+.bk-list li .bk-right {
+    width: 40px;
+    left: -19px;
+}
+
+.bk-list li .bk-top,
+.bk-list li .bk-bottom {
+    width: 150px;
+    height: 40px;
+    top: -15px;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.bk-list li .bk-back {
+    -webkit-transform: rotate3d(0, 1, 0, -180deg) translate3d(0, 0, 20px);
+    -moz-transform: rotate3d(0, 1, 0, -180deg) translate3d(0, 0, 20px);
+    transform: rotate3d(0, 1, 0, -180deg) translate3d(0, 0, 20px);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 3px 0 0 3px;
+}
+
+.bk-list li .bk-cover-back {
+    background-color: #000;
+    -webkit-transform: rotate3d(0, 1, 0, -180deg);
+    -moz-transform: rotate3d(0, 1, 0, -180deg);
+    transform: rotate3d(0, 1, 0, -180deg);
+}
+
+.bk-list li .bk-right {
+    height: 209px;
+    top: 5px;
+    -webkit-transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 150px);
+    -moz-transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 150px);
+    transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 150px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.bk-list li .bk-left {
+    height: 219px;
+    -webkit-transform: rotate3d(0, 1, 0, -90deg);
+    -moz-transform: rotate3d(0, 1, 0, -90deg);
+    transform: rotate3d(0, 1, 0, -90deg);
+}
+
+.bk-list li .bk-top {
+    -webkit-transform: rotate3d(1, 0, 0, 90deg);
+    -moz-transform: rotate3d(1, 0, 0, 90deg);
+    transform: rotate3d(1, 0, 0, 90deg);
+}
+
+.bk-list li .bk-bottom {
+    -webkit-transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 0, 209px);
+    -moz-transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 0, 209px);
+    transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 0, 209px);
+}
+
+
+/* Transform classes */
+
+.bk-list li .bk-viewinside .bk-front {
+    -webkit-transform: translate3d(0, 0, 20px) rotate3d(0, 1, 0, -160deg);
+    -moz-transform: translate3d(0, 0, 20px) rotate3d(0, 1, 0, -160deg);
+    transform: translate3d(0, 0, 20px) rotate3d(0, 1, 0, -160deg);
+}
+
+.bk-list li .bk-book.bk-viewinside {
+    -webkit-transform: translate3d(0, 0, 150px) rotate3d(0, 1, 0, 0deg);
+    -moz-transform: translate3d(0, 0, 150px) rotate3d(0, 1, 0, 0deg);
+    transform: translate3d(0, 0, 150px) rotate3d(0, 1, 0, 0deg);
+}
+
+.bk-list li .bk-book.bk-viewback {
+    -webkit-transform: translate3d(0, 0, 0px) rotate3d(0, 1, 0, 180deg);
+    -moz-transform: translate3d(0, 0, 0px) rotate3d(0, 1, 0, 180deg);
+    transform: translate3d(0, 0, 0px) rotate3d(0, 1, 0, 180deg);
+}
+
+.bk-list li .bk-viewback .bk-back {
+    z-index: 10;
+}
+
+
+/* Book 1 */
+
+.bk-front > div,
+.bk-back,
+.bk-left,
+.bk-top,
+.bk-bottom {
+    background-color: #999;
+}
+
+.book-1 .bk-front {
+    background-image: url("../images/e-book/b-1.png")/*tpa=http://www.aetoscg.com/cn/static/images/e-book/b-1.png*/;
+}
+
+.book-2 .bk-front {
+    background-image: url("../images/e-book/b-2.png")/*tpa=http://www.aetoscg.com/cn/static/images/e-book/b-2.png*/;
+}
+
+.book-3 .bk-front {
+    background-image: url("../images/e-book/b-3.png")/*tpa=http://www.aetoscg.com/cn/static/images/e-book/b-3.png*/;
+}
+
+.book-4 .bk-front {
+    background-image: url("../images/e-book/b-4.png")/*tpa=http://www.aetoscg.com/cn/static/images/e-book/b-4.png*/;
+}
+
+.bk-info {
+    text-align: center;
+}
+
+.bk-info h4 {
+    font-size: 18px;
+}
+
+.bk-info p {
+    font-size: 14px;
+}
+
+
+/* Fallbacks */
+
+.no-csstransforms3d .bk-list li .bk-book > div,
+.no-csstransforms3d .bk-list li .bk-book .bk-cover-back {
+    display: none;
+}
+
+.no-csstransforms3d .bk-list li .bk-book > div.bk-front {
+    display: block;
+}
+
+.no-csstransforms3d .bk-info button,
+.no-js .bk-info button {
+    display: none;
+}
+
+.eb-mtt {
+    margin-top: 402px;
+    *float: left;
+    *width: 100%
+}
+
+
+.main-title .b1 {
+    margin-top: 20px;
+}
+
+.stocks-indices-tab {
+    padding-left: 20px;
+}
+
+#main h4 {
+    border-bottom: 0;
+    padding-bottom: 0
+}
+
+#main p {
+    line-height: 1
+}
+
+
+/* large img  */
+
+.ebook-list-box {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.ebook-list-box .bk-list li {
+    margin-top: 30px;
+    padding-left: 65px
+}
+
+.ebook-list-box .bk-list li {
+    width: 212px;
+}
+
+.ebook-list-box .bk-list li .bk-info {
+    margin-top: 325px;
+}
+
+.ebook-list-box .bk-list li .bk-book {
+    height: 300px;
+}
+
+.ebook-list-box .bk-list li .bk-page {
+    width: 212px;
+    height: 295px;
+    top: 5px;
+}
+
+.ebook-list-box .bk-list li .bk-front,
+.ebook-list-box .bk-list li .bk-back,
+.ebook-list-box .bk-list li .bk-front > div {
+    width: 212px;
+    height: 300px;
+}
+
+.ebook-list-box .bk-list li .bk-top,
+.ebook-list-box .bk-list li .bk-bottom {
+    width: 212px;
+}
+
+.ebook-list-box .bk-list li .bk-right {
+    height: 295px;
+}
+
+.ebook-list-box .bk-list li .bk-left {
+    height: 300px;
+}
+
+.ebook-list-box .bk-list li .bk-bottom {
+    -webkit-transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 0, 295px);
+    -moz-transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 0, 295px);
+    transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 0, 295px);
+}
+
+
+/* Transform classes */
+
+.ebook-list-box .bk-list li .bk-book.bk-viewinside {
+    -webkit-transform: translate3d(0, 0, 207px) rotate3d(0, 1, 0, 0deg);
+    -moz-transform: translate3d(0, 0, 207px) rotate3d(0, 1, 0, 0deg);
+    transform: translate3d(0, 0, 207px) rotate3d(0, 1, 0, 0deg);
+}
+
+.ebook-list-box .bk-list li .book-1 .bk-front {
+    background-image: url("../images/e-book/b-1-large.png")/*tpa=http://www.aetoscg.com/cn/static/images/e-book/b-1-large.png*/;
+}
+
+.ebook-list-box .bk-list li .book-2 .bk-front {
+    background-image: url("../images/e-book/b-2-large.png")/*tpa=http://www.aetoscg.com/cn/static/images/e-book/b-2-large.png*/;
+}
+
+.ebook-list-box .bk-list li .book-3 .bk-front {
+    background-image: url("../images/e-book/b-3-large.png")/*tpa=http://www.aetoscg.com/cn/static/images/e-book/b-3-large.png*/;
+}
+
+.ebook-list-box .bk-list li .book-4 .bk-front {
+    background-image: url("../images/e-book/b-4-large.png")/*tpa=http://www.aetoscg.com/cn/static/images/e-book/b-4-large.png*/;
+}
+
+
+/* large img end */
+
+
+/*wowbook begin*/
+
+#eb-detailed #warp {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+
+#eb-detailed #content {
+    border-left: 0px solid #999;
+    border-right: 0px solid #999;
+    padding-top: 10px;
+    position: relative;
+    width: 100%
+}
+
+#eb-detailed #here,
+#eb-detailed .main-title {
+    margin: 0 auto;
+    width: 997px;
+}
+
+#eb-detailed #here {
+    margin-top: 10px;
+}
+
+#eb-detailed .main-title {
+    height: 67px;
+}
+
+#eb-detailed #footer .yingyin {
+    display: none;
+}
+
+#eb-detailed #nav-con li.hover {
+    z-index: 99999
+}
+
+
+/*btn*/
+
+nav.eb-nav {
+    width: 100%;
+    text-align: center;
+}
+
+nav.eb-nav ul {
+    width: 100%;
+    background-color: #000;
+    padding: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d5d5d5 #d2d2d2 #cdcdcd;
+    border-radius: 6px;
+    display: -moz-inline-box;
+    -moz-box-orient: vertical;
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+nav.eb-nav li {
+    float: left;
+    /* border-left: 1px solid #d2d2d2;*/
+}
+
+nav.eb-nav li:first-child {
+    border-left: 0;
+}
+
+nav.eb-nav li:first-child a {
+    border-radius: 6px 0 0 6px;
+}
+
+nav.eb-nav li:last-child a {
+    border-radius: 0 6px 6px 0;
+}
+
+nav.eb-nav a {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    color: #666;
+    color: rgb(221, 221, 221);
+    background: #fafafa;
+    background-color: #fcfcfc;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, #f0f0f0));
+    background-image: -webkit-linear-gradient(top, #fcfcfc, #f0f0f0);
+    background-image: -moz-linear-gradient(top, #fcfcfc, #f0f0f0);
+    background-image: -ms-linear-gradient(top, #fcfcfc, #f0f0f0);
+    background-image: -o-linear-gradient(top, #fcfcfc, #f0f0f0);
+    background-image: linear-gradient(top, #fcfcfc, #f0f0f0);
+    background-color: #2C2C2C;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, #f0f0f0));
+    background-image: -webkit-linear-gradient(top, #333333, #222222);
+    background-image: -moz-linear-gradient(top, #333333, #222222);
+    background-image: -ms-linear-gradient(top, #333333, #222222);
+    background-image: -o-linear-gradient(top, #333333, #222222);
+    background-image: linear-gradient(top, #333333, #222222);
+    /*-webkit-box-shadow: inset 1px 1px #fafafa, inset -1px -1px #fafafa;
+    -moz-box-shadow: inset 1px 1px #fafafa, inset -1px -1px #fafafa;
+    -ms-box-shadow: inset 1px 1px #fafafa, inset -1px -1px #fafafa;
+    -o-box-shadow: inset 1px 1px #fafafa, inset -1px -1px #fafafa;
+    box-shadow: inset 1px 1px #fafafa, inset -1px -1px #fafafa; }*/
+}
+
+nav.eb-nav a:hover {
+    color: #333;
+    color: rgb(221, 221, 221);
+    /* FIXME */
+    z-index: 10;
+    text-decoration: none;
+    /*
+      /-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3), inset 1px 1px #fafafa, inset -1px -1px #fafafa;
+      /-moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3), inset 1px 1px #fafafa, inset -1px -1px #fafafa;
+      /-ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3), inset 1px 1px #fafafa, inset -1px -1px #fafafa;
+      /-o-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3), inset 1px 1px #fafafa, inset -1px -1px #fafafa;
+      /box-shadow: 0 0 3px rgba(0, 0, 0, 0.3), inset 1px 1px #fafafa, inset -1px -1px #fafafa; 
+      */
+}
+
+nav.eb-nav li.active a,
+nav.eb-nav a:active,
+nav.eb-nav a:visited {
+    color: #333;
+    color: rgb(221, 221, 221);
+    /* background: #fff;*/
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+nav.eb-nav {
+    height: 50px;
+    left: 0;
+    position: relative;
+    right: 0;
+    top: 0px;
+    z-index: 9999;
+    zoom: 1;
+}
+
+nav.eb-nav a {
+    float: left;
+    height: 50px;
+    width: 70px;
+    line-height: 50px;
+    padding-left: 36px;
+    background: no-repeat;
+    background-position: 0px 9px;
+    font-weight: normal;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+nav.eb-nav #home {
+    background-image: url("img/e-book/home.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/home.png*/;
+    text-indent: -9999px;
+    background-position: 36px 9px;
+}
+
+nav.eb-nav #zoomin {
+    background-image: url("img/e-book/zoom_in.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/zoom_in.png*/;
+    background-position: 22px 9px;
+    padding-left: 58px;
+    width: 48px;
+}
+
+nav.eb-nav #zoomout {
+    background-image: url("img/e-book/zoom_out.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/zoom_out.png*/;
+    background-position: 22px 9px;
+    padding-left: 58px;
+    width: 48px;
+}
+
+nav.eb-nav #first {
+    background-image: url("img/e-book/arrow_double_left.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/arrow_double_left.png*/;
+    background-position: 14px 9px;
+    padding-left: 50px;
+    width: 56px
+}
+
+nav.eb-nav #last {
+    background-image: url("img/e-book/arrow_double_right.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/arrow_double_right.png*/;
+    background-position: 14px 9px;
+    padding-left: 50px;
+    width: 56px
+}
+
+nav.eb-nav #next {
+    background-image: url("img/e-book/arrow_right_1.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/arrow_right_1.png*/;
+    background-position: 6px 9px;
+    padding-left: 42px;
+    width: 64px
+}
+
+nav.eb-nav #back {
+    background-image: url("img/e-book/arrow_left_1.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/arrow_left_1.png*/;
+    background-position: 6px 9px;
+    padding-left: 42px;
+    width: 64px
+}
+
+nav.eb-nav #slideshow {
+    background-image: url("img/e-book/slideshow_play.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/slideshow_play.png*/;
+    background-position: 1px 9px;
+    padding-left: 39px;
+    width: 63px
+}
+
+nav.eb-nav #slideshow.wowbook-disabled {
+    background-image: url("img/e-book/slideshow_pause.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/slideshow_pause.png*/;
+}
+
+nav.eb-nav #flipsound {
+    background-image: url("img/e-book/sound_on.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/sound_on.png*/;
+}
+
+nav.eb-nav #flipsound.wowbook-disabled {
+    background-image: url("img/e-book/sound_off.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/sound_off.png*/;
+}
+
+nav.eb-nav #thumbs {
+    background-image: url("img/e-book/thumbs.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/thumbs.png*/;
+    background-position: 15px 9px;
+    padding-left: 53px;
+    width: 59px;
+}
+
+nav.eb-nav #fullscreen {
+    background-image: url("img/e-book/fullscreen_on.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/fullscreen_on.png*/;
+}
+
+nav.eb-nav #fullscreen.wowbook-disabled {
+    background-image: url("img/e-book/fullscreen_off.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/fullscreen_off.png*/;
+}
+
+nav.eb-nav a:hover {
+    background-color: #2C2C2C;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, #f0f0f0));
+    background-image: -webkit-linear-gradient(top, #555555, #222222);
+    background-image: -moz-linear-gradient(top, #555555, #222222);
+    background-image: -ms-linear-gradient(top, #555555, #222222);
+    background-image: -o-linear-gradient(top, #555555, #222222);
+    background-image: linear-gradient(top, #555555, #222222);
+}
+
+nav.eb-nav a:active,
+nav.eb-nav a:hover,
+nav.eb-nav a {
+    outline: none;
+}
+
+nav.eb-nav ul li i {
+    float: left;
+    display: inline-block;
+    width: 1px;
+    height: 50px;
+    margin: 0 8px;
+    display: inline;
+    background: url("img/e-book/line-img.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/line-img.png*/ no-repeat top left;
+}
+
+#eb-container {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+    height: auto;
+    max-width: 990px;
+    margin: auto;
+    position: relative;
+    padding-bottom: 20px;
+    display: block;
+    z-index: 9998;
+}
+
+.wowbook-page-content {
+    padding: 1em;
+}
+
+#book-main {
+    clear: both;
+    position: relative;
+    margin-top: 20px;
+    z-index: 887;
+}
+
+#click_to_open {
+    position: absolute;
+    right: 25%;
+    margin-right: -165px;
+    top: 50%;
+    margin-top: -50px;
+}
+
+.js #features {
+    margin-left: -12000px;
+}
+
+.wowbook-thumbnails {
+    background: none repeat scroll 0 0 #888;
+    background: none repeat scroll 0 0 rgba(128, 128, 128, 0.48);
+    border-top: 1px solid white;
+    border-top-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid gray;
+    border-bottom-color: rgba(64, 64, 64, 0.5);
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.48);
+	
+}
+
+.wowbook-horizontal.wowbook-thumbnails {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.wowbook-vertical .wowbook-thumbnail {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#cover {
+    background-color: #000;
+    border: 1px red solid;
+    /* background: #ffffff url("img/e-book/cover.jpg") no-repeat;*/
+    background-size: 100% 100%;
+}
+
+#thumbs_holder {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: auto;
+    left: 0;
+    z-index: 10000;
+}
+
+#thumbs_holder .wowbook-thumbnails {
+    background: none repeat scroll 0 0 #222;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
+    border-top: 1px solid white;
+    border-top-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid gray;
+    border-bottom-color: rgba(64, 64, 64, 0.5);
+    box-shadow: 0 0 20px #aa2b2b;
+    padding: 10px 0;
+    position: relative;
+}
+
+#thumbs_holder .wowbook-button {
+    background-color: #AA2B2B;
+}
+
+.wowbook {
+    position: relative;
+    zoom: 1;
+}
+
+.wowbook-page {
+    zoom: 1;
+}
+
+.wowbook-page-content {
+    position: absolute;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.wowbook-loading .wowbook-page-content {
+    background-image: url("img/e-book/loading.gif")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/loading.gif*/;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+img.wowbook-lazy {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+/* marker class */
+
+.wowbook-left {}
+
+.wowbook-right {}
+
+.wowbook-disabled {}
+
+.wowbook-handle {
+    cursor: pointer;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 50px;
+    z-index: 10000;
+    /* without this Chrome will mess the zindex of hardcover when it flips, making
+	   the cover to jump when the "curl page corner on hover" is enabled */
+    -webkit-transform: translate3d(0px, 0px, 10000px);
+}
+
+.wowbook-handle.wowbook-disabled {
+    display: none;
+}
+
+.wowbook-unselectable {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.wowbook-page-content.wowbook-double-page {
+    padding: 0;
+}
+
+
+/* shadows */
+
+.wowbook-shadow-clipper {
+    position: absolute;
+    overflow: hidden;
+    z-index: 999;
+    /* 1 a menos do que o verso da pagina sendo foldada */
+    zoom: 1;
+    -webkit-backface-visibility: hidden;
+    /* eliminate jagged edges */
+}
+
+.wowbook-shadow-container {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    /* 1 a menos do que o verso da pagina sendo foldada */
+    zoom: 1;
+}
+
+.wowbook-shadow-internal {
+    background: url("img/e-book/shadow_internal_fold.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/shadow_internal_fold.png*/ repeat-y;
+    height: 500px;
+    width: 200px;
+    position: absolute;
+    zoom: 1;
+    -webkit-backface-visibility: hidden;
+    /* eliminate jagged edges */
+}
+
+.wowbook-shadow-fold {
+    background: url("img/e-book/shadow_fold.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/shadow_fold.png*/ right top repeat-y;
+    height: 500px;
+    width: 100px;
+    position: absolute;
+    zoom: 1;
+    -webkit-backface-visibility: hidden;
+    /* eliminate jagged edges */
+}
+
+.wowbook-shadow-fold-flipped {
+    background-image: url("img/e-book/shadow_fold_flip_h.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/shadow_fold_flip_h.png*/;
+}
+
+.wowbook-fold-gradient {
+    background: url("img/e-book/fold_gradient.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/fold_gradient.png*/ right top repeat-y;
+    height: 500px;
+    width: 125px;
+    position: absolute;
+    top: 0;
+    zoom: 1;
+    -webkit-backface-visibility: hidden;
+    /* eliminate jagged edges */
+}
+
+.wowbook-fold-gradient-flipped {
+    background-image: url("img/e-book/fold_gradient_flip_h.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/fold_gradient_flip_h.png*/;
+}
+
+.wowbook-fold-gradient-container {
+    position: absolute;
+    z-index: 1001;
+    /* 1 a mais que o verso da pagina sendo foldada */
+}
+
+.wowbook-gutter-shadow {
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    top: 0;
+}
+
+.wowbook-left .wowbook-gutter-shadow {
+    background: url("img/e-book/gutter_shadow_left.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/gutter_shadow_left.png*/ right top repeat-y;
+    right: 0;
+    width: 70px;
+}
+
+.wowbook-right .wowbook-gutter-shadow {
+    background: url("img/e-book/gutter_shadow_right.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/gutter_shadow_right.png*/ right top repeat-y;
+    left: 0;
+}
+
+.wowbook-hard-page-shadow {
+    background: #888;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    /* 1 a menos do que o verso da pagina sendo foldada */
+}
+
+.wowbook-page-number {
+    bottom: 0;
+    padding-bottom: 0.3em;
+    position: absolute;
+}
+
+.wowbook-left .wowbook-page-number {
+    left: 0;
+    padding-left: 0.5em;
+}
+
+.wowbook-right .wowbook-page-number {
+    right: 0;
+    padding-right: 0.5em;
+}
+
+.wowbook-left .wowbook-page-number,
+.wowbook-right .wowbook-page-number {
+    display: none;
+}
+
+.wowbook-book-shadow {
+    -moz-box-shadow: 0 0 7px #666;
+    -ms-box-shadow: 0 0 7px #666;
+    -webkit-box-shadow: 0 0 7px #666;
+    -o-box-shadow: 0 0 7px #666;
+    box-shadow: 0 0 7px #666;
+    /* if you change this, change the .wowbook-hard-page-shadow too */
+}
+
+.wowbook-hard-page-shadow {
+    background: #888;
+    box-shadow: 0 0 2px 0px #666;
+    background: rgba(96, 96, 96, 0.5);
+    position: absolute;
+    top: 0;
+    z-index: 999;
+}
+
+.wowbook-page-holded {}
+
+.wowbook-page-holded object {
+    /* visibility: hidden; */
+}
+
+.wowbook {
+    color: #333;
+}
+
+.wowbook-page-content {
+    background: white;
+}
+
+.wowbook-left .wowbook-gutter-shadow {
+    background-image: url("img/e-book/page_left_background.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/page_left_background.png*/;
+    opacity: 0.5;
+    width: 60px;
+}
+
+.wowbook-right .wowbook-gutter-shadow {
+    background-image: url("img/e-book/page_right_background.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/page_right_background.png*/;
+    background-position: 0 0;
+    width: 75px;
+}
+
+
+/* Thumbnails */
+
+.wowbook-thumbnails {
+    background: #fff;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    image-rendering: optimizeQuality;
+    z-index: 888;
+}
+
+.wowbook-thumbnails .wowbook-clipper {
+    overflow: hidden;
+    position: relative;
+}
+
+.wowbook-thumbnails ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.wowbook-thumbnails .wowbook-button {
+    background: none no-repeat 50% 50% #333;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.wowbook-thumbnail {
+    cursor: pointer;
+    display: inline-block;
+    *display: inline;
+    /* for IE7 */
+    zoom: 1;
+    /* for IE7 */
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+}
+
+
+/* BUGFIX. IE8 apparently ignores background-position
+   when zoom<>1 is applied and the element has position:absolute */
+
+.wowbook-thumbnail .wowbook-page-content {
+    position: relative;
+}
+
+
+/*.wowbook-thumbnail.wowbook-left {
+	margin-left: 1em;
+}*/
+
+.wowbook-thumbnail.wowbook-right {
+    padding-right: 1em;
+    border-right: 1px #999 dotted;
+    margin-right: 1em;
+}
+
+.wowbook-overlay {
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100000;
+}
+
+
+/* Thumbnails - horizontal */
+
+.wowbook-horizontal.wowbook-thumbnails {
+    width: 100%;
+}
+
+.wowbook-horizontal.wowbook-thumbnails .wowbook-clipper {
+    height: 100%;
+    position: relative;
+    margin: 0 40px;
+    /* margin is the width of the buttons */
+}
+
+.wowbook-horizontal.wowbook-thumbnails ul {
+    display: inline-block;
+    *display: inline;
+    /* IE7 */
+    *zoom: 1;
+    /* IE7 */
+    white-space: nowrap;
+}
+
+.wowbook-horizontal.wowbook-thumbnails .wowbook-button {
+    width: 30px;
+    height: 100%;
+    background-image: url("img/e-book/arrow_left.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/arrow_left.png*/;
+}
+
+.wowbook-horizontal.wowbook-thumbnails .wowbook-next.wowbook-button {
+    left: auto;
+    right: 0;
+    background-image: url("img/e-book/arrow_right.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/arrow_right.png*/;
+}
+
+.wowbook-horizontal .wowbook-thumbnail {
+    /* without this, the "nowrap" value set in the "ul" will
+	   be inherited and (probably)	mess with your thumbnails */
+    white-space: normal;
+    /* BUT IE7 NEED THIS */
+    *white-space: nowrap;
+}
+
+.wowbook-horizontal .wowbook-thumbnail .wowbook-page-content {
+    /* AGAIN, IE7 NEED THIS */
+    *white-space: normal;
+}
+
+
+/* Thumbnails - vertical */
+
+.wowbook-vertical.wowbook-thumbnails {
+    display: inline-block;
+    height: 100%;
+}
+
+.wowbook-vertical.wowbook-thumbnails .wowbook-clipper {
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    /* this value is the height of the buttons */
+}
+
+.wowbook-vertical.wowbook-thumbnails .wowbook-button {
+    height: 30px;
+    width: 100%;
+    background-image: url("img/e-book/arrow_up.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/arrow_up.png*/;
+}
+
+.wowbook-vertical.wowbook-thumbnails .wowbook-next.wowbook-button {
+    bottom: 0;
+    top: auto;
+    background-image: url("img/e-book/arrow_down.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/e-book/arrow_down.png*/;
+}
+
+.wowbook-vertical .wowbook-thumbnail.wowbook-right {
+    margin-right: 0;
+}
+
+.wowbook-vertical .wowbook-thumbnail:first-child {
+    margin-left: 50%;
+}
+
+/*#eb-detailed .fancybox-overlay {
+    z-index: 1100000
+}*/
+.wowbook-horizontal{background-color:#eaeaea;}
+#ebClose { /* position:absolute; bottom: 160px; right: 0; display:none;*/float:right;margin-top:-43px;width:30px;height:30px;line-height:30px;text-align:center;background-color:red;font-size:24px;color:#fff;cursor: pointer;}
+
+
+
+/* other book img  */
+.other-book {padding-top: 20px;display:block; width: 100%}
+.other-book .ebook-list-box {
+    display: inline-block;
+    padding-left: 0px;
+}
+
+.other-book .ebook-list-box .bk-list li {
+    margin-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-left: 29px\9;
+    padding-right: 29px\9;
+}
+
+.other-book .select {font-size: 16px;font-weight: normal;}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wow_book</title>
+    <link rel="stylesheet" href="static/css/e-book.css">
+</head>
+<body>
+<div id="eb-container" class="clearfix">
+    <nav class="eb-nav clearfix">
+        <ul>
+            <li>
+                <a id='home' href="e-learning-centre-copy.html" title='电子教程'>返回</a>
+            </li>
+            <li>
+                <a id='zoomin' href="#" title='放大'>放大</a>
+            </li>
+            <li>
+                <a id='zoomout' href="#" title='缩小'>缩小</a>
+                <i></i>
+            </li>
+            <li>
+                <a id='first' href="#" title='首页'>首页</a>
+            </li>
+            <li>
+                <a id='back' href="#" title='上一页'>上一页</a>
+            </li>
+            <li>
+                <a id='next' href="#" title='下一页'>下一页</a>
+            </li>
+            <li>
+                <a id='last' href="#" title='尾页'>尾页</a>
+                <i></i>
+            </li>
+            <li>
+                <a id='slideshow' href="#" title='自动翻页'>自动翻页</a>
+            </li>
+            <!--  <li>
+                    <a id='flipsound' href="#" title='声音'>声音</a>
+                </li> -->
+            <!-- <li>
+                    <a id='fullscreen' href="#" title='全屏'>全屏</a>
+                </li> -->
+            <li>
+                <a id='thumbs' href="#" title='缩略图'>缩略图</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="book-main" class="clearfix">
+        <img id='click_to_open' src="static/css/img/e-book/click_to_open.png" alt='点击进入'/>
+        <div id='features'>
+            <div>
+                <img src="static/images/e-book/sttrading/1.jpg" alt="1" width="468" title="1"/>
+            </div>
+            <div>
+                <img src="static/images/e-book/sttrading/2.jpg" alt="2" width="468" title="2"/>
+            </div>
+            <div>
+                <img src="static/images/e-book/sttrading/3.jpg" alt="3" width="468" title="3"/>
+            </div>
+            <div>
+                <img src="static/images/e-book/sttrading/4.jpg" alt="4" width="468" title="4"/>
+            </div>
+            <div>
+                <img src="static/images/e-book/sttrading/5.jpg" alt="5" width="468" title="5"/>
+            </div>
+            <div>
+                <img src="static/images/e-book/sttrading/6.jpg" alt="6" width="468" title="6"/>
+            </div>
+            <div>
+                <img src="static/images/e-book/sttrading/7.jpg" alt="7" width="468" title="7"/>
+            </div>
+            <div>
+                <img src="static/images/e-book/sttrading/8.jpg" alt="8" width="468" title="8"/>
+            </div>
+            <div>
+                <img src="static/images/e-book/sttrading/9.jpg" alt="9" width="468" title="9"/>
+            </div>
+            <div>
+                <img src="static/images/e-book/sttrading/10.jpg" alt="10" width="468" title="10"/>
+            </div>
+            <div>
+                <img src="static/images/e-book/sttrading/11.jpg" alt="11" width="468" title="11"/>
+            </div>
+            <div>
+                <img src="static/images/e-book/sttrading/12.jpg" alt="12" width="468" title="12"/>
+            </div>
+            <div>
+                <img src="static/images/e-book/sttrading/13.jpg" alt="13" width="468" title="13"/>
+            </div>
+            <div>
+                <img src="static/images/e-book/sttrading/14.jpg" alt="14" width="468" title="14"/>
+            </div>
+            <div>
+                <img src="static/images/e-book/sttrading/15.jpg" alt="15" width="468" title="15"/>
+            </div>
+            <div>
+                <img src="static/images/e-book/sttrading/16.jpg" alt="16" width="468" title="16"/>
+            </div>
+        </div>
+        <!-- features -->
+    </div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="static/js/wow_book.min.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#features').wowBook({
+            height: 692,
+            width: 995,
+            flipSoundPath: "static/images/e-book/",
+            mouseWheel: "zoom",
+            centeredWhenClosed: true,
+            hardcovers: true,
+            turnPageDuration: 500,
+            slideShowDelay: 5000,
+            numberedPages: [1, -2],
+            controls: {
+                zoomIn: '#zoomin',
+                zoomOut: '#zoomout',
+                next: '#next',
+                back: '#back',
+                first: '#first',
+                last: '#last',
+                slideShow: '#slideshow',
+                flipSound: '#flipsound',
+                thumbnails: '#thumbs',
+                fullscreen: '#fullscreen'
+            },
+            zoomStep: 0.1,
+            scaleToFit: "#eb-container",
+            thumbnailsPosition: 'bottom'
+        }).css({
+            'display': 'none',
+            'margin': 'auto'
+        }).fadeIn(1000);
+
+        //点击半闭BOOK列表
+        /*$("#ebClose").live("click", function() {
+            $('.wowbook-thumbnails').hide();
+        });*/
+    });
+</script>
+</body>
+</html>

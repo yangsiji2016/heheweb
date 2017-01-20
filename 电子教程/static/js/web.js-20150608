@@ -1,0 +1,315 @@
+// JavaScript Document
+$(document).ready(function($){
+	//主菜单
+	$("#nav-con li").hover(function(){
+				$(this).addClass("hover");
+				$(this).find('.two-menu').show();				
+			},function(){
+				$(this).removeClass('hover'); 
+				$(this).find('.two-menu').hide();	
+				//重新选择高亮栏目
+				$.fn.setNavStatus();			
+			});
+			
+	//语言选择		
+	$(".language").click(function () {
+			$(".language-select").toggle();		
+	  });
+	  $(".language"). mouseleave(function(){
+		$(".language-select").hide();
+	  });
+	 
+	  
+	  //个人信息
+	$(".profile").hover(function () {
+			
+			$(".profile-select").toggle();	
+				
+	  });  
+	  $(".profile"). mouseleave(function(){
+		$(".profile-select").hide();
+	  }); 
+	  $(".profile div").hover(function(){
+			 $(this).addClass("over");
+			},
+			function(){
+				$(this).removeClass("over");
+			}
+		)
+ 
+	  
+	  //
+	  //表格鼠标移上去变换底色
+	$(".economic-tbody tr").hover(
+		function(){						
+			$(this).addClass("over");
+		},
+		function(){
+			$(this).removeClass("over");
+		}
+	);
+	
+	$(".market-trend-tbody tr").hover(
+		function(){						
+			$(this).addClass("over");
+		},
+		function(){
+			$(this).removeClass("over");
+		}
+	);
+	
+	//切换选项卡
+	$(".market-trend-tab li").hover(
+		function(){		
+			$(this).addClass("over");
+		},
+		function(){
+			$(this).removeClass("over");
+		}
+	);
+	
+	//
+	$(".tab-item").hover(
+		function(){		
+			$(this).addClass("over");
+		},
+		function(){
+			$(this).removeClass("over");
+		}
+	);
+	
+	//微信
+	$('.wx').hover(function(){
+		$(this).find(".fudong").show();
+	},function(){
+		$(this).find(".fudong").hide();
+	}
+	
+	);
+	
+	//入金方式
+	$('.funding-tab li').click(function(){
+		$(this).addClass('select');
+		$(this).siblings().removeClass('select');	
+		var index= $(this).index();
+		$('.deposit-con').each(function(){
+			$(this).hide();
+		});
+		$(".deposit-con:eq("+index+")").show();
+	});
+	
+	//入金收款银行
+	$('.wire-menu a').click(function(){
+		$(this).parent().addClass('current');
+		$(this).parent().siblings().removeClass('current');	
+		var index= $(this).parent().index();
+		$('.wire-con').each(function(){
+			$(this).hide();
+		});
+		$(".wire-con:eq("+index+")").show();
+	});
+	
+		//产品特性例子
+	$('.product-tab li').click(function(){
+		$(this).addClass('select');
+		$(this).siblings().removeClass('select');	
+		var index= $(this).index();
+		$('.product-tab-body').each(function(){
+			$(this).hide();
+		});
+		$(".product-tab-body:eq("+index+")").show();
+	});
+	
+
+	  
+});
+
+
+/**
+ * 当前栏目高亮
+ * silva.lim 2014-03-19
+ */
+$(document).ready(function(){
+	/**
+	 * [函数] 选择高亮栏目
+	 */
+	$.fn.setNavStatus = function(){
+		//当前栏目, eg: about-us.html
+		var _nav = window.location.pathname.replace(/\/(.+)\//g, "");
+		//内容页固定标示
+		switch(_nav){
+			case 'http://www.aetoscg.com/cn/static/js/company-news-content.html': 
+				_nav = 'http://www.aetoscg.com/cn/static/js/company-news.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/news-content.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/news.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/trading-hours2.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/trading-hours.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/trading-hours-winter.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/trading-hours-winter.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/trading-hours-summer.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/trading-hours-winter.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/indices.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/stocks.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/recruitment-australia-1.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/recruitment.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/recruitment-australia-2.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/recruitment.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/recruitment-australia-3.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/recruitment.html';
+				break;			
+			case 'http://www.aetoscg.com/cn/static/js/recruitment-australia-4.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/recruitment.html';
+				break;			
+			case 'http://www.aetoscg.com/cn/static/js/recruitment-uk-1.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/recruitment.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/recruitment-uk-2.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/recruitment.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/recruitment-china-1.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/recruitment.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/recruitment-china-2.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/recruitment.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/tc-free.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/tc.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/tc-about.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/tc.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/aetos-option-ago.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/aetos-option.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/commodities-wheat.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/commodities.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/commodities-corn.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/commodities.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/commodities-soyabean.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/commodities.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/commodities-cotton.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/commodities.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/commodities-coffee.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/commodities.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/commodities-sugar.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/commodities.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/commodities-cocoa.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/commodities.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/commodities-soyabeanoil.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/commodities.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/commodities-cattle.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/commodities.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/energy-oil.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/energy.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/energy-naturalgas.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/energy.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/metals-silver.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/metals.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/metals-gold.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/metals.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/metals-copper.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/metals.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/metals-platinum.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/metals.html';
+				break;
+			case 'http://www.aetoscg.com/cn/static/js/metals-palladium.html':
+				_nav = 'http://www.aetoscg.com/cn/static/js/metals.html';
+				break;
+			defalut: 
+				break;
+		}
+
+		//去掉左侧菜单当前高亮栏目,重新选择
+		$('#submenu li a').removeClass('curr');
+		$('#submenu li a[href$="'+_nav+'"]').addClass('curr');
+
+		//判断当前栏目,并将父类添加高亮属性
+		//$('#nav-con li').removeClass('hover');
+		$('#nav-con').find('a[href^="'+_nav+'"]').parentsUntil('.tow-menu').parent('li').addClass('hover');
+	}
+	//选择高亮栏目
+	$.fn.setNavStatus();
+	
+	//chose_language-----------------------
+	$("http://www.aetoscg.com/cn/static/js/ul.language-select .ar").click(function(e){
+		var _lang = $(this).attr('class');
+		e.preventDefault();
+		var hrefUrl = location.href;
+		
+		if(hrefUrl.indexOf("/cn/") != -1){
+			url = hrefUrl.replace(/\/cn\//g,"/ar/");
+		}
+		window.location.href = url;
+	});
+	
+	$("http://www.aetoscg.com/cn/static/js/ul.language-select .en").click(function(e){
+		var _lang = $(this).attr('class');
+		e.preventDefault();
+		var hrefUrl = location.href;
+		if(hrefUrl.indexOf("/cn/") != -1){
+			url = hrefUrl.replace(/\/cn\//g,"/en/");
+		}
+		window.location.href = url;
+	});
+	
+	$("http://www.aetoscg.com/cn/static/js/ul.language-select .tw").click(function(e){
+		var _lang = $(this).attr('class');
+		e.preventDefault();
+		var hrefUrl = location.href;
+		tw_change(hrefUrl);
+		/*if(hrefUrl.indexOf("/cn/") != -1){
+			url = hrefUrl.replace(/\/cn\//g,"/tw/");
+		}
+		window.location.href = url;*/
+	});
+
+});
+
+function tw_change(path){
+	if(path.indexOf("http://accounts.html/")!=-1 || path.indexOf("http://standard-accounts.html/")!=-1 || path.indexOf("http://mini-accounts.html/")!=-1 || path.indexOf("http://www.aetoscg.com/cn/static/js/institutional-accounts.html")!=-1){
+		/(.+)\/(.+)/.test(path); 
+		path = path.replace(RegExp.$2,"http://www.aetoscg.com/cn/static/js/index.html");
+		window.location.href = path;
+	}else{
+		var hrefUrl = location.href;
+		if(hrefUrl.indexOf("/cn/") != -1){
+		url = hrefUrl.replace(/\/cn\//g,"/tw/");
+		}
+		window.location.href = url;
+	}
+}
+
+
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+
+
+function getCookie(name)//取cookies函数       
+{
+    var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+     if(arr != null) return unescape(arr[2]); return null;
+}

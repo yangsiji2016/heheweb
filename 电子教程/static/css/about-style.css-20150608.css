@@ -1,0 +1,1045 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+#main p {
+    line-height: 180%;
+}
+
+#main ul li {
+    line-height: 160%;
+}
+
+.why_bg {
+    width: auto;
+    min-height: 97px;
+    margin: 10px 0 25px 20px;
+    background: url("img/oaquan.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/oaquan.jpg*/ no-repeat;
+    clear: both;
+    padding-left: 110px;
+}
+
+.a1 {
+    background-position: 0 0;
+}
+
+.a2 {
+    background-position: 0 -293px;
+}
+
+.a3 {
+    background-position: 0 -596px;
+}
+
+.a4 {
+    background-position: 0 -890px;
+}
+
+.a5 {
+    background-position: 0 -1192px;
+}
+
+.a6 {
+    background-position: 0 -1510px;
+}
+
+.a7 {
+    background-position: 0 -1807px;
+}
+
+.cnews {
+    width: 100%;
+    margin: 10px 0 20px 0;
+    float: left;
+}
+
+.cnews .limg {
+    background: url("img/c-news.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/c-news.jpg*/ no-repeat;
+    width: 100px;
+    height: 100px;
+    margin-right: 25px;
+    float: left;
+}
+
+.cnews .rcont {
+    float: left;
+    padding-bottom: 15px;
+    border-bottom: 1px #CCCCCC solid;
+    width: 622px;
+}
+
+.cnews .rcont .fonw {
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 30px;
+    display: block;
+    position: relative;
+}
+
+.fonw .feitime {
+    position: absolute;
+    width: 80px;
+    font-size: 12px;
+    color: #333;
+    right: 0;
+    top: 0;
+}
+
+.safety {
+    width: 100%;
+    margin: 0 0 5px 0;
+    float: left;
+    height: 130px;
+}
+
+.safety .limg1 {
+    background: url("img/safetybg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/safetybg.jpg*/ 0 0 no-repeat;
+    width: 229px;
+    height: 127px;
+    margin-right: 15px;
+    float: left;
+}
+
+.safety .limg2 {
+    background: url("img/safetybg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/safetybg.jpg*/ 0 -140px no-repeat;
+    width: 229px;
+    height: 127px;
+    margin-right: 15px;
+    float: left;
+}
+
+.safety .limg3 {
+    background: url("img/safetybg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/safetybg.jpg*/ 0 -280px no-repeat;
+    width: 229px;
+    height: 127px;
+    margin-right: 15px;
+    float: left;
+}
+
+.safety .rcont .fonw {
+    font-size: 16px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.safety .rcont {
+    float: left;
+    width: 506px;
+}
+
+.safety .up1 {
+    padding-top: 1px;
+}
+
+.safety .up2 {
+    padding-top: 31px;
+}
+
+.safety .up3 {
+    padding-top: 17px;
+}
+
+.partnerslogo {
+    width: 752px;
+    height: 64px;
+    float: left;
+    background: #FFFFE6;
+    border: 1px #26688F solid;
+    margin: 10px 0 10px 0;
+    padding-top: 6px;
+}
+
+.partnerslogo .rcont {
+    float: right;
+    width: 360px;
+    height: 54px;
+}
+
+.partnerslogo .rcont .jiantou {
+    background: url("img/icon-2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-2.png*/ 0 -274px no-repeat;
+    position: absolute;
+    margin-left: 318px;
+    margin-top: 20px;
+    width: 21px;
+    height: 21px;
+}
+
+.partnerslogo .rcont a.linkkk {
+    background: url("img/icon-2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-2.png*/ 0 -134px no-repeat;
+    display: block;
+    height: 25px;
+    padding-left: 35px;
+    line-height: 25px;
+    font-size: 12px;
+}
+
+.partnerslogo .rcont a.linkkk:hover {
+    text-decoration: underline;
+}
+
+.partnerslogo .a1,
+.partnerslogo .a2,
+.partnerslogo .a3,
+.partnerslogo .a4,
+.partnerslogo .a5,
+.partnerslogo .a6,
+.partnerslogo .a7 {
+    background: url("img/partnersabg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/partnersabg.jpg*/ no-repeat;
+    width: 377px;
+    height: 54px;
+    line-height: 54px;
+    float: left;
+    border-right: 1px #CCCCCC dotted;
+    display: block;
+}
+
+.partnerslogo .a1 {
+    background-position: right 0;
+}
+
+.partnerslogo .a2 {
+    background-position: right -97px;
+}
+
+.partnerslogo .a3 {
+    background-position: right -194px;
+}
+
+.partnerslogo .a4 {
+    background-position: right -321px;
+}
+
+.partnerslogo .a5 {
+    background-position: right -454px;
+}
+
+.partnerslogo .a6 {
+    background-position: right -580px;
+}
+
+.partnerslogo .a7 {
+    background-position: right -695px;
+}
+
+.mspan {
+    float: left;
+    width: 370px;
+    text-align: center;
+}
+
+.mspan1 {
+    float: none;
+}
+
+.deposit-tab {
+    height: 33px;
+    margin: 15px 0 0 0;
+    padding-left: 20px;
+    border-bottom: 1px solid #999;
+    padding-left: 35%;
+}
+
+.deposit-tab li {
+    height: 28px;
+    line-height: 28px;
+    background: #eaeaea;
+    text-align: center;
+    float: left;
+    padding: 0 25px;
+    margin: 5px 10px 0 0;
+    border: 1px solid #999;
+    border-bottom: none;
+    font-size: 17px;
+    font-weight: bold;
+    display: inline;
+    cursor: pointer;
+    position: relative;
+}
+
+.deposit-tab li span {
+    width: 10px;
+    height: 4px;
+    background: url("img/deposit-tab-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/deposit-tab-bg.png*/ left top no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 32px;
+    display: none;
+    margin-left: -5px;
+}
+
+.deposit-tab li a {
+    white-space: nowrap;
+    color: #999;
+}
+
+.deposit-tab li.select span,
+.deposit-tab li.over span {
+    display: block;
+}
+
+.deposit-tab li.select,
+.deposit-tab li.over {
+    background: #26688F;
+    color: #fff;
+    height: 32px;
+    line-height: 32px;
+    margin-top: 0;
+}
+
+.deposit-tab li.select a {
+    color: #fff;
+}
+
+#ing,
+#last {
+    margin: 20px 0 20px 0;
+}
+
+.zxtitle {
+    background: url("img/zxxxbgtime.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/zxxxbgtime.jpg*/ 0 3px no-repeat;
+    padding-left: 58px;
+    height: 23px;
+    line-height: 23px;
+}
+
+.up .zxtitle {
+    background-position: 0 3px;
+}
+
+.mid .zxtitle {
+    background-position: -184px -27px;
+}
+
+.last .zxtitle {
+    background-position: -360px -67px;
+}
+
+.zxcon,
+.zxlastcon {
+    border-left: 1px #999999 solid;
+    margin: 0 0 0 5px;
+    padding-left: 40px;
+    width: 709px;
+    padding-bottom: 30px;
+    display: inline-block;
+}
+
+.zxlastcon {
+    border: none;
+    margin-left: 6px;
+    padding-bottom: 0;
+}
+
+.zxcon p,
+.zxlastcon p {
+    margin: 0;
+}
+
+.taitou {
+    font-size: 22px;
+    line-height: 30px;
+    margin-left: 50px;
+    color: #CCCCCC;
+    width: 100%;
+}
+
+.left1 {
+    font-size: 12px;
+    line-height: 22px;
+    color: #FFF;
+    float: left;
+    width: 82px;
+}
+
+.font14 {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: bold;
+    float: left;
+    width: 355px;
+    padding-left: 10px;
+}
+
+.rt {
+    float: right;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.tm {
+    width: 240px;
+}
+
+.lt {
+    float: left;
+    text-align: right;
+}
+
+.content {
+    float: left;
+    width: 604px;
+    height: auto;
+    padding-left: 20px;
+    display: block;
+    text-align: justify;
+}
+
+.leftimg1,
+.leftimg2,
+.leftimg3,
+.leftimg4,
+.leftimg5,
+.leftimg6,
+.leftimg7,
+.leftimg8,
+.leftimg9,
+.leftimg10 {
+    width: 85px;
+    height: 92px;
+    float: left;
+    display: inline;
+}
+
+.leftimg1 {
+    background: url("img/zxxxhdbg.gif")/*tpa=http://www.aetoscg.com/cn/static/css/img/zxxxhdbg.gif*/ 2px -85px no-repeat;
+}
+
+.leftimg2 {
+    background: url("img/zxxxhdbg.gif")/*tpa=http://www.aetoscg.com/cn/static/css/img/zxxxhdbg.gif*/ 2px -188px no-repeat;
+}
+
+.leftimg3 {
+    background: url("img/zxxxhdbg.gif")/*tpa=http://www.aetoscg.com/cn/static/css/img/zxxxhdbg.gif*/ 2px 15px no-repeat;
+}
+
+.leftimg4 {
+    background: url("img/zxxxhdbg.gif")/*tpa=http://www.aetoscg.com/cn/static/css/img/zxxxhdbg.gif*/ 2px -300px no-repeat;
+}
+
+.leftimg5 {
+    background: url("img/zxxxhdbg.gif")/*tpa=http://www.aetoscg.com/cn/static/css/img/zxxxhdbg.gif*/ 2px -395px no-repeat;
+}
+
+.leftimg6 {
+    background: url("img/zxxxhdbg.gif")/*tpa=http://www.aetoscg.com/cn/static/css/img/zxxxhdbg.gif*/ 2px -477px no-repeat;
+}
+
+.leftimg7 {
+    background: url("img/zxxxhdbg.gif")/*tpa=http://www.aetoscg.com/cn/static/css/img/zxxxhdbg.gif*/ 2px -557px no-repeat;
+}
+
+.leftimg8 {
+    background: url("img/zxxxhdbg.gif")/*tpa=http://www.aetoscg.com/cn/static/css/img/zxxxhdbg.gif*/ 2px -662px no-repeat;
+}
+
+.leftimg9 {
+    background: url("img/zxxxhdbg.gif")/*tpa=http://www.aetoscg.com/cn/static/css/img/zxxxhdbg.gif*/ 2px -763px no-repeat;
+}
+
+.leftimg10 {
+    background: url("img/zxxxhdbg.gif")/*tpa=http://www.aetoscg.com/cn/static/css/img/zxxxhdbg.gif*/ 2px -880px no-repeat;
+}
+
+.now,
+.hot,
+.closed {
+    background: url("img/zxxxbt.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/zxxxbt.png*/ no-repeat;
+    width: 36px;
+    height: 15px;
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+.now {
+    background-position: 0 -258px;
+}
+
+.hot {
+    background-position: -52px -258px;
+}
+
+.closed {
+    background-position: -103px -258px;
+}
+
+.rbutton,
+.huibutton,
+.lanbutton,
+.jinbutton {
+    height: 30px;
+    font-weight: ;
+    line-height: 20px;
+    background: url("img/zxxxbt.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/zxxxbt.png*/ repeat-x;
+    padding: 0 0 0 20px;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 15px;
+    color: #FFF;
+    -margin-right: 5px;
+}
+
+.rbutton span,
+.huibutton span,
+.lanbutton span,
+.jinbutton span {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    background: url("img/zxxxbt.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/zxxxbt.png*/ repeat-x;
+    color: #fff;
+    font-size: 12px;
+    padding: 0 20px 0 0;
+    display: inline;
+}
+
+.rbutton {
+    background-position: left 1px;
+}
+
+.rbutton span {
+    background-position: right 1px;
+}
+
+.huibutton {
+    background-position: left -66px;
+    color: #333
+}
+
+.huibutton span {
+    background-position: right -66px;
+    color: #333
+}
+
+.lanbutton {
+    background-position: left -133px;
+}
+
+.lanbutton span {
+    background-position: right -133px;
+}
+
+.jinbutton {
+    background-position: left -199px;
+}
+
+.jinbutton span {
+    background-position: right -199px;
+}
+
+
+/* western-sydney-wanderers */
+
+.wsw-share {
+    float: right;
+    margin-top: -30px;
+}
+
+.wsw-title,
+.wsw-banner {
+    float: left;
+    width: 752px;
+    display: block;
+}
+
+.wsw-title {
+    margin-top: 35px;
+}
+
+.wsw-title .wsw-left-logo {
+    float: left;
+    margin-left: 100px;
+    width: 180px;
+    height: 51px;
+}
+
+.wsw-title h3 {
+    float: left;
+    padding-left: 20px;
+    font-size: 24px;
+    padding-top: 22px;
+    line-height: 120%
+}
+
+.wsw-banner {
+    margin-top: 30px;
+    float: left;
+}
+
+.wsw-theme {
+    display: block;
+    width: 100%;
+    text-align: right;
+    font-weight: 700;
+    float: left;
+    font-size: 28px;
+    line-height: 120%;
+    margin-top: 20px;
+}
+
+.wsw-theme span {
+    font-size: 22px;
+    padding: 0 10px;
+}
+
+.wsw-theme b {
+    color: #D8222D;
+    font-weight: 700;
+}
+
+.wsw-separate {
+    float: left;
+    width: 752px;
+    margin: 30px 0 30px 0;
+    height: 7px;
+    background: url("../images/wsw-separate.jpg")/*tpa=http://www.aetoscg.com/cn/static/images/wsw-separate.jpg*/ no-repeat top left;
+}
+
+.wsw-focus-cen {
+    float: left;
+    width: 752px;
+    position: relative;
+}
+
+.wsw-focus-cen ul.slides {
+    position: relative;
+    width: 100%;
+}
+
+.wsw-focus-cen ul.slides li {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+}
+
+.wsw-focus-cen ul.slides li img {
+    width: 752px;
+    height: 385px;
+}
+
+
+/* .wsw-focus-cen ul.slides li a{ display:block; width:100%; height:100%;} */
+
+.wsw-focus-cen .flex-control-nav {
+    position: absolute;
+    top: 385px;
+    left: 0;
+    width: 752px;
+    z-index: 9;
+	    background: #ddd;
+}
+
+.wsw-focus-cen .flex-control-nav li {
+    display: inline-block;
+    width: 150.4px;
+    height: 10px;
+    font-size: 0px;
+    *display: inline;
+    zoom: 1;
+    overflow: hidden;
+}
+
+.wsw-focus-cen .flex-control-nav li a {
+    display: inline-block;
+    width: 149.4px;
+    height: 10px;
+    line-height: 40px;
+    overflow: hidden;
+    background-color: #333333;
+    font-size: 0px;
+    *display: inline;
+    zoom: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-right: 1px #fff solid;
+}
+
+.wsw-focus-cen .flex-control-nav li:last-child a {
+    border-right: 1px #333333 solid;
+}
+
+.wsw-focus-cen .flex-control-nav .flex-active {
+    background-color: #D9232E
+}
+
+.wsw-focus-cen .flex-control-nav li:last-child a.flex-active {
+    border-right: 1px #D9232E solid;
+}
+
+.wsw-focus-cen .flexbtn {
+    width: 752px;
+    position: absolute;
+    left: 50%;
+    top: 192.5px;
+    margin-top: -27.5px;
+    margin-left: -376px;
+    display: none;
+}
+
+.wsw-focus-cen .flex-prev,
+.flex-next {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    margin-top: 0px;
+    background: url("img/lr.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/lr.png*/ no-repeat 0 0;
+    z-index: 9;
+    display: block;
+}
+
+.wsw-focus-cen .flex-prev {
+    left: 5px;
+}
+
+.wsw-focus-cen .flex-next {
+    right: 5px;
+    background-position: -45px 0px;
+}
+
+.wsw-focus-cen:hover .flexbtn {
+    display: block;
+}
+
+.wsw-focus-cen ul.slides li div.wsw-focus-cen-text {
+    margin-top: 30px;
+    height: 166px;
+    padding-right: 6px;
+    overflow-y: auto;
+}
+
+.wsw-about-t {
+    float: left;
+    width: 729px;
+    font-size: 18px;
+    line-height: 160%;
+    display: block;
+}
+
+.wsw-about-con {
+    float: left;
+    width: 729px;
+    font-size: 14px;
+    line-height: 160%
+}
+
+.wsw-video-content {
+    float: left;
+    margin-top: 35px;
+    width: 752px;
+    position: relative;
+}
+
+.wsw-video-content h4 {
+    font-size: 22px;
+    line-height: 120%;
+    float: left;
+    width: 752px;
+    text-align: right;
+    padding-bottom: 16px;
+    background: url("../images/wsw-separate.jpg")/*tpa=http://www.aetoscg.com/cn/static/images/wsw-separate.jpg*/ no-repeat bottom right;
+}
+
+.wsw-video-content .next,
+.wsw-video-content .prev {
+    position: absolute;
+    z-index: 2;
+}
+
+.wsw-video-content .prev {
+    top: 0;
+    left: 0;
+}
+
+.wsw-video-content .next {
+    top: 0;
+    left: 40px;
+}
+
+.wsw-video-content .next,
+.wsw-video-content .prev {
+    display: block;
+    width: 29px;
+    height: 29px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.wsw-video-content .prev {
+    background-image: url("../images/wsw-focus-left.jpg")/*tpa=http://www.aetoscg.com/cn/static/images/wsw-focus-left.jpg*/;
+}
+
+.wsw-video-content .next {
+    background-image: url("../images/wsw-focus-right.jpg")/*tpa=http://www.aetoscg.com/cn/static/images/wsw-focus-right.jpg*/;
+}
+
+.wsw-video-content .wsw-video-box {
+    float: left;
+    width: 752px;
+    margin-top: 20px;
+    height: 260px;
+    overflow: hidden;
+}
+
+.wsw-video-content .wsw-video-box ul li {
+    float: left;
+    width: 240px;
+    margin-right: 18px;
+}
+
+.wsw-video-content .wsw-video-box ul li img {
+    width: 240px;
+    height: 158px;
+}
+
+.wsw-video-content .wsw-video-box ul li p {
+    width: 240px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.wsw-video-content .wsw-video-box ul li:last-child {
+    margin-right: 0
+}
+
+.wsw-club-introduction {
+    float: left;
+    width: 752px;
+    margin-top: 35px;
+}
+
+.wsw-club-introduction h4 {
+    font-size: 22px;
+    line-height: 120%;
+    float: left;
+    width: 752px;
+    text-align: right;
+    padding-bottom: 16px;
+    background: url("../images/wsw-separate.jpg")/*tpa=http://www.aetoscg.com/cn/static/images/wsw-separate.jpg*/ no-repeat bottom right;
+}
+
+.wsw-club-introduction h4 b {
+    color: #D8212C
+}
+
+.wsw-club-introduction .wsw-club-banner {
+    position: relative;
+    width: 752px;
+    float: left;
+    display: block;
+    height: 70px;
+    margin-top: 20px;
+}
+
+.wsw-club-introduction .wsw-club-banner div {
+    position: absolute;
+    top: 0;
+    left: -15px;
+    background: url("../images/wsw-img.jpg")/*tpa=http://www.aetoscg.com/cn/static/images/wsw-img.jpg*/ no-repeat top left;
+    width: 784px;
+    height: 70px;
+}
+
+.wsw-club-introduction .wsw-club-banner div span {
+    float: left;
+    padding: 38px 0 0 395px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.wsw-club-introduction .wsw-club-cen {  
+    font-size: 14px;
+    line-height: 160%;
+    float: left;
+    width: 752px; 
+}
+
+.wsw-club-awards-adout {
+    float: left;
+    width: 752px;
+}
+
+.wsw-club-awards-adout .wsw-club-awards-row {
+    display: inline-table;
+    float: left;
+    width: 752px;
+    margin-top: 40px;
+    float: left;
+}
+
+.wsw-club-awards-adout .wsw-club-awards-icon {
+    display: table-cell;
+    width: 132px;
+    text-align: left;
+    vertical-align: top;
+    float: left;
+}
+
+.wsw-club-awards-adout .wsw-club-awards-detail {
+    float: left;
+    width: 752px;
+    padding-top: 15px;
+    vertical-align: top;
+}
+
+.wsw-club-awards-adout .wsw-awards-summary {
+    float: left;
+    display: table-cell;
+    width: 620px;
+    vertical-align: top;
+}
+
+.wsw-club-awards-adout .wsw-awards-summary h3 {
+    font-size: 22px;
+    color: #D8212C;
+    line-height: 120%
+}
+
+.wsw-club-awards-adout .wsw-awards-summary p {
+    font-size: 14px;
+    line-height: 160%
+}
+
+.wsw-club-awards-adout .wsw-club-awards-row .club-awards-detail-list {
+    display: inline-table;
+    float: left;
+    width: 752px;
+    margin-top: 10px;
+}
+
+.wsw-club-awards-adout .wsw-club-awards-row .club-awards-detail-list ul li {
+    float: left;
+    width: 376px;
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+.wsw-club-awards-adout .wsw-club-awards-row .club-awards-detail-list ul li h5 {
+    color: #D8212C;
+    font-size: 14px;
+}
+
+.wsw-club-awards-adout .wsw-club-awards-row .club-awards-detail-list ul li p {
+    font-size: 14px;
+}
+
+.wsw-club-awards-adout .wsw-club-awards-row .club-awards-detail-list ul li p span {
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    line-height: 100%;
+    background-color: #141009;
+    display: inline-block;
+    margin: 0 5px;
+    *display: inline;
+    zoom: 1;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.wsw-club-awards-adout .wsw-club-awards-row .club-awards-detail-list ul li p span.team-red {
+    background-color: #D51C37
+}
+
+.wsw-club-awards-adout .wsw-club-awards-row .club-awards-detail-list ul li.wsw-club-honor {
+    width: 752px;
+}
+
+.wsw-club-awards-adout .wsw-club-awards-row .club-awards-detail-list ul li .color-red {
+    color: #D8212C
+}
+
+.wsw-players-introduction {
+    float: left;
+    width: 753px;
+    margin-top: 30px;
+}
+
+.wsw-players-introduction h3 {
+    font-size: 22px;
+    color: #D8212C;
+    line-height: 120%;
+    display: block;
+}
+
+.wsw-players-introduction .wsw-players-introduction-row {
+    float: left;
+    width: 753px;
+    margin-top: 30px;
+}
+
+.wsw-players-introduction .wsw-players-summary {
+    float: left;
+    width: 753px;
+    height: 319px;
+    position: relative;
+}
+
+.wsw-players-introduction .wsw-players-summary .wsw-players-summary-con,
+.wsw-players-introduction .wsw-players-summary .wsw-players-name,
+.wsw-players-introduction .wsw-players-summary .wsw-partner-text {
+    position: absolute;
+}
+
+.wsw-players-introduction .wsw-players-summary .wsw-players-summary-con {
+    top: 50px;
+    left: 518px;
+}
+
+.wsw-players-introduction .wsw-players-summary .wsw-players-summary-con h4 {
+    color: #FFCC00;
+    line-height: 120%;
+    font-size: 22px;
+}
+
+.wsw-players-introduction .wsw-players-summary .wsw-players-summary-con p {
+    color: #fff;
+    font-size: 12px;
+    line-height: 160%
+}
+
+.wsw-players-introduction .wsw-players-summary .wsw-players-name {
+    top: 158px;
+    right: 42px;
+    text-align: right;
+}
+
+.wsw-players-introduction .wsw-players-summary .wsw-partner-text {
+    top: 285px;
+    left: 462px;
+    font-size: 19px;
+}
+
+.wsw-players-introduction .wsw-players-summary .wsw-players-name h4 {
+    color: #fff;
+    font-size: 30px;
+    line-height: 120%;
+}
+
+#main .wsw-players-introduction .wsw-players-summary .wsw-players-name p {
+    color: #fff;
+    font-size: 15px;
+    line-height: 120%;
+    padding: 0;
+    margin: 0;
+}
+
+.wsw-players-introduction .wsw-players-detail {
+    float: left;
+    width: 711px;
+    padding: 20px;
+    border: 1px #000 solid;
+    border-top: 0;
+}
+
+.wsw-players-introduction .wsw-players-detail-scroll {
+    float: left;
+    width: 711px;
+}
+
+.wsw-players-introduction .wsw-players-detail p {
+    line-height: 160px;
+    padding: 0;
+    font-size: 14px;
+}

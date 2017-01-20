@@ -1,0 +1,281 @@
+/**
+ * silva.lim
+ * 2014-03-26
+ * QQ: 1520002068
+ *
+ * Tools: Chart
+ */
+
+//刷新跑马灯数据
+function quotation(data){
+	var dataBox = $("#hot-news-box"),_ul = '<ul class="hot-news">',_dSize = data.length;//data.length;
+	if(dataBox.hasClass('dataLoaded')){ //加载更新
+		if(!$.isArray(data)) return;
+		for(var i=0;i<data.length;i++){
+			var obj = data[i]; 
+			var li = dataBox.find("li[symbol='"+obj.p+"']");	
+			li.find("span.liter").removeClass('up').removeClass('down').addClass(obj.u);
+			li.find("span.liter").html(obj.b);
+			li.find('img.p-up-down').attr('src','static/images/'+obj.u+'-cn.png');
+			li.find("p.high span").html(obj.h);
+			li.find("p.low span").html(obj.l);
+		}
+	}else{	//首次加载
+		var _tmp = '';
+		for(var i=0;i<_dSize;i++){
+			var obj = data[i]; 
+			var _li = '<li symbol="'+obj.p+'"><a href="#" title="'+obj.p+'">'+
+			'<span class="pro">'+obj.p+'</span>'+
+			'<span class="liter '+obj.u+'">'+obj.b+'</span><span><img src="static/images/'+obj.u+'-cn.png" class="p-up-down"/></span>'+
+			'HIGH&nbsp;&nbsp;<span class="high">'+obj.h+'</span> &nbsp;&nbsp;LOW&nbsp;&nbsp;<span class="low">'+obj.l+'</span></a></li>';
+
+			if(i%3 == 0 && i != _dSize){
+				_tmp += _ul+_li;
+			}else if(i%3 == 2 && i != _dSize){
+				_tmp += _li+'</ul>';
+			}else{
+				_tmp += _li;
+			}
+		}
+		dataBox.addClass('dataLoaded').html(_tmp+'</ul>');
+	}
+}
+
+//交易专区
+function loadingData(){
+	var boxId = $(".market-trend-tab > li.select").attr("id").split('_')[1];
+	switch(boxId){
+		case"fxBox":
+			$('.stock').find('span.select').attr('lib','ST');//判断charts.html的图片链接是否加a
+			$.getScript(SystemProp.quoteBrowserUrl+"?group=FX&callback=fillData");
+			break;
+		case"mBox":
+			$('.stock').find('span.select').attr('lib','IX');
+			$.getScript(SystemProp.quoteBrowserUrl+"?group=ML&callback=fillData");
+			break;
+		case"oBox":
+			$('.stock').find('span.select').attr('lib','IX');
+			$.getScript(SystemProp.quoteBrowserUrl+"?group=OL&callback=fillData");
+			break;
+		case"iBox":
+			$('.stock').find('span').eq(0).attr('lib','ST');
+			$('.stock').find('span').eq(1).attr('lib','IX');
+			var _ch = $('.stock').find('span.select').attr('lib');
+			if(_ch != 'IX' && _ch != 'ST'){
+				$.getScript(SystemProp.quoteBrowserUrl+"?group=IX&callback=fillData");
+				//$.getScript(SystemProp.quoteBrowserUrl+"?group=ST&callback=fillDataST");
+			}else{
+				$.getScript(SystemProp.quoteBrowserUrl+"?group="+_ch+"&callback=fillData");
+			}
+			break;
+		case"cBox":
+			$('.stock').find('span.select').attr('lib','IX');
+			$.getScript(SystemProp.quoteBrowserUrl+"?group=FM&callback=fillData");
+			break;	
+	}
+}
+//填充数据
+function fillData(data){
+	if(!data) return;
+	var boxId = $(".market-trend-tab").find("li.select").eq(0).attr("id").split('_')[1];
+	//if loaded,partial update
+	var trueDiv = 0;
+	if(boxId == 'fxBox' && !!data && data[0].p == 'EURUSD'){
+		trueDiv = 1;
+	}else if(boxId == 'mBox' && !!data && data[0].p == 'XAUUSD'){
+		trueDiv = 1;
+	}else if(boxId == 'oBox' && !!data && data[0].p == 'USOIL'){
+		trueDiv = 1;
+	}else if(boxId == 'iBox' && (!!data && data[0].p == 'US30' || !!data && data[0].p == 'AAPL')){
+		trueDiv = 1;
+	}else if(boxId == 'cBox' && !!data && data[0].p == 'CORN'){
+		trueDiv = 1;
+	}
+	if($('.stock').length > 0){
+		var _ch = $('.stock').find('span.select').attr('lib');
+		if(_ch == 'IX'){
+			if(!(!!data && $("#iBox").find("tr[name=US30]").length>0)){
+				$("#iBox").removeClass('dataLoaded');
+			}
+		}else if(_ch == 'ST'){
+			if(!(!!data && $("#iBox").find("tr[name=AAPL]").length>0)){
+				$("#iBox").removeClass('dataLoaded');
+			}
+		}
+	}
+	
+	if(trueDiv == 1){
+		if($("#"+boxId).hasClass('dataLoaded')){
+			for(var i=0;i<data.length;i++){
+				var obj = data[i];
+				var oldTr = $("#"+boxId).find("tr[name="+obj.p+"]").eq(0);
+				if(oldTr.length>0){
+					oldTr.find("td.fx-n").html('<span class="'+((obj.o == 1) ? 'green' :'red')+'">•</span>'+obj.p);
+					oldTr.find("td").eq(1).html(obj.s).removeClass().addClass((obj.u=='up')?'drop':'liter');
+					oldTr.find("td").eq(2).html(obj.b+'<span><img src="static/images/'+ ((obj.u=='up')-'up'-'down') +'-cn.png"/*tpa=http://www.aetoscg.com/cn/static/pageStatic/js/static/images/'+ ((obj.u=='up')?'up':'down') +'-cn.png*/ /></span>').removeClass().addClass((obj.u=='up')?'drop':'liter');
+					//oldTr.find("td").eq(2).html(obj.b).removeClass().addClass((obj.u=='up')?'drop':'liter');
+					//oldTr.find("td").eq(3).html(obj.h);
+					//oldTr.find("td").eq(4).html(obj.l+'<span><img src="static/images/'+ ((obj.u=='up')-'up'-'down') +'-cn.png"/*tpa=http://www.aetoscg.com/cn/static/pageStatic/js/static/images/'+ ((obj.u=='up')?'up':'down') +'-cn.png*/ /></span>');
+				}
+			}
+		}else{
+			var tableHtml = '<table class="market-trend-tbody" width="100%">';
+	
+			for(var i=0;i<data.length;i++){
+				var obj = data[i];
+				tableHtml += '<tr name="'+obj.p+'">';
+				tableHtml += '<td width="108">'+obj.p+'</td>';
+				tableHtml += '<td width="108" class="'+((obj.u=='up')?'drop':'liter')+'">'+obj.s+'</td>';
+				tableHtml += '<td class="'+((obj.u=='up')?'drop':'liter')+'">'+obj.b+'<span><img src="static/images/'+ ((obj.u=='up')-'up'-'down') +'-cn.png"/*tpa=http://www.aetoscg.com/cn/static/pageStatic/js/static/images/'+ ((obj.u=='up')?'up':'down') +'-cn.png*/ /></span>'+'</td>';
+				//tableHtml += '<td width="60">'+obj.h+'</td>';
+				//tableHtml += '<td>'+obj.l+'<span><img src="static/images/'+ ((obj.u=='up')-'up'-'down') +'-cn.png"/*tpa=http://www.aetoscg.com/cn/static/pageStatic/js/static/images/'+ ((obj.u=='up')?'up':'down') +'-cn.png*/ /></span></td>';
+				tableHtml += '</tr>';
+			}
+			var p = data[data.length-1].p;
+			//检测是否存在.chart-img-box
+			var rightPic = $(document).find('.chart-img-box').size();
+			if (rightPic == 0){
+				var strTr = '<tr name="image"><td colspan="5" style=" width:305px; height:160px;"><img src="'+SystemProp.chartBrowserUrl+'/'+p+'1_305x160x2.gif" width="305" height="160"/></td></tr>';
+				tableHtml += strTr;
+			}
+			tableHtml += '</table>'
+			$("#"+boxId).addClass('dataLoaded').html(tableHtml);
+			$("#"+boxId).children('table').children('tbody').children('tr').click(tr_click);
+			if (rightPic == 1){
+				var lastTr = $("#"+boxId).children('table').children('tbody').children('tr').last();
+				lastTr.click();
+			}
+		}
+	}
+}
+
+//填充数据, 追加股票数据 
+function fillDataST(data){
+	if(!data) return;
+	var boxId = $(".market-trend-tab").find("li.select").eq(0).attr("id").split('_')[1];
+	//if loaded,partial update
+	if($("#"+boxId).hasClass('dataLoaded') && $("#"+boxId).hasClass('st')){
+		for(var i=0;i<data.length;i++){
+			var obj = data[i];
+			var oldTr = $("#"+boxId).find("tr[name="+obj.p+"]").eq(0);
+			if(oldTr.length>0){
+				oldTr.find("td.fx-n").html('<span class="'+((obj.o == 1) ? 'green' :'red')+'">•</span>'+obj.p);
+				oldTr.find("td").eq(1).html(obj.s).removeClass().addClass((obj.u=='up')?'drop':'liter');
+				oldTr.find("td").eq(2).html(obj.b+'<span><img src="static/images/'+ ((obj.u=='up')-'up'-'down') +'-cn.png"/*tpa=http://www.aetoscg.com/cn/static/pageStatic/js/static/images/'+ ((obj.u=='up')?'up':'down') +'-cn.png*/ /></span>').removeClass().addClass((obj.u=='up')?'drop':'liter');
+				//oldTr.find("td").eq(3).html(obj.h);
+				//oldTr.find("td").eq(4).html(obj.l+'<span><img src="static/images/'+ ((obj.u=='up')-'up'-'down') +'-cn.png"/*tpa=http://www.aetoscg.com/cn/static/pageStatic/js/static/images/'+ ((obj.u=='up')?'up':'down') +'-cn.png*/ /></span>');
+			}
+		}
+	}else{
+		if(boxId == 'iBox' && $("#"+boxId).children('table').length>0){
+			var tableHtml = '';
+			for(var i=0;i<data.length;i++){
+				var obj = data[i];
+				tableHtml += '<tr name="'+obj.p+'" class="tr_st">';
+				tableHtml += '<td width="108">'+obj.p+'</td>';
+				tableHtml += '<td width="108" class="'+((obj.u=='up')?'drop':'liter')+'">'+obj.s+'</td>';
+				tableHtml += '<td class="'+((obj.u=='up')?'drop':'liter')+'">'+obj.b+'<span><img src="static/images/'+ ((obj.u=='up')-'up'-'down') +'-cn.png"/*tpa=http://www.aetoscg.com/cn/static/pageStatic/js/static/images/'+ ((obj.u=='up')?'up':'down') +'-cn.png*/ /></span>'+'</td>';
+				//tableHtml += '<td width="56">'+obj.h+'</td>';
+				//tableHtml += '<td>'+obj.l+'<span><img src="static/images/'+ ((obj.u=='up')-'up'-'down') +'-cn.png"/*tpa=http://www.aetoscg.com/cn/static/pageStatic/js/static/images/'+ ((obj.u=='up')?'up':'down') +'-cn.png*/ /></span></td>';
+				tableHtml += '</tr>';
+			}
+			var p = data[data.length-1].p;
+			$("#"+boxId).addClass('st');
+			$("#"+boxId).children('table').children('tbody').append(tableHtml);
+			$("#"+boxId).children('table').children('tbody').children('tr').click(tr_click);
+		}
+	}
+}
+
+//tr_click---
+function tr_click(e){
+	e.preventDefault();
+	var isOpen = $(this).data("isOpen")|| false;
+	var trName = $(this).attr("name");
+	var $tr = $(this).parents("table").eq(0).find("tr[name='image']").eq(0);
+	if(trName == 'image'){
+		return;	
+	}
+	
+	var _ch = $('.stock').find('span.select').attr('lib');
+	/*if(_ch == 'ST' || $(this).hasClass('tr_st')){
+		trName = trName;
+	}else if(trName.length < 6 && trName !== 'DXY'){
+		trName = trName + 'A';
+	}*/
+	//检测是否存在.chart-img-box
+	var rightPic = $(document).find('.chart-img-box').size();
+	if (rightPic == 0){
+		if(!isOpen){
+			$(this).data("isOpen",true);
+			var $img = $tr.find("img");
+			var newSrc = $(this).data("img_src") || '';
+			var time = $(this).data("time") || '';
+			if(time){
+				var nowTime = new Date().getTime();
+				if((nowTime- time*1)>60000){
+					newSrc = SystemProp.chartBrowserUrl+'/'+trName+'1_305x160x2.gif?radom='+(new Date().getTime());
+				}
+			}else{
+				newSrc = SystemProp.chartBrowserUrl+'/'+trName+'1_305x160x2.gif?radom='+(new Date().getTime());
+				$(this).data('time',new Date().getTime());
+				$(this).data('img_src',newSrc);
+			}
+			$img.attr("src",newSrc);
+
+			$(this).after($tr);
+			$tr.show();
+		}else{
+			$(this).data("isOpen",false);
+			//$tr.hide();
+		}
+	}
+
+	//chart.html 页面使用
+	if (rightPic == 1){
+		var rightPic = SystemProp.chartBrowserUrl+'/'+trName+'1_335x337x2.gif?radom='+(new Date().getTime());
+		$('.chart-img-box > img').attr("src",rightPic);
+		$(this).parents('table').find('tr').css({'background':'none'});
+		$(this).css({'background':'#d9d9d9'});
+	}
+	
+}
+
+$(document).ready(function(){
+	$("#fxBox").after('<div class="market-trend-box" id="mBox" style="display:none;"></div>'+
+	'<div class="market-trend-box" id="oBox" style="display:none;">'+'</div><div class="market-trend-box" id="iBox" style="display:none;"></div>'
+	+'</div><div class="market-trend-box" id="cBox" style="display:none;"></div>');
+	
+	//交易专区menu
+	$(".market-trend-tab > li").bind('click',function(){
+		var boxId = $(this).attr("id").split("_")[1];
+		if(boxId == 'iBox'){
+			$('.stock').show();
+		}else{
+			$('.stock').hide();
+		}
+
+		$(".market-trend-tab > li").removeClass("select");
+		$(this).addClass("select");
+		$(".market-trend-box").hide();
+		loadingData();
+		$("#"+boxId).show();
+	});
+
+	$('.stock > span').on('click',function(){
+		$('.stock').children('span').removeClass('select');
+		$(this).addClass('select');
+		$('#iBox').removeClass('dataLoaded').html();
+		$('#t_iBox').click();
+	})
+
+
+	//加载数据,写到页面
+	// loadingData();
+	// setInterval(function(){$(".market-trend-tab").find("li.select").click();},5000);
+
+	// //首页跑马灯
+	// $.getScript(SystemProp.quoteBrowserUrl+"?group=ALL&callback=quotation&random="+(+new Date()));
+	// setInterval(function(){$.getScript(SystemProp.quoteBrowserUrl+"?group=ALL&callback=quotation");},5000);
+
+});

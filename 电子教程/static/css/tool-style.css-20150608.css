@@ -1,0 +1,508 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*----------交易行情-------*/
+.charts-all{
+	padding-bottom:15px;
+}
+#con-banner .ban-p06 { background:url("img/ban_post.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/ban_post.png*/ 0 -613px no-repeat; -background:url("img/ban_post-ie6.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/ban_post-ie6.png*/ 0 -613px no-repeat; width:238px; height:201px; position: absolute; margin-left:720px; margin-top:6px;}
+#content { min-height:500px;}
+
+.zhiyin a{
+	float:left;
+	text-align:center;
+	margin:20px 22px 40px 23px;
+}
+
+.market-trend h3 span{
+	background-position:center -90px;
+}
+.market-trend-tab{
+	height:33px;
+	margin:4px 0 0 0;
+	padding-left:50px;
+	border-bottom:1px solid #ccc;
+}
+.market-trend-tab li{
+	height:28px;
+	line-height:28px;
+	background:#eaeaea;
+	text-align:center;
+	float:right;
+	padding:0 20px;
+	margin:5px 10px 0 0;
+	border:1px solid #ccc;
+	border-bottom:none;
+	font-size:15px;
+	font-weight:bold;
+	display:inline;
+	cursor:pointer;
+	position:relative;
+}
+.market-trend-tab li span{
+	display:inline-block;
+	width:10px;
+	height:4px;
+	background:url("img/market-trend-tab-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/market-trend-tab-bg.png*/ no-repeat;
+	position:absolute;
+	left:46%;
+	top:32px;
+	display:none;
+}
+.market-trend-tab li.select span,.market-trend-tab li.over span{
+	display:block;
+}
+.market-trend-tab li.select,.market-trend-tab li.over{
+	background:#90352E;
+	color:#fff;
+	height:32px;
+	border-color:#90352E;
+	line-height:32px;
+	margin-top:0;
+}
+.market-trend-thead th{
+	height:27px;
+	line-height:27px;
+	background: #fff;	
+	background: linear-gradient(#fff, #ccc);
+	-pie-background: linear-gradient(#fff, #ccc);
+	border-radius:4px 4px 0 0;
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+	font-weight:normal;
+}
+.market-trend-box{
+	width:380px;
+	height:360px;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+.market-trend-tbody td{
+	height:21px;
+	line-height:21px;
+	text-align:center;
+}
+.liter span,.drop span{padding-left:5px; font-family:"Courier New", Courier, monospace;}
+.liter{color:#090; padding-right:12px;}
+.drop{ color:#f00; padding-right:12px;}
+
+.market-trend-tbody td.liter,.market-trend-tbody td.drop{
+	padding:0;
+}
+.chart-img-box{
+	float:right;
+	padding:14px 0 0 5px;
+	width:360px;
+	display:inline;
+}
+.stock{
+	height:40px;
+	border-bottom:1px solid #ccc;
+}
+.tab-item{
+	height:22px;
+	line-height:22px;
+	border-radius:11px;
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+	border:1px solid #ccc;
+	padding:0 20px;
+	display:inline-block;
+	cursor:pointer;
+}
+.tab-item.over,.tab-item.select{
+	border-color:#26688F;
+	background:#D9EAF4;
+}
+.stock .tab-item{
+	margin-top:9px;
+}
+/*表格移上去变色*/
+.market-trend-tbody tr{
+	border-top:1px solid rgba(0, 0, 0, 0);
+	border-bottom:1px rgba(0, 0, 0, 0);
+}
+.market-trend-tbody tr.over{
+	border-top:1px solid #26688F;
+	border-bottom:1px solid #26688F;
+	background:#D9EAF4;
+}
+
+/*新闻*/
+#news { min-height:500px;}
+#news h1{
+	font-size:16px;
+	color#000;
+	line-height:150%;
+	padding-top:8px;
+	color:#333;
+}
+.published{
+	font-size:12px;line-height:150%;
+	margin-top:5px;
+}
+.news-con{
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	margin:10px 0;
+}
+.news-con p{
+	padding8px 0 6px 0;
+	line-height:22px;
+	font-size:14px;
+}
+.news-tip p{
+	padding:0;
+	color:#666;
+	margin:0;
+	line-height:18px;
+}
+.news-tip p a{
+	color:#666;
+}
+.news-tip p a:hover{
+	color: #90352E;
+	text-decoration: underline;
+}
+
+/*tc技术分析*/
+.tc-item-box {
+	margin-top:10px; display:block; clear:both; height:205px; width:750px; margin-left:auto; margin-right:auto;
+}
+.tc-item-img{
+	text-align:center;
+	width:240px;
+	height:200px;
+	float:left;	
+	margin-left:10px;
+	line-height:20px;
+	display:inline;
+}
+.tc-item-img img{
+	border:1px solid #CCC;
+	height:163px;
+}
+
+.tc-item{
+	margin-top:20px;
+}
+.tc-item dt{
+	float:left;
+	width:330px;
+	border-right:1px dotted #999;
+	text-align:right;
+	padding-right:10px;
+	display:inline;
+}
+.tc-item dt img{
+	margin-left:5px;
+}
+.tc-item dd{
+	margin-left:350px;
+}
+.tc-item-btn{
+	padding-left:24px;
+	margin-left:40px;
+}
+.tc-item-btn span{
+	padding-right:24px;
+}
+
+/*多空对比*/
+.product-list{
+	width:330px;
+	float:left;
+	border:1px solid #999;
+}
+.product-list2{
+	margin-left:25px;
+	display:inline;
+}
+#con-banner .ban-p07 { 
+	background:url("img/long-and-short-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/long-and-short-bg.png*/ no-repeat; 
+/*	_background:none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='static/css/img/long-and-short-bg.png');*/
+	width:390px;
+	height:315px;
+	position: absolute;
+	margin-left:590px;
+	margin-top:36px;
+}
+.product-list-tip{
+	font-size:20px;
+	color:#26688F;
+	line-height:24px;
+	margin:25px 0 50px 0;
+}
+.product-list-tip span{
+	font-size:12px;
+}
+.product-list-item{
+	margin-bottom:13px;	
+	padding:0 15px;
+}
+.product-list-item td{
+	height:18px;
+	line-height:18px;
+	text-align:center;
+	color:#fff;
+}
+.product-list-item label,.product-list-th label{
+	height:18px;
+	line-height:18px;
+	width:110px;
+	float:left;
+	font-size:14px;
+	padding-right:10px;
+	display:inline;
+}
+.product-list-th label{
+	height:40px;
+	line-height:40px;
+	font-size:15px;
+	color:#000;
+}
+.product-list-th{
+	height:40px;
+	line-height:40px;
+	border-bottom:1px solid #999;
+	margin-bottom:15px;
+	padding:0 10px;
+	background: linear-gradient(#fff, #ccc);
+	-pie-background: linear-gradient(#fff, #ccc);
+	behavior: url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+}
+.product-list-th span{
+	padding-left:20px;
+}
+.product-list-th .long-span{
+	background:url("img/list-icons2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/list-icons2.png*/ left -73px no-repeat;
+	margin-left:110px;
+}
+.product-list-th .short-span{
+	background:url("img/list-icons2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/list-icons2.png*/ left -93px no-repeat;	
+	margin-left:10px;
+}
+.product-list-item table{
+	width:180px;
+}
+.product-list-item .long{
+	background:url("img/product-list-barbg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/product-list-barbg.png*/ left 0 no-repeat;
+	text-align:left;
+	padding-left:5px;
+}
+.product-list-item .short{
+	background:url("img/product-list-barbg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/product-list-barbg.png*/ right -18px no-repeat;
+	text-align:right;
+	padding-right:5px;
+}
+
+/*财经日历*/
+.res-time{
+	background:url("img/res-time-bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/res-time-bg.jpg*/ 0 30px no-repeat;
+	padding-left:288px;
+	height:330px;
+}
+.time-upcoming{
+	width:185px;
+	height:160px;
+	margin:30px 0 0 0;
+	background:url("img/time-upcoming-bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/time-upcoming-bg.jpg*/ 0 15px no-repeat;
+	float:left;
+	text-align:center;
+}
+.res-time-month{
+	width:240px;
+	float:left;
+	margin-left:35px;
+	display:inline;	
+}
+.date{
+ 	height:67px;
+	width:38px;
+	margin: 5px 3px 0 0;
+	float:left;
+	overflow:hidden;
+	background:url("img/time-numben.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/time-numben.png*/ no-repeat;
+}
+.date-time-0{
+	background-position:-3px -5px;
+}
+.date-time-1{
+	background-position:-43px -5px;
+}
+.date-time-2{
+	background-position:-83px -5px;
+}
+.date-time-3{
+	background-position:-123px -5px;
+}
+.date-time-4{
+	background-position:-163px -5px;
+}
+.date-time-5{
+	background-position:-203px -5px;
+}
+.date-time-6{
+	background-position:-243px -5px;
+}
+.date-time-7{
+	background-position:-293px -5px;
+}
+.date-time-8{
+	background-position:-332px -5px;
+}
+.date-time-9{
+	background-position:-373px -5px;
+}
+
+.minute1{
+	margin-left:18px;
+}
+.week{padding-top:15px;}
+.week li{
+	width:59px;
+	height:68px;
+	margin-right:7px;
+	float:left;
+	background:url("img/calendar-bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/calendar-bg.jpg*/ -2px -5px no-repeat;
+	display:inline;
+	cursor:pointer;
+}
+.week li.hover,.week li:hover{
+	background-position:-2px -82px;
+}
+.week-con,.date-con,.week li:hover{
+	text-align:center; display:block;
+	color:#26688F;
+}
+.week-con{
+	margin-top:3px;
+}
+.date-con{
+	font-size:22px;
+	font-weight:bold;
+	margin-top:5px; display:block;
+}
+.week li.hover .week-con,.week li:hover .week-con{
+	color:#90352E;
+}
+.week li.hover .date-con,.week li:hover .date-con{
+	color:#fff;
+}
+
+/*----------经济事件--------*/
+.economic h3 span{
+	background-position: left -68px;
+}
+.economic-thead,.economic-tbody{
+	width:100%;
+}
+.economic-thead th{
+	font-size:13px;
+	height:38px;
+	line-height:38px;
+	border-bottom:1px solid #26688F;
+	background: linear-gradient(#fff, #ccc);
+	-pie-background: linear-gradient(#fff, #ccc);
+	border-radius:4px 4px 0 0;
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+	
+}
+.economic-tbody td{
+	height:25px;
+	text-align:center;
+}
+.economic-tbody tr,.market-trend-tbody tr{
+	border-top:1px solid rgba(0, 0, 0, 0);
+	border-bottom:1px rgba(0, 0, 0, 0);
+}
+.economic-tbody tr.over,.market-trend-tbody tr.over{
+	border-top:1px solid #26688F;
+	border-bottom:1px solid #26688F;
+	background:#D9EAF4;
+}
+
+.times{
+	float:right;
+	font-weight:normal;
+	line-height:40px;
+}
+.times input{
+	width:52px;
+	height:14px;
+	color:#900;
+	text-align:center;
+	border:1px solid #999;
+	margin-top:12px;
+	line-height:12px;
+}
+.economic{
+	border:1px solid #26688F;
+	border-radius:4px;
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+}
+
+/*新闻*/
+.time{
+	float:right;
+}
+.news ul{
+	padding:5px 0;
+}
+.news {
+	margin-top:15px;
+}
+.news li{
+	line-height:24px;
+	background:url("img/list-icons2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/list-icons2.png*/ left -10px no-repeat;
+	padding-left:20px;
+	font-size:13px;
+}
+
+/*日期选择*/
+.select-date{
+	padding:0 6px 0 11px;
+	height: 22px;
+	line-height: 22px;
+	behavior: url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+	border: 1px solid #26688F;	
+	border-radius: 11px;
+	cursor: pointer;
+	width:480px;
+	margin:0 auto;
+}
+.select-date .start,.select-date .end,.select-date .key{
+	float:left;
+	padding:0 34px 0 4px;
+	background:url("img/date-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/date-bg.png*/ 38px 2px no-repeat;
+	border-left:1px solid #26688F;
+	border-right:1px solid #26688F;
+	width:24px;
+	display:inline;
+}
+.select-date .key{
+	width:40px;
+	background: url("img/btn-right-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/btn-right-bg.png*/ 45px 3px no-repeat;
+	padding:0 20px 0 4px;
+}
+.select-date .key{
+	border-left:0;
+}
+.select-date input{
+	border:0px;
+	margin:0;
+	width:80px;
+	padding:0 5px;
+	height:22px;
+	float: left;
+	line-height: 20px;
+	display:inline;
+}
+.search-btn2 {
+	background: url("img/user-icons.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/user-icons.png*/ 00px #fff no-repeat;
+	width: 16px;
+	border-left: none;
+	float:left;
+	height:16px;
+	margin-top:3px;
+}
+

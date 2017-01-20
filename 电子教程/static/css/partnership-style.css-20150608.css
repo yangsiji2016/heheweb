@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+
+#main p { line-height:180%;}
+
+
+#con-banner .ban-p04 { background:url("img/ban_post.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/ban_post.png*/ 0 -263px no-repeat; background:url("img/ban_post-ie6.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/ban_post-ie6.png*/ 0 -263px no-repeat; width:246px; height:48px; position: absolute; margin:149px 0 0 724px; -margin-top:150px;}
+
+.paship-a1 {  height:212px;  position: relative; z-index:1;background:url("img/partnership.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/partnership.jpg*/ 18px 0 no-repeat;   margin-top:30px; }
+.paship-a2 {  height:212px; position: relative; z-index:1;background:url("img/partnership.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/partnership.jpg*/ 18px -274px no-repeat;   margin-top:30px; }
+.paship-a3 {  height:212px;  position: relative; z-index:1;background:url("img/partnership.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/partnership.jpg*/ 18px -555px no-repeat;   margin-top:30px; }
+.paship-a4 {  height:212px;  position: relative; z-index:5;background:url("img/partnership.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/partnership.jpg*/ 18px -861px no-repeat;    margin-top:30px; }
+
+.paship-a1:hover { background:url("img/partnership.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/partnership.jpg*/ 18px -1170px no-repeat; display:block; cursor: auto; }
+.paship-a2:hover { background:url("img/partnership.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/partnership.jpg*/ 18px -1444px no-repeat; display:block; cursor: auto; }
+.paship-a3:hover { background:url("img/partnership.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/partnership.jpg*/ 18px -1725px no-repeat; display:block; cursor: auto; }
+.paship-a4:hover { background:url("img/partnership.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/partnership.jpg*/ 18px -2031px no-repeat; display:block; cursor: auto; }
+
+.paship-a1 h1,.paship-a2 h1,.paship-a3 h1,.paship-a4 h1 { border-bottom:1px #CCCCCC solid; position:absolute; width:480px; height:30px; line-height:30px; padding-left:50px; margin:5px 0 0 216px; font-size:16px; z-index:2;}
+.liebiao{
+	padding-top:52px;
+	margin-left:266px;
+}
+.paship-a1 .liebiao ul li,.paship-a2 .liebiao ul li,.paship-a3 .liebiao ul li,.paship-a4 .liebiao ul li { background:url("img/icon-2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-2.png*/ 1px -201px no-repeat; padding-left:15px; line-height:25px;}
+.paship-a1 .fly,.paship-a2 .fly,.paship-a3 .fly,.paship-a4 .fly { position:absolute;margin-top:18px; right:0; z-index:5;  display:block;}
+.paship-a1 .fly2,.paship-a2 .fly2,.paship-a3 .fly2,.paship-a4 .fly2 { margin:8px 0 0 0;  }
+
+
+.mspan { float:left; width:370px; }
+.broker { width:auto; min-height:94px; margin:10px 0 25px 35px; background:url("img/broker.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/broker.jpg*/ no-repeat; clear:both; padding-left:110px;}
+.a1 { background-position:0 0;}
+.a2 { background-position:0 -152px;}
+.a3 { background-position:0 -295px;}
+.a4 { background-position:0 -449px;}
+.a5 { background-position:0 -598px;}
+.a6 { background-position:0 -764px;}
+
+
+.liebiaoj ul { margin:0; margin-top:0; padding-top:0;}
+.liebiaoj li { background:url("img/icon-3.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-3.png*/ 2px 7px no-repeat; padding-left:15px; line-height:23px;}
+
+
+.makerl { border:1px #CCCCCC solid; text-align:center; float:left; padding:17px;}
+.makerr { width:430px; float:right;}
+
+
+.brand-coop { background:url("img/brand-co.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/brand-co.jpg*/ 11px 25px no-repeat;  height:370px; display:block; margin:0 auto; padding-left:293px;}
+#main .fu2 { background:url("img/lundun.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/lundun.jpg*/ 0 0 no-repeat; width:784px; height:400px; position:absolute;  z-index:99; left:0; margin-top:20px; }
+
+.o1 { float:left; text-align:center; margin-left:110px; display:inline;}
+.o2 { float:right; margin-right:130px; margin-top:20px; display:inline;}

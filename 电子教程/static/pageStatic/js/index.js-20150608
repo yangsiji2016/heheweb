@@ -1,0 +1,44 @@
+
+$(window).load(function() {
+	$('.flexslider').flexslider({
+		directionNav: true,
+		pauseOnAction: true
+	});
+});
+
+
+
+$(document).ready(function(e) {
+	$("#scrollbox").Scroll({line:1,speed:500,timer:2000,up:"zzjs-up",down:"zzjs-dw"});
+
+	//$.fn.showLongAndShort('index');
+    showIndexTcList(1,'zh-cn','9');
+	showIndexNewsList(1,'zh-cn','10');
+	showIndexEcoList(7);
+
+	loadingData();
+	setInterval(function(){$(".market-trend-tab").find("li.select").click();},5000);
+
+	//首页跑马灯
+	$.getScript(SystemProp.quoteBrowserUrl+"?group=ALL&callback=quotation&random="+(+new Date()));
+	setInterval(function(){$.getScript(SystemProp.quoteBrowserUrl+"?group=ALL&callback=quotation");},5000);
+	setInterval(function(){var surl = $("tr[name=image] td img").attr("src");surl=surl.replace(/radom=(\d+)/,"radom="+new Date().getTime());$("tr[name=image] td img").attr("src",surl);},30000);
+	$(".fancybox").fancybox({
+		padding: 0,
+		margin:0,
+		width:730,
+		height:620,
+		minHeight : 620,
+		
+		autoSize   : false,
+		autoResize  : false,
+		autoScale:false,
+		closeBtn   : false,
+		
+		iframe : {
+			scrolling : 'no',
+			preload   : true
+		}
+	});
+	
+});

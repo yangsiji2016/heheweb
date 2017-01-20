@@ -1,0 +1,304 @@
+/**
+ * silva.lim
+ * 2014-03-26
+ * QQ: 1520002068
+ *
+ * Tools: Economic Calendar
+ */
+var indexHour;
+var indexMinute;
+var timer;
+var maxtime; 
+
+var GMTTime;
+var GMTH;
+var GMTM;
+
+ //ECONOMIC CALENDAR
+ function showIndexEcoList(num){
+ 	var api = SystemProp.contentServiceUrl+'/getEcoDataList.php?callback=?';
+ 	$.post(api,{num:num},function(json){
+ 		var list = '';
+ 		$.each(json.data,function(i,val){
+ 				var imgNameTemp = 'low';
+ 				if(val.importance == 'H'){
+ 					imgNameTemp = 'hight';
+ 				}
+				var valCnEvent = "";
+				//if(val.cn_event.length>17){
+//					valCnEvent = val.cn_event.substr(0,1) + '...';
+//				}else{}
+					valCnEvent = val.cn_event;
+				
+ 				list += '<tr>';
+ 				list += '<td width="50">'+ val.pub_time +'</td>';
+ 				list += '<td width="66">'+ val.region_code +'</td>';
+ 				list += '<td style="text-align:center;" title="'+ val.cn_event +'">'+ valCnEvent +'</td>';
+ 				list += '<td width="100"><img src="static/images/'+ imgNameTemp +'.png"/*tpa=http://www.aetoscg.com/cn/static/pageStatic/js/static/images/'+ imgNameTemp +'.png*/ /></td>';
+ 				list += '<td width="100">'+ val.prior +'</td>';
+ 				list += '<td width="100">'+ val.forecast +'</td>';
+ 				list += '<td width="100">'+ val.actual +'</td>';
+ 				list += '<tr>';
+ 				if(i == 0 && val.pub_date && val.pub_time){
+ 					getDailyMinSpanBySer(val);
+ 				}
+ 				
+ 		})
+ 		$('.economic-tbody').html(list);
+ 		$('.economic-tbody-box').find('div.replaceImg').remove();
+ 	},'json')
+ }
+
+function getDailyMinSpanBySer(){
+	var myDate = new Date();
+	//初始化倒计时
+	var countdownUrl = SystemProp.appServerUrl+"/content/get-fx-daily!callbackCountdown.json?callback=indexCountdown&ln=0&time="+(new Date()).getTime();
+	$.getScript(countdownUrl);
+
+}
+function indexCountdown(rs){
+	if(rs.code == 200 && !!rs.data.hourSpan && !!rs.data.minSpan){
+		//$("#countdown").text(rs.data.hourSpan+":"+rs.data.minSpan);
+		var datetime = rs.data.hourSpan+":"+rs.data.minSpan;
+		$('.economic').find(':input').val(datetime);
+		maxtime = parseInt(rs.data.hourSpan,10)*60+parseInt(rs.data.minSpan); 
+		timer = setInterval("indexCountDownInterval()",60000);  
+	}
+}
+
+function charLeftAll(n)
+{
+	if(n < 10)
+		return "0" + n;
+	else
+		return n;
+}
+
+function indexCountDownInterval(){  
+	if(maxtime>=0){  
+		maxtime--;
+		hours = Math.floor(maxtime/60);  
+		minutes = Math.floor(maxtime%60); 
+		hours = charLeftAll(hours);
+		minutes = charLeftAll(minutes);
+		if(!(maxtime<0)){
+			$('.economic').find(':input').val(hours+":"+minutes);
+		}
+	}  
+	else{  
+		clearInterval(timer);  
+	}  
+} 
+
+//callback function 
+function callbackEcon(rs){
+	
+	if(rs.msg == 'ok'){
+		var eventBody = $("#all_events");
+		eventBody.empty();
+		var data = rs.data;
+		for(var i=0;i<data.length;i++){
+			var event = data[i];
+			var importance = event.importance == 'H' ? 'gao' : event.importance == 'M' ? 'zhong' : 'di';
+			var strTr = '<tr '+((i == 0)? 'class="quick"':'')+'><td>'+event.pub_time+'</td><td>'+event.region_code+'</td><td>'+event.cn_event+'</td><td>'+
+				'<img src="static/images/'+importance+'.png"></td><td>'+event.prior+
+				'</td><td>'+event.forecast+'</td><td>'+event.actual+'</td></tr>';
+
+			$('.economic').find('.replaceImg').remove();
+			eventBody.append(strTr);
+		}
+		
+	}else if(rs.msg == 'Empty'){
+		if($('.economic').find('.replaceImg').length > 0){
+			$('.economic').find('.replaceImg').html('没有数据.');
+			$('.economic').find('.replaceImg').removeClass('replaceImg');	
+		}else{
+			var eventBody = $("#all_events");
+			eventBody.empty();
+			eventBody.append("<tr align='center'><td align='center'  colspan='7'>没有数据</td><tr>");
+		}
+	}
+}
+//callback 倒计时
+function countdown(rs){
+
+	if(rs.code == 200 && !!rs.data.hourSpan && !!rs.data.minSpan){
+		//$("#countdown").text(rs.data.hourSpan+":"+rs.data.minSpan);
+
+		var hours1 = rs.data.hourSpan.substr(0,1),
+			hours2 = rs.data.hourSpan.substr(1,2),
+			minute1 = rs.data.minSpan.substr(0,1),
+			minute2 = rs.data.minSpan.substr(1,2);
+			
+			$('.hours1').removeClass('date-zero').addClass('date-time-'+hours1);
+			$('.hours2').removeClass('date-zero').addClass('date-time-'+hours2);
+			$('.minute1').removeClass('date-zero').addClass('date-time-'+minute1);
+			$('.minute2').removeClass('date-zero').addClass('date-time-'+minute2);
+			
+		maxtime = parseInt(rs.data.hourSpan,10)*60+parseInt(rs.data.minSpan); 
+		timer = setInterval("countDownInterval()",60000);  
+	}
+}
+
+function countDownInterval(){  
+	if(maxtime>=0){  
+		maxtime--;
+		hours = Math.floor(maxtime/60);  
+		minutes = Math.floor(maxtime%60); 
+		hours = charLeftAll(hours);
+		minutes = charLeftAll(minutes);
+		hours = hours.toString();
+		minutes = minutes.toString();
+		if(!(maxtime<0)){
+			var hours1 = hours.substr(0,1),
+				hours2 = hours.substr(1,2),
+				minute1 = minutes.substr(0,1),
+				minute2 = minutes.substr(1,2);
+			
+			$('.hours1').removeClass().addClass('hours1').addClass('date').addClass('date-time-'+hours1);
+			$('.hours2').removeClass().addClass('hours2').addClass('date').addClass('date-time-'+hours2);;
+			$('.minute1').removeClass().addClass('minute1').addClass('date').addClass('date-time-'+minute1);;
+			$('.minute2').removeClass().addClass('minute2').addClass('date').addClass('date-time-'+minute2);;
+		}
+	}  
+	else{  
+		clearInterval(timer);  
+	}  
+} 
+
+//获取当前日期的事件
+function getEvent(strDate){
+	var date = strDate.replace(/-/g,''),
+		// url = SystemProp.appServerUrl+"/content/get-fx-daily!callback.json?ln=0&onDate="+date+"time="+(+new Date());
+		url = SystemProp.contentServiceUrl+"/getEcoDataList.php?onDate="+date;
+
+	$.getScript(url+'&callback=callbackEcon');
+
+}
+
+
+//初始化日期
+function showDate(dateStr){
+	var checkDate = str2Date(dateStr);
+	
+	var day = checkDate.getDay();
+	var $week = $("#weekDay");
+	$week.find("a.hover").removeClass("hover");
+	$week.find("li.hover").removeClass("hover");
+	for(var i=0;i<7;i++){
+		var date = str2Date(dateStr);
+		if(i != day){
+			date.setDate(checkDate.getDate()*1+(i-day));
+			$week.find("a").eq(i).attr("name",date2Str(date)).find("b").html(date.getDate());
+		}else{
+			$week.find("a").eq(day).attr("name",date2Str(checkDate)).addClass("hover").find("b").html(checkDate.getDate());
+			$week.find("a").eq(day).parent('li').addClass('hover');
+		}
+	}
+}
+
+function ajaxGetServerTime(){
+	var getDateTimeUrl2 = SystemProp.appServerUrl + "/content/get-fx-daily!callbackDateTime.json?callback=exDateTime2&ln=0";
+	$.getScript(getDateTimeUrl2);
+}
+
+function GetRTime(){
+	if(GMTM>=59){
+		GMTM=0;
+		GMTH++;
+		GMTH = charLeftAll(GMTH);
+		GMTM = charLeftAll(GMTM);
+		$('#t_h').html(GMTH);
+		$('#t_m').html(GMTM);
+	}else{
+		GMTM++;
+		GMTM = charLeftAll(GMTM);
+		$('#t_m').html(GMTM);
+	};
+	if(GMTH>23){
+		ajaxGetServerTime();
+	};
+}
+   
+function exDateTime(rs){
+	if(rs.code == 200 && !!rs.data){
+		showDate(rs.data.date1);
+		getEvent(rs.data.date2);
+		exDateTime2(rs);
+	}
+	
+	ajaxGetServerTime();
+	
+　　 setInterval(function(){
+		GetRTime();
+　　	}, 60000);
+}
+
+function exDateTime2(rs){
+	if(rs.code == 200 && !!rs.data){
+		//初始化时钟
+		GMTTime = rs.data.date1 + " " + rs.data.time;
+		GMTTime = GMTTime.replace(/-/g,"/");
+		var GDate = new Date(GMTTime);
+		GMTH = GDate.getHours();
+		GMTM = GDate.getMinutes();
+		GMTH = charLeftAll(GMTH);
+		GMTM = charLeftAll(GMTM);
+		$('#GMTTimer').html('<span id="t_h"></span>:<span id="t_m"></span>');
+		$('#t_h').html(GMTH);
+		$('#t_m').html(GMTM);
+		$('#GMTDater').html(rs.data.date1);
+		
+		var weekNum = rs.data.week;
+		var weekStr = "";
+		if (weekNum == 1) {
+            weekStr = "星期日";
+        } else if (weekNum == 2) {
+            weekStr = "星期一";
+        } else if (weekNum == 3) {
+            weekStr = "星期二";
+        } else if (weekNum == 4) {
+            weekStr = "星期三";
+        } else if (weekNum == 5) {
+            weekStr = "星期四";
+        } else if (weekNum == 6) {
+            weekStr = "星期五";
+        } else if (weekNum == 7) {
+            weekStr = "星期六";
+        }
+		$('#GMTWeek').html(weekStr);
+	}
+}
+
+$(document).ready(function(){
+
+	
+	//日历控件
+	$("#datePicker").datepicker({
+		dateFormat:"yy-mm-dd",
+		dayNamesMin:[ "日", "一", "二", "三", "四", "五", "六" ],
+		showOtherMonths: true,
+        selectOtherMonths: true,
+		onSelect:function(dateStr){
+			if(!!dateStr){
+				getEvent(dateStr);
+			}
+			showDate(dateStr);
+		}
+	});
+	
+
+	//周选择器
+	$("#weekDay").find("a").click(function(e){
+		var date = $(this).attr("name");
+		if(!!date){
+			getEvent(date);
+		}
+		$("#weekDay").find("li.hover").removeClass("hover");
+		$(this).parent('li').addClass("hover");
+		$("#datePicker").datepicker("setDate",date);
+	});
+
+
+	
+});

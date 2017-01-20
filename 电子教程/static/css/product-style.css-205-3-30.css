@@ -1,0 +1,331 @@
+@charset "utf-8";
+/* CSS Document */
+
+#main p { line-height:180%;}
+
+
+#con-banner .ban-p02 { background:url("img/ban_post.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/ban_post.png*/ 0 0 no-repeat; -background:url("img/ban_post-ie6.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/ban_post-ie6.png*/ 0 0 no-repeat; width:76px; height:146px; position: absolute; margin-left:-67px; margin-top:6px;}
+
+.main-title .b1 { position:relative; height:40px; line-height:40px;  font-size:12px; float:right; right:10px; width:570px;  top:9px;  text-align:right; }
+
+.main-title .b1 .jtbtn { background:url("img/icon-small.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-small.png*/ no-repeat right -31px; display:inline-block; height:25px; clear:both; margin-left:10px; padding-right:10px; }
+.main-title .b1 .jtbtn em { background: url("img/icon-small.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-small.png*/ no-repeat left -31px; padding:0 0 0 23px; height:25px; line-height:25px; float:left;  display:inline;}
+.main-title .b1 .pdfbtn { background:url("img/icon-small.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-small.png*/ no-repeat right -74px; display:inline-block; height:25px; clear:both; margin-left:10px; padding-right:10px; }
+.main-title .b1 .pdfbtn em { background: url("img/icon-small.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-small.png*/ no-repeat left -74px; padding:0 0 0 43px; height:25px; line-height:25px; float:left; display:inline; }
+
+
+#pro-m { min-height:190px; width:752px; margin-left:auto; margin-right:auto; line-height:170%; text-align:center; margin-top:25px; padding-left:20px; }
+#pro-m a { float:left; margin-right:26px; }
+#pro-m a.a1, #pro-m a.a2, #pro-m a.a3, #pro-m a.a4, #pro-m a.a5, #pro-m a.a6, #pro-m a.a7, #pro-m a.a8 , #pro-m a.a9 , #pro-m a.a10 , #pro-m a.a11 , #pro-m a.a12 , #pro-m a.a13, #pro-m a.a14, #pro-m a.a15, #pro-m a.a16{ width:120px; height:122px; display:inline; background: url("img/pro-m.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/pro-m.jpg*/ no-repeat; }
+#pro-m a.a1, #pro-m a.a5, #pro-m a.a9:hover { background-position:0 0; }
+#pro-m a.a2, #pro-m a.a6, #pro-m a.a10:hover { background-position: -127px 0;}
+#pro-m a.a3, #pro-m a.a7, #pro-m a.a11:hover { background-position: -254px 0 ;}
+#pro-m a.a4, #pro-m a.a8, #pro-m a.a12:hover { background-position: -380px 0; }
+#pro-m a.a15, #pro-m a.a16:hover { background-position: -507px 0;}
+#pro-m a.a13, #pro-m a.a14:hover { background-position: -635px 0; margin-right:0;}
+
+#pro-m a.a5:hover, #pro-m a.a9 { background-position:0 -373px; }
+#pro-m a.a6:hover, #pro-m a.a10 { background-position: -127px -373px;}
+#pro-m a.a7:hover, #pro-m a.a11 { background-position: -254px -373px ;}
+#pro-m a.a8:hover, #pro-m a.a12 { background-position: -380px -373px;}
+#pro-m a.a14 { background-position: -635px -373px; margin-right:0;}
+#pro-m a.a16 { background-position: -507px -373px;}
+
+#pro-m .pan1 { text-align:center; margin-top:140px; display:block;}
+#pro-m .pan1 span { font-size:18px; }
+#pro-m .pan1 span span{font-size:14px;}
+.b-color { font-weight:bolder; color:#26688F;}
+.bl-color { font-weight:bolder; color: #666;}
+
+
+.catl { float:left; width:100%;   }
+.lgr { float:right; width:350px; height:310px; }
+.bord-all { border:1px #999999 solid; padding:10px;  overflow:hidden;clear:both; height:336px; }
+.lgr a.a1, .catl a.a1 { background:#EAEAEA; border:1px #999999 solid; padding:0 20px 0 20px; border-bottom:none; display:inline-block;height:28px; font-size:14px; line-height:28px;  cursor:text;}
+.lgr a.a2, .catl a.a2 { background:#26688F;  padding:0 10px 0 10px; display:inline-block; position:relative; height:19px; line-height:19px; font-size:12px; color:#FFF; float:right; top:11px;  right:10px;cursor:point; }
+
+.pro-news {  margin-top:30px;}
+.pro-news ul { padding:15px 10px 0 -5px; display:block;}
+.time{	float:right;}
+.pro-news li{ line-height:24px;background:url("img/list-icons2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/list-icons2.png*/ left -10px no-repeat;padding-left:20px;	font-size:12px;}
+
+
+#main h4  { font-size:16px; line-height:16px; padding-bottom:10px; padding-left:8px; font-weight:bolder; border-bottom:1px #999999 solid; }
+#main h4  a.a2 { background:#26688F;  padding:0 10px 0 10px; display:inline-block; position:relative; height:19px; line-height:19px; font-size:12px; color:#FFF; float:right; right:10px; -top:-25px; }
+
+.st-bbgg { width:640px; height:80px; margin:20px auto 20px auto;}
+a.st-btn  { background:url("img/st_bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/st_bg.jpg*/ 0 -113px no-repeat; width:101px; height:76px; display:block; margin-right:5px; text-align:center; float:left;}
+a.st-btn .sp1 { padding-top:15px; font-size:15px; font-weight:bolder; color:#26678E; display:block;}
+a.st-btn .sp2 { padding-top:15px; font-size:12px; font-weight:bolder; color:#333; display:block;}
+a.st-btn:hover  { background:url("img/st_bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/st_bg.jpg*/ 0 0 no-repeat; width:101px; height:76px; display:block; margin-right:5px; color:#fff; float:left;}
+a.st-btn:hover .sp1 { padding-top:15px; font-size:15px; font-weight:bolder; color:#fff; display:block;}
+a.st-btn:hover .sp2 { padding-top:15px; font-size:12px; font-weight:bolder; color:#fff; display:block;}
+.font14-1 { font-size:16px; font-weight:bolder; color:#26678E; letter-spacing:1px;}
+.font14-2 { font-size:16px; font-weight:bolder; color:#90352E; letter-spacing:1px;}
+
+
+/*----------交易行情-------*/
+.market-trend h3 span{
+	background-position:center -90px;
+}
+.market-trend-tab{
+	height:16px;
+	margin:4px 0 0 0;
+	padding-left:10px;
+	border-bottom:1px solid #ccc;
+}
+.market-trend-tab li{
+	height:16px;
+	line-height:16px;
+	background:#ccc;
+	width:52px;
+	text-align:center;
+	float:left;
+	margin-right:10px;
+	display:inline;
+	cursor:pointer;
+	position:relative;
+}
+.market-trend-tab li span{
+	display:inline-block;
+	width:10px;
+	height:4px;
+	background:url("img/market-trend-tab-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/market-trend-tab-bg.png*/ no-repeat;
+	position:absolute;
+	left:20px;
+	top:16px;
+	display:none;
+}
+.market-trend-tab li.select span,.market-trend-tab li.over span{
+	display:block;
+}
+.market-trend-tab li.select,.market-trend-tab li.over{
+	background:#90352E;
+	color:#fff;
+}
+.market-trend-thead th{
+	height:23px;
+	line-height:23px;
+	background:#26688F;
+	color:#fff;
+	font-weight:normal;
+}
+.market-trend-box{
+	float:left;
+	height:290px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	width:390px;
+}
+.market-trend-tbody td{
+	height:21px;
+	line-height:21px;
+	text-align:center;
+}
+.liter span,.drop span{padding-left:5px; font-family:"Courier New", Courier, monospace;}
+.liter{color:#090; padding-right:12px;}
+.drop{ color:#f00; padding-right:12px;}
+
+.market-trend-tbody td.liter,.market-trend-tbody td.drop{
+	padding:0;
+}
+.market-trend-tbody tr{
+	border-top:1px solid rgba(0, 0, 0, 0);
+	border-bottom:1px rgba(0, 0, 0, 0);
+}
+.market-trend-tbody tr.over{
+	border-top:1px solid #26688F;
+	border-bottom:1px solid #26688F;
+	background:#D9EAF4;
+}
+
+/*多空对比*/
+.product-list-item{
+	margin-bottom:13px;	
+	padding:0 10px;
+	height:18px;
+}
+.product-list-item td{
+	height:18px;
+	line-height:18px;
+	text-align:center;
+	color:#fff;
+}
+.product-list-item label,.product-list-th label{
+	height:18px;
+	line-height:18px;
+	width:110px;
+	float:left;
+	padding-right:10px;
+	display:inline;
+}
+.product-list-th label{
+	height:30px;
+	line-height:30px;
+	font-size:15px;
+	color:#000;
+}
+.product-list-th{
+	height:30px;
+	line-height:30px;
+	border-bottom:1px dotted #999;
+	margin-bottom:8px;
+	padding:0 10px;
+}
+.product-list-th span{
+	padding-left:20px;
+}
+.product-list-th .long-span{
+	background:url("img/list-icons2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/list-icons2.png*/ left -73px no-repeat;
+	margin-left:120px;
+}
+.product-list-th .short-span{
+	background:url("img/list-icons2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/list-icons2.png*/ left -93px no-repeat;	
+}
+.product-list-item table{
+	width:180px;
+}
+.product-list-item .long{
+	background:url("img/product-list-barbg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/product-list-barbg.png*/ left 0 no-repeat;
+	text-align:left;
+	padding-left:5px;
+}
+.product-list-item .short{
+	background:url("img/product-list-barbg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/product-list-barbg.png*/ right -18px no-repeat;
+	text-align:right;
+	padding-right:5px;
+}
+
+
+/*产品选项卡*/
+.deposit-tab{
+	height:33px;
+	margin:15px 0 0 0;
+	padding-left:20px;
+	border-bottom:1px solid #999;
+}
+.deposit-tab li{
+	height:28px;
+	line-height:28px;
+	background:#eaeaea;
+	text-align:center;
+	float:left;
+	padding:0 15px;
+	margin:5px 10px 0 0;
+	border:1px solid #999;
+	border-bottom:none;
+	font-size:15px;
+	font-weight:bold;
+	display:inline;
+	cursor:pointer;
+	position:relative;
+}
+
+.deposit-tab li span{
+	width:10px;
+	height:4px;
+	background:url("img/deposit-tab-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/deposit-tab-bg.png*/ left top no-repeat;
+	position:absolute;
+	left:50%;
+	top:32px;
+	display:none;
+	margin-left:-5px;
+}
+.deposit-tab li a{
+	white-space:nowrap;
+}
+.deposit-tab li.select span,.deposit-tab li.over span{
+	display:block;
+}
+.deposit-tab li.select,.deposit-tab li.over{
+	background:#26688F;
+	color:#fff;
+	height:32px;
+	line-height:32px;
+	margin-top:0;
+}
+.deposit-tab li.select a{
+	color:#fff;
+}
+.product-box{
+	padding:15px 12px;
+	border:1px solid #999;
+	border-top:none;
+}
+.example{
+	padding:0 12px;
+}
+.example p{
+	line-height:25px;
+	padding:0;
+	margin:0;
+}
+.pro-tip{
+	color:#777;
+	margin-top:20px;
+}
+
+/*股票指数的tab*/
+.stocks-indices-tab{
+	text-align:center;
+	padding-left:300px;
+}
+.stocks-indices-tab  li.select{
+	background:#90352E;
+}
+.stocks-indices-tab  li span{
+	background: url("img/market-trend-tab-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/market-trend-tab-bg.png*/ no-repeat
+}
+
+/*股票下载pdf*/
+.stock-list .pdfbtn{
+	 background: url("img/icon-small.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-small.png*/ no-repeat scroll center -76px;
+	 height:20px;
+	 line-height:20px;
+	 margin-left:0;
+	 padding:0;
+}
+
+.stock-list  .pdfbtn em {
+	 background: url("img/icon-small.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-small.png*/ no-repeat scroll -6px -76px;
+	 height:20px;
+	 line-height:20px;
+	 padding: 0 0 0 36px;
+}
+
+.commod-tab{
+	text-align:center;
+	padding-left:3%;
+}
+.commod-tab  li.select{
+	background:#90352E;
+}
+.commod-tab  li span{
+	background: url("img/market-trend-tab-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/market-trend-tab-bg.png*/ no-repeat
+}
+
+
+.metals-tab{
+	text-align:center;
+	padding-left:20%;
+}
+.metals-tab  li.select{
+	background:#90352E;
+}
+.metals-tab  li span{
+	background: url("img/market-trend-tab-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/market-trend-tab-bg.png*/ no-repeat
+}
+
+
+.energy-tab{
+	text-align:center;
+	padding-left:36%;
+}
+.energy-tab  li.select{
+	background:#90352E;
+}
+.energy-tab  li span{
+	background: url("img/market-trend-tab-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/market-trend-tab-bg.png*/ no-repeat
+}
+#pro-m{ clear:both; padding:0px 180px !important; width:auto;}
+#pro-m a{ margin:0px 30px !important;}

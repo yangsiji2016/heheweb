@@ -1,0 +1,146 @@
+@charset "utf-8";
+/* CSS Document */
+
+#main p { line-height:180%;}
+
+
+.contact-bg { background:url("img/contact-bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/contact-bg.jpg*/ 0 0 no-repeat; width:711px; height:639px; margin:20px  auto 20px auto; float:left; }
+.contact-bg .a1, .contact-bg .a2, .contact-bg .a3 { position:relative; width:347px;}
+.contact-bg .a1 { margin:62px 0 0 352px; }
+.contact-bg .a2 { margin:96px 0 0 352px; }
+.contact-bg .a3 { margin:96px 0 0 352px; }
+
+.contact-bg .a1 h3, .contact-bg .a2 h3, .contact-bg .a3 h3 { font-size:15px; border-bottom:1px #CCCCCC solid; margin-bottom:6px; padding-bottom:6px; line-height:21px; }
+
+.live-bg { background:url("img/ctus.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/ctus.jpg*/ 0 0 no-repeat; width:603px; height:244px; margin-left:110px; line-height:230%;}
+.live-bg .l1 { float:left; text-align:left; padding:30px 0 0 140px; display:block; }
+.live_chat { position:absolute; margin:180px 0 0 207px;}
+
+.queries-bg { width:687px; min-height:500px; margin:0 auto;}
+.queries-bg .t1 { background:url("img/feedback-1.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/feedback-1.jpg*/ 0 0 no-repeat; width:687px; height:141px; display:block;}
+.t1 em { padding:55px 15px 0 175px; display:block;}
+.queries-bg .t2 { width:659px;min-height:250px; border-left:1px #999 solid; border-right:1px #999 solid; display:block; float:right; clear:both;}
+.queries-bg .t3 { background:url("img/feedback-2.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/feedback-2.jpg*/ 0 0 no-repeat; width:687px; height:13px; display:block; float:right; clear:both;}
+
+.control-group {
+	padding: 0 0 18px 150px;
+}
+.control-label {
+	float: left;
+	width: 140px;
+	line-height: 32px;
+	height: 32px;
+	font-size: 13px;
+	color: #000;
+}
+.controls {
+	margin-left: 150px;
+	position:relative;
+}
+
+.controls input, .controls select, .controls textarea {
+	border-radius: 4px;
+	behavior: url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+	border: 1px solid #999;
+	padding: 4px;
+}
+
+.controls input {
+	height: 22px;
+	line-height: 22px;
+	width: 250px;
+}
+.controls .help-inline {
+	padding: 4px 5px 4px 24px;
+	background: url("img/reg-icons.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/reg-icons.png*/ 4px -114px no-repeat #ffffe6;
+	border-radius: 4px;
+	behavior: url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+	border: 1px solid #999;
+	display: none;
+	width: 230px;
+	line-height: 18px;
+	position: absolute;
+	left:0;
+	top:32px;
+	z-index:999;
+}
+.control-group.warning input, .control-group.warning textarea, .control-group.warning select, .control-group.warning .help-inline {
+	border: 1px solid #3F6BF2;
+	display: inline-block;
+}
+
+.control-group.warning .help-inline {
+	background-position: 4px -114px;
+}
+.controls textarea {
+    height: 52px;
+    resize: none;
+    width: 250px;
+}
+
+.controls select {
+    height: 30px;
+    width: 260px;
+}
+.p1 { background:url("img/faq.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/faq.png*/ 0 7px no-repeat; padding-left:20px; font-size:14px;  font-weight:bolder; margin-top:13px; }
+.p2 { background:#FFFFE6; border:#CCC 1px solid; padding:5px;}
+
+
+.rm_au {  background:url("img/rm_bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/rm_bg.jpg*/ 0 -14px no-repeat; width:748px; float:left; margin-bottom:15px;}
+.rm_uk { background:url("img/rm_bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/rm_bg.jpg*/ -892px -2px no-repeat; width:748px; float:left; margin-bottom:15px;}
+.rm_cn { background:url("img/rm_bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/rm_bg.jpg*/ -1780px -14px no-repeat; width:748px; float:left; margin-bottom:15px;}
+
+.rm_au .a1, .rm_uk .a1,.rm_cn .a1 { display: inline-block; margin-left:85px; margin-top:15px; width:630px; line-height:22px; }
+.a1 a { line-height:22px; text-align:inherit; float:left; }
+.a1 li { clear:both; padding-bottom:36px; -padding-bottom:16px;}
+
+.rm_au .a2, .rm_uk .a2,.rm_cn .a2 { display: inline-block; margin-left:85px; margin-top:15px; width:630px; line-height:22px; }
+.a2 a { line-height:22px; text-align:inherit; float:left; }
+.a2 .span { line-height:22px; text-align:inherit; float:left; margin-right:15px;}
+.a2 li { clear:both; padding-bottom:16px; -padding-bottom:8px;}
+
+.rmf14 { font-size:14px; padding:10px 0 0 85px;}
+.rmf141 { font-size:14px; padding:20px 0 0 85px;}
+.rmf20b { font-size:16px; font-weight:bolder;}
+
+
+
+.litbutton {
+	height:22px; font-weight:bold;
+	line-height:22px;
+	background:url("img/btn-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/btn-bg.png*/ left -385px repeat-x;
+	padding:0 0 0 10px;
+	display:inline-block;
+	cursor:pointer; margin-right:15px;
+}
+
+.litbutton span {
+	float:left;
+	height:22px;line-height:22px;
+	background:url("img/btn-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/btn-bg.png*/ right -385px repeat-x;
+	color:#fff;
+	font-size:12px;
+	padding:0 10px 0 0;
+	display:inline;
+}
+
+a.litbutton:hover {
+	height:22px; font-weight:bold;
+	line-height:22px;
+	background:url("img/btn-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/btn-bg.png*/ left -437px repeat-x;
+	padding:0 0 0 10px;
+	display:inline-block;
+	cursor:pointer; margin-right:15px;
+}
+
+a.litbutton:hover span {
+	float:left;
+	height:22px;line-height:22px;
+	background:url("img/btn-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/btn-bg.png*/ right -437px repeat-x;
+	color:#fff;
+	font-size:12px;
+	padding:0 10px 0 0;
+	display:inline;
+}
+
+.line_div { border-bottom:1px #CCCCCC solid; height:5px;}

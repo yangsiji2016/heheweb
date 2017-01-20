@@ -1,0 +1,1120 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, h1, h2, h3, h4, h5, h6, hr,div,
+blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, p,/* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td, /* table elements 表格元素 */
+img/* img elements 图片元素 */{
+	margin: 0;
+	padding: 0;
+}
+img fieldset{border:medium none;}
+p {padding: 5px 0; margin:5px 0;}
+.p1{padding:0 0 8px 0;}
+
+body,button, input, select, textarea {
+	font-size: 12px;
+	font-family:"微软雅黑", Arial;
+	color:#333;
+	line-height:140%;
+	
+}
+h1, h2, h3, h4, h5, h6, b, strong { font-size: 100%; font-weight:bold; }
+em,cite{font-style:normal;}
+
+table { border-collapse: collapse; border-spacing: 0; border-collapse:collapse; }
+ul,ol{ list-style:none;}
+select, img {vertical-align: middle;}
+img{ border:0px;}
+
+/*清除浮动*/
+.clearfix:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+* html .clearfix {height: 1%;}
+
+
+.fl{float:left;}
+.fr{float:right;}
+.clear{clear:both;}
+
+.disb{display:block;}
+.disi{display:inline;}
+.disn{display:none;}
+
+.defaul{ cursor:default;}
+.absolute {position: absolute;}
+.relative {position: relative;}
+
+.fotbold{ font-weight:bold;}
+.textl {text-align: left;}
+.textr {text-align: right;}
+.textc {text-align: center;}
+.textindent{ text-indent:2em;}
+.textul { text-decoration:underline;}
+.offScreen {left: -9999px; position: relative;}
+
+
+.mtt{ margin-top:10px;}
+.mlt{margin-left:10px;}
+.mbt{margin-bottom:5px;}
+
+a {
+    color: #333333;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.color-blue{color:#26678E;}
+
+
+/*-----大框架 css------*/
+#content,#head,#nav-box,#con-banner .con-banner,#footmenu,.footmenu-content{
+	width:997px;
+	margin:0 auto;
+}
+#content{
+	padding-bottom:20px;
+	background:url("img/yinying.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/yinying.jpg*/ top center no-repeat;
+}
+
+/*--------#head start-----*/
+#head{
+	width:1000px;
+	height:90px;
+	margin:0 auto;
+}
+
+#logo img {
+  margin-top: 23px;
+  height: 45px; width:169px;
+}
+#top-nav{
+	width:518px;
+	float:right;
+	padding-bottom:8px;
+}
+.top-nav-body{
+	margin-top:14px;
+	float:right;
+}
+.top-nav-body li{
+	display:inline;
+	margin-right:8px;
+	height:26px;
+	line-height:26px;
+}
+.top-nav-body a{
+	display:inline-block;
+	padding:0 15px 0 22px;
+	height:26px;
+	border-radius:6px;	
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+	border:1px solid #000;
+	color:#fff;
+	background:url("img/list-icons2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/list-icons2.png*/ left 8px no-repeat #26688F;
+}
+
+.top-nav-body a:hover{		
+		background:url("img/list-icons2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/list-icons2.png*/ left 8px no-repeat #900;
+}
+
+.red-bt a {
+	display:inline-block;
+	padding:0 15px 0 22px;
+	height:26px;
+	border-radius:6px;	
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+	border:1px solid #000;
+	color:#fff;
+	background:url("img/list-icons2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/list-icons2.png*/ left 8px no-repeat #900;
+	}
+/*------我的媒体 start-----*/
+.share{
+	width:350px;
+	margin-top:10px;
+	line-height:26px;
+	height:26px;
+	zoom:1;
+	float:right;
+}
+.wx .fudong { background: url("img/wx-sao.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/wx-sao.png*/0 0 no-repeat; position:relative; width:123px; height:130px; z-index:200; margin-left:-45px; display:none; }
+.share-con{
+	margin:0 15px 0 10px;
+	height:26px;
+	width:130px;
+	float:left;
+ }
+.share-con li{
+	float:left;
+	width:26px;
+	height:25px;
+	cursor:pointer;
+	margin-left:5px;
+	display:inline;
+	
+}
+.share-con li a{
+	display:block;
+	height:26px;
+	background:url("img/share-icons.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/share-icons.png*/ no-repeat;
+}
+.share-con li.kj a,.my-media li.kj a:hover{background-position:0 0;}
+.share-con li.wx a,.my-media li.wx a:hover{ background-position:-36px 0;}
+.share-con li.wb a,.my-media li.wb a:hover{ background-position:-69px 0;}
+.share-con li.xl a,.my-media li.xl a:hover{ background-position:-102px 0;}
+.share-con li.ff a,.my-media li.ff a:hover{ background-position:-138px 0;}
+.share-con li.tw a,.my-media li.tw a:hover{ background-position:-172px 0;}
+
+/*--------脚部我的媒体------*/
+.my-media{float:right; margin:3px 0 0 10px;}
+.my-media li.kj a {background-position:0 -34px;}
+.my-media li.wx a{ background-position:-36px -35px;}
+.my-media li.wb a{ background-position:-69px -35px;}
+.my-media li.xl a{ background-position:-102px -35px;}
+.my-media li.ff a{ background-position:-138px -35px;}
+.my-media li.tw a{ background-position:-172px -35px;}
+
+/*------我的媒体 end-----*/
+
+
+/*------语言选择 start------*/
+.language{
+	float:left;
+	width:104px;
+	height:24px;
+	line-height:22px;
+	position:relative;
+	cursor:pointer;
+	z-index:999;
+}
+.defalut{
+	background:url("img/language_bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/language_bg.png*/ left 0 no-repeat;
+	width:74px;
+	height:24px;
+	line-height:24px;
+	padding-left:30px;
+	position:relative;
+	cursor:pointer;
+	z-index:999;
+}
+/*选择英文*/
+.languang-en{
+	background:url("img/language_bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/language_bg.png*/ left 0 no-repeat;
+}
+/*选择中文*/
+.languang-cn{
+	background:url("img/language_bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/language_bg.png*/ left -26px no-repeat;
+}
+/*选择阿拉伯*/
+.languang-ar{
+	background:url("img/language_bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/language_bg.png*/ left -51px no-repeat;
+}
+
+.language-select {
+	position:absolute;
+	z-index:-88;
+	width:82px;
+	border:1px solid #26688F;
+	border-top:none;
+	left:12px;
+	top:18px;
+	background:#fff;
+	display:none;
+	padding-top:10px;
+}
+.language-select li{
+	height:24px;
+	line-height:22px;
+	padding-left:19px;
+}
+.language-select li:hover{
+	background:#666;
+	color:#fff;
+}
+/*------语言选择 end------*/
+
+/*--------#head end-----*/
+
+/*------nav start----*/
+#index {
+	float:left;
+	width:49px;
+	height:39px;
+	line-height:39px;
+	background:url("img/index_bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/index_bg.jpg*/ no-repeat;
+}
+
+#nav{
+	width:100%;
+	min-width:1000px;
+	height:39px;
+	line-height:39px;
+	border-top:3px solid #26688F;
+	border-bottom:3px solid #26688F;
+}
+#nav-con li{
+	float:left;
+	border-right:1px solid #26688F; 
+	position:relative;
+	padding-left:1px;
+	display:inline;
+	z-index:98;
+}
+#nav-con li a{
+	display:inline-block;
+	padding:0 19px;
+	font-size:15px;
+}
+#nav-con li.hover{
+	background:url("img/menu_hover_bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/menu_hover_bg.jpg*/ left 0 no-repeat;
+}
+#nav-con li.hover a{
+	background:url("img/menu_hover_bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/menu_hover_bg.jpg*/ right 0 no-repeat;
+	color:#fff;
+}
+#nav-con .two-menu{
+	display:none;
+	width:158px;
+	border:1px solid #333;
+	padding:5px 0;
+	background:url("img/two-menu-bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/two-menu-bg.jpg*/  repeat-x #26688F;	
+	position:absolute;
+	top:39px;
+	left:-1px;
+}
+
+#nav-con .two-menu li {
+	float:none;
+	border:0;
+	padding:0;
+}
+#nav-con .two-menu li a{
+	display:block;
+	height:25px;
+	line-height:25px;
+	color:#fff;
+	padding:0 21px;
+	
+
+}
+#nav-con li .two-menu li a:hover{
+	background:#90352E;
+}
+#nav-con li.hover .two-menu li,#nav-con li.hover .two-menu a{
+	background:none;
+}
+/*------nav end----*/
+
+
+
+
+
+
+/*------content start----*/
+.trading,.news,.economic,.product-list,.video,.market-trend,.e-book{
+	border:1px solid #26688F;
+	border-radius:4px;
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+	margin-top:10px;
+}
+.product-list { height:266px;}
+.trading { height:266px;}
+#main{
+	width:654px;
+	float:left;
+}
+#sidebar{
+	width:332px;
+	float:right;
+	display:inline;
+}
+.more{
+	float:right;
+	padding:0 8px;
+	height:16px;
+	color:#fff;
+	background:#26688F;
+}
+.trading h3,.news h3,.product-list h3,.video h3,.economic h3,.market-trend h3,.e-book h3{
+	height:40px;
+	line-height:40px;
+	border-bottom:1px solid #26688F;
+	padding:0 12px 0 18px;	
+	background: #fff;	
+	background: linear-gradient(#fff, #ccc);
+	-pie-background: linear-gradient(#fff, #ccc);
+	border-radius:4px 4px 0 0;
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+}
+.trading h3 span,.news h3 span,.economic h3 span{	
+	color:#26678E;
+	font-size:15px;
+	background:url("img/list-icons.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/list-icons.png*/ left -17px no-repeat;
+	padding:1px 0 2px 24px;
+}
+.news{height:271px;}
+.news h3 span{
+	background-position: left -43px;
+}
+.trading .more,.news .more,.economic .more,.e-book .more{
+	line-height:16px;
+	margin-top:12px;
+	font-size:12px;
+	font-weight:normal;
+}
+.time{
+	float:right;
+}
+.trading ul ,.news ul{
+	padding:5px 10px;
+}
+.trading li,.news li{
+	line-height:24px;
+	background:url("img/list-icons2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/list-icons2.png*/ left -10px no-repeat;
+	padding-left:20px;
+	font-size:13px;
+}
+.news dl{
+	margin:15px  0 0 10px;
+	width:220px;
+	float:left;
+	display:inline;
+}
+.news ul{
+	width:402px;
+	float:right;
+	display:inline;
+}
+.news dt{
+	height:165px;
+	background:url("img/news-dt-bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/news-dt-bg.jpg*/ no-repeat;
+}
+.news dt img{
+	padding:7px 8px;
+	border:1px solid #26688F;
+	background:#fff;
+}
+.news dd{
+	padding:0 14px 0 5px;
+	text-align:center;
+}
+
+/*------content end----*/
+
+
+/*全屏banner start*/
+
+
+.flexslider { position: relative; height: 322px; overflow: hidden; background: url("img/loading.gif")/*tpa=http://www.aetoscg.com/cn/static/css/img/loading.gif*/ 50% no-repeat;}
+.slides { position: relative; z-index: 1;}
+.slides li { height: 318px; border-bottom:4px solid #276890;}
+.slides li a{display:block; width:100%; height:322px;}
+.flex-control-nav { position: relative;  bottom: 20px;  z-index: 2;  width: 1000px;  text-align: right;  margin: 0 auto;}
+.flex-control-nav li { display: inline-block; width: 29px; height: 10px; margin: 0 5px; *display: inline; zoom: 1;}
+.flex-control-nav a { display: inline-block; width: 29px; height: 10px; line-height: 40px; overflow: hidden; background: url("img/icon-1.gif")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-1.gif*/  no-repeat; cursor: pointer;}
+.flex-control-nav .flex-active {background: url("img/icon-2.gif")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-2.gif*/  no-repeat;}
+.flex-direction-nav{
+	width:1000px;
+	position:relative;
+	margin:0 auto;
+	height:323px;
+}
+.flex-prev,.flex-next{
+	background:url("img/skip_bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/skip_bg.png*/ no-repeat;
+	width:33px;
+	height:60px;
+	position:absolute;
+	top:126px;
+	z-index:99;
+	display:none;
+}
+.flex-prev{background-position:0 0; left:-33px; }
+.flex-next{background-position:right 0; right:-33px; }
+
+/*pn 2015-3-4*/
+.index-banner{position: relative;height: 322px;overflow: hidden;background: url("img/loading.gif")/*tpa=http://www.aetoscg.com/cn/static/css/img/loading.gif*/ center center no-repeat;
+}
+.index-banner .slides li:first-child{ z-index:2;}
+.index-banner ul.slides{ position:relative; width:100%; height:322px;}
+.index-banner ul.slides li{ position:absolute; left:0px; top:0px; width:100%;height: 318px; border-bottom: 4px solid #276890;}
+.index-banner ul.slides li a{ display:block; width:100%; height:100%;}
+.flexbtn{ width:1000PX; position:absolute; left:50%; margin-left:-500px; top:10px; display:none;}
+.flex-prev,.flex-next{ height:45px; width:45px;position:absolute; margin-top:0px; background:url("img/lr.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/lr.png*/ no-repeat 0 0; z-index:9; display:block; }
+.flex-prev{ left:5px;}
+.flex-next{ right:5px; background-position:-45px 0px;}
+.index-banner:hover .flexbtn{ display:block;}
+/*end pn 2015-3-4*/
+
+
+/*全屏banner end*/
+
+/*-----上下滚动产品展示 start------*/
+.scroolbox{
+	margin:10px 0 0;
+	height:22px;
+	overflow:hidden;
+	position:relative;
+	z-index:3;
+	width:963px;
+	float:left;
+}
+.scroolbtn{
+	float:right;
+	width:16px;
+	height:23px;
+	margin:8px 5px 0 0;
+	display:inline;
+}
+.scroolbtn a{ 
+	display:block;
+	width:16px;
+	height:10px;
+	overflow:hidden;
+	background:url("img/new_btn.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/new_btn.jpg*/ no-repeat;
+}
+#zzjs-dw{background-position:left -12px; margin-top:2px;}
+#hot-news-box{
+	height:22px;
+	line-height:22px;
+	position:absolute;
+}
+.hot-news{ height:22px;}
+.hot-news li{
+	float:left;
+	width:304px;
+	padding:0 8px;
+	border-right:1px solid #555;
+	display:inline;
+}
+.hot-news li.last{
+	border:none;
+}
+.pro{
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	padding-right:10px;
+
+}
+.liter span,.drop span{padding-left:3px;}
+.liter{color:#090;}
+.drop{ color:#f00;}
+.up { color:#f00; }
+.down { color:#090;}
+.p-up-down { margin-left:3px; margin-right:3px;}
+
+/*-----上下滚动产品展示 end------*/
+
+/*-----sidebar start------*/
+.product-list h3 span,.video h3 span,.market-trend h3 span{
+	background:url("img/title-icons.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/title-icons.png*/ center 10px no-repeat;
+	color:#90352E;
+	font-size:15px;
+	display:block;
+	text-align:center;
+}
+.product-list-item{
+	margin-bottom:13px;	
+	padding:0 10px;
+}
+.product-list-item td{
+	height:18px;
+	line-height:18px;
+	text-align:center;
+	color:#fff;
+}
+.product-list-item label,.product-list-th label{
+	height:18px;
+	line-height:18px;
+	width:105px;
+	float:left;
+	padding-right:10px;
+	display:inline;
+}
+.product-list-th label{
+	height:30px;
+	line-height:30px;
+	font-size:15px;
+	color:#000;
+}
+.product-list-th{
+	height:30px;
+	line-height:30px;
+	border-bottom:1px dotted #999;
+	margin-bottom:8px;
+	padding:0 10px;
+}
+.product-list-th span{
+	padding-left:20px;
+}
+.product-list-th .long-span{
+	background:url("img/list-icons2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/list-icons2.png*/ left -73px no-repeat;
+	margin-left:125px;
+}
+.product-list-th .short-span{
+	background:url("img/list-icons2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/list-icons2.png*/ left -93px no-repeat;	
+}
+.product-list-item table{
+	width:190px;
+}
+.product-list-item .long{
+	background:url("img/product-list-barbg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/product-list-barbg.png*/ left 0 no-repeat;
+	text-align:left;
+	padding-left:5px;
+}
+.product-list-item .short{
+	background:url("img/product-list-barbg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/product-list-barbg.png*/ right -18px no-repeat;
+	text-align:right;
+	padding-right:5px;
+}
+
+/*-----视频轮播----*/
+.video h3 span{
+	background-position: center -40px;
+}
+.videos-box{
+	width:330px;
+	height:198px;
+	overflow:hidden;
+}
+#video-con{ position:relative;}
+#video-con div{
+	position: absolute;
+	left:0;
+	top:0;
+}
+.video-num{
+	height:21px;
+	text-align:center;
+	padding:4px 0 8px 0;
+}
+.video-num span{
+	width:25px;
+	display:inline-block;
+	height:21px;
+	padding-right:5px;
+	background:url("img/video-icons.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/video-icons.png*/ no-repeat;
+	cursor:pointer;
+	overflow:hidden;
+}
+.video-num span.on{
+	background-position:-126px 0;
+}
+.video-num span.num-last{
+	padding-right:0;
+}
+
+/*----------经济事件--------*/
+.economic h3 span{
+	background-position: left -68px;
+}
+.economic-thead,.economic-tbody{
+	width:100%;
+}
+.economic-thead th{
+	font-size:13px;
+	height:30px;
+	line-height:30px;
+	border-bottom:1px solid #999;
+	
+}
+.economic-tbody td{
+	height:25px;
+	text-align:center;
+}
+.economic-tbody tr,.market-trend-tbody tr{
+	border-top:1px solid rgba(0, 0, 0, 0);
+	border-bottom:1px rgba(0, 0, 0, 0);
+}
+.economic-tbody tr.over,.market-trend-tbody tr.over{
+	border-top:1px solid #26688F;
+	border-bottom:1px solid #26688F;
+	background:#D9EAF4;
+}
+.economic-tbody-box{
+	padding:6px 0;
+	height:183px;
+	overflow:auto;
+}
+.times{
+	float:right;
+	font-weight:normal;
+	line-height:40px;
+}
+.times input{
+	width:52px;
+	height:14px;
+	color:#900;
+	text-align:center;
+	border:1px solid #999;
+	margin-top:12px;
+	line-height:12px;
+}
+
+/*----------市场趋势-------*/
+.market-trend h3 span{
+	background-position:center -90px;
+}
+.market-trend-tab{
+	height:16px;
+	margin:4px 0 0 0;
+	padding-left:15px;
+	border-bottom:1px solid #ccc;
+}
+.market-trend-tab li{
+	height:16px;
+	line-height:16px;
+	background:#ccc;
+	width:52px;
+	text-align:center;
+	float:left;
+	margin-right:10px;
+	display:inline;
+	cursor:pointer;
+	position:relative;
+}
+.market-trend-tab li span{
+	display:inline-block;
+	width:10px;
+	height:4px;
+	background:url("img/market-trend-tab-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/market-trend-tab-bg.png*/ no-repeat;
+	position:absolute;
+	left:20px;
+	top:16px;
+	display:none;
+}
+.market-trend-tab li.select span,.market-trend-tab li.over span{
+	display:block;
+}
+.market-trend-tab li.select,.market-trend-tab li.over{
+	background:#90352E;
+	color:#fff;
+}
+.market-trend-thead th{
+	height:23px;
+	line-height:23px;
+	background:#26688F;
+	color:#fff;
+	font-weight:normal;
+}
+.market-trend-box{
+	height:180px;
+	overflow:auto;cursor:pointer;
+}
+.market-trend-tbody td{
+	height:21px;
+	line-height:21px;
+	text-align:center;
+}
+.market-trend-tbody td.liter,.market-trend-tbody td.drop{
+	padding:0;
+}
+/*-----sidebar end------*/
+
+/*------product start------*/
+.product{
+	float:left;
+	width:740px;
+	overflow:hidden;
+	zoom:1;
+}
+.product dl{
+	float:left;
+	width:145px;
+	height:224px;
+	margin:22px 5px 10px 0;
+	display:inline;
+}
+.product  dl.indices{
+	margin-right:0;
+}
+.product dl.indices dd{ padding-right:0;}
+.product dd{
+	text-align:center;
+}
+.product dt{
+	background:url("img/pro-m-index.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/pro-m-index.jpg*/ no-repeat;
+	height:150px; margin-top:23px;
+}
+.product .forex dt{ background-position:left top;}
+.metals dt{ background-position:-150px top;}
+
+.energy dt{background-position:-300px top;}
+
+.indices dt{background-position:-451px top;}
+
+.commod dt{background-position:-600px top;}
+
+.product dl { cursor:pointer;}
+
+.product .name{
+	padding-top:10px;
+	line-height:25px;
+	font-size:18px;	
+}
+/*------product end------*/
+
+#small-banner{
+	float:right;
+	width:250px;
+	margin:14px 0 0 0;
+}
+
+.small-banner-text{
+	margin:15px;
+	text-align:center;
+	font-family:"微软雅黑";
+}
+
+.small-banner-img{
+	position:relative;
+	height:179px;
+	width:257px;
+	overflow:hidden;
+}
+.small-banner-img li{
+	float:left;
+	width:257px;
+	height:179px;
+	overflow:hidden;
+	text-align:center;
+}
+.num {
+	position:absolute;
+	right:2px;
+	top:170px;
+	height:10px;
+	overflow:hidden;
+}
+.num span{
+	background:url("img/small_click_bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/small_click_bg.png*/ no-repeat;
+	margin-right:5px;
+	display:inline-block;
+	width:8px;
+	height:8px;
+	cursor:pointer;
+}
+.num span.on{background-position:-12px 0;}
+
+
+/*-------#footer start*/
+#footer {
+	width:100%;
+	background:#f3f3f3;
+	border-top:1px solid #999;
+	border-bottom:5px solid  #26688F;
+	padding:15px 0;
+}
+.footcon{
+	width:997px;
+	margin:0 auto;
+}
+.pay{
+	position:relative;
+	z-index:999;
+	width:800px;
+}
+.pay li{
+	float:left;
+	width:89px;
+	margin:0 10px 0 0;
+	height:32px;
+	border-radius:6px;	
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+}
+.pay li a{
+	display:block;
+	border: 1px solid #999;
+	background:url("img/pay-bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/pay-bg.jpg*/ no-repeat;
+	overflow:hidden;
+	width:89px;
+	height:32px;
+	border-radius:6px;	
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+}
+.pay li a.visa{background-position:left  0;}
+.pay li a.wire{background-position:-99px 0;}
+.pay li a.card{background-position:-199px 0;}
+.pay li a.skrill{background-position:-298px 0;}
+.pay li a.casha{background-position:-397px 0;}
+.pay li a.pay{background-position:-496px 0;}
+.pay li a.jcb{background-position:-597px 0;}
+.pay li a.alipay{background-position:-699px 0;}
+.pay li a.move{background-position:-800px 0;}
+.pay li a:hover{
+	border: 1px solid #ccc;
+	
+}
+#guild{
+	clear:both;
+	overflow:hidden;
+	zoom:1;
+	padding:30px 0 0 0;
+}
+#guild dl{
+	float:left;
+}
+#guild dt{
+	font-size:14px;
+	color:#26668D;
+	border-bottom: solid 1px #999;
+	padding:0 64px 0 0;
+	line-height:30px;
+}
+#guild  dd{
+	padding:8px 8px 0 0;
+	line-height:18px;
+}
+#guild  dd li a{
+	color:#666;
+}
+
+#warning{
+	margin-top:20px;
+	color:#666;
+	font-size:11px;
+}
+#warning dt{
+	line-height:26px;
+	border-bottom:1px solid #999;
+}
+
+#footmenu { padding-top:10px; background:url("img/ft-bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/ft-bg.jpg*/ repeat-x; height:119px; width:100%; }
+.foot-menucon{
+	margin-left:260px;
+	padding-top:12px;
+
+}
+.foot-menucon ul{
+	overflow:hidden;
+	zoom:1;
+}
+.foot-menucon p{
+	padding:0 0 5px 10px;
+}
+.foot-menucon li{
+	float:left;
+	font-size:11px;
+}
+.foot-menucon li a{
+	padding:0 10px;
+}
+/*-------#footer end*/
+
+/*右侧漂浮框*/
+.sidepanel {
+	position: fixed !important;
+	position: absolute;
+	top:140px !important;
+	right: 50px;
+	width: 70px;
+	height: 320px;
+	z-index: 1000;
+	_position:absolute;
+	_bottom:auto;
+	_top:expression(eval(document.documentElement.scrollTop));
+	_margin-top:140px;
+	
+}
+.sidepanel-item{
+	margin-top:3px;
+}
+.sidepanel-item a{
+	background:#900;
+	width:62px;
+	height:36px;
+	line-height:16px;
+	display:block;
+	text-align:center;
+	border:2px solid #fff;
+	color:#fff;
+	border-radius:4px;
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+	-webkit-box-shadow: #999 4px 5px 2px;
+	-moz-box-shadow: #999 4px 5px 2px;
+	box-shadow: #999 4px 5px 2px;
+	padding-top:3px ;
+
+}
+
+.replaceImg { background:url("../images/zhuanzhuan-guan.gif")/*tpa=http://www.aetoscg.com/cn/static/images/zhuanzhuan-guan.gif*/ center 0 no-repeat; width:auto; min-height:41px; line-height:41px; display:block;}
+
+/*登录后头部导航样式*/
+	#top-nav-login{
+	width:650px;
+	float:right;
+	padding-bottom:8px;
+	display:inline;
+}
+.top-nav-body-login{
+	float:right;
+	display:inline;
+	padding-right:10px;
+	margin-top:14px;
+	height:28px;
+}
+.top-nav-body-login li{
+	float:left;
+	display:inline;
+}
+
+.role,.profile,.quit{
+	float:left;
+	height:22px;
+	line-height:22px;
+	position:relative;
+	cursor:pointer;
+	z-index:999;
+}
+.profile,.role{
+	border-right:1px solid #999;
+	margin-right:10px;
+	padding-right:10px;
+}
+.profile div{
+	padding:0 15px 0 10px;
+	background:url("img/top-nav-icons.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/top-nav-icons.png*/ 68px -140px no-repeat;
+	border:1px solid #fff;
+	_display: inline;
+	_zoom: 1;
+}
+.profile div.over,.profile div:hover{
+	border:1px solid #26688F;
+	height:22px;
+}
+.profile-select{
+	position:absolute;
+	top:23px;
+	border:1px solid #26688F;
+	width:85px;
+	background:#fff;	
+	display:none;
+}
+
+/*-----profile start------*/
+.profile div{
+	background:none;
+	display:inline;
+	padding:0 0 0 10px;
+}
+
+.profile i{
+	margin-left:5px;
+	display:inline;
+	float:left;
+	width:20px;
+	height:20px;
+	background:url("img/top-nav-icons.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/top-nav-icons.png*/ left -140px no-repeat;
+}
+.profile div a{
+	display:inline;
+	float:left;
+	height:22px;
+}
+.profile-select{
+	right:-1px;
+	_right:-2px;
+	top:22px;
+	width:66px;
+	background:#fff;
+	border-top:none;
+	border-radius:0 0 4px 4px;
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;	
+	-webkit-box-shadow: #666 2px 4px 4px;
+	-moz-box-shadow: #666 2px 4px 4px;
+	box-shadow: #666 2px 4px 4px;
+}
+.profile-select li a{
+	display:block;
+	padding:0 8px;
+	width:50px;
+}
+.profile-select li a:hover{
+	color:#fff;
+	background:#999;
+}
+
+/*-----profile end------*/
+
+/*------role start----------*/
+.role .default{
+	/*background:url(img/role-bg.png) 66px 1px #26688F no-repeat;*/
+	background: url("img/btn-right-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/btn-right-bg.png*/ 94px 3px no-repeat #26688F;
+	height:22px;
+	line-height:22px;
+	width:74px;
+	display:block;
+	padding: 0 26px 0 13px;
+	position:relative;
+	cursor:pointer;
+	z-index:999;
+	border:1px solid #26688F;
+	border-radius:12px;
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;	
+	color:#fff;
+}
+
+/*------role end----------*/
+
+
+
+/*---------退出 start----------*/
+.quit{
+	padding-left:22px;
+	background:url("img/top-nav-icons.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/top-nav-icons.png*/ 0 4px no-repeat;
+}
+.quit a:hover{
+	text-decoration:underline;
+	color:#09C;
+}
+/*---------退出 end----------*/
+
+/*最新小图标提示*/
+.menu_new { background:url("img/niu.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/niu.png*/ 0 -1px no-repeat; width:35px; height:19px; position:absolute; margin-top:-15px; -margin-top:-20px;}
+.menu_li_new { background:url("img/niu.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/niu.png*/ 2px -137px no-repeat; width:35px; height:16px; position: relative; display: inline-block; top: 5px; -top: 5px; left:5px;   }
+.sidebar_new { background:url("img/niu.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/niu.png*/ 0 -55px no-repeat; width:40px; height:20px; position: relative; display: inline-block; top: 5px; -top: 10px; _top: -30px; *top: 0; left:5px;  }
+
+
+.bannerR{
+	width: 50%;
+	float: right;
+	background: #90352E;
+	height: 318px;
+}	
+.bannerL {
+	width: 50%;
+	float: left;
+	background: #26688F;
+	height: 318px;
+}
+.other-sites{ text-align:right; line-height:24px;width: 700px; margin: 0 auto; float:right;}
+.other-sites img{ float:right; margin-left:5px; border:1px solid #ccc;  }
+
+.product dl{ height:260px}
+.product dt {
+    background: url("img/pro2016-7-7.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/pro2016-7-7.png*/ no-repeat -5px -14px ;
+    height:164px;
+	width:164px;
+    margin: 23px auto 18px !important;
+}
+.product .forex dt{
+	background-position: -4px -14px;
+}	
+.product .metals dt{
+	background-position: -201px -14px;
+}	
+.product .indices dt{
+	background-position: -398px -14px;
+}	
+#main-list{ overflow:hidden;}

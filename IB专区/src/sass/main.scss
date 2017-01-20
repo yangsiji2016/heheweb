@@ -47,6 +47,12 @@
 }
 
 /*等级列表*/
+
+.grades-title{
+    color: red;
+    font-size: 16px;
+}
+
 .grades{
     background: url("../images/bg1.jpg") center center no-repeat;
     background-size: cover;
@@ -54,6 +60,9 @@
     tr{
         height: 50px;
         border-bottom: 2px solid #fff;
+    }
+    .no-border{
+        border-bottom: none;
     }
     thead tr{
         border: none;

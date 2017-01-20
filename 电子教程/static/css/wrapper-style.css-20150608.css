@@ -1,0 +1,923 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, h1, h2, h3, h4, h5, h6, hr,div,
+blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, p,/* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td, /* table elements 表格元素 */
+img/* img elements 图片元素 */{
+	margin: 0;
+	padding: 0; 
+}
+img fieldset{border:medium none;}
+p {padding: 5px 0; margin:5px 0;}
+.p1{padding:0 0 8px 0;}
+
+body,button, input, select, textarea {
+	font-size: 12px;
+	font-family:"微软雅黑", Arial, Helvetica, sans-serif; 
+	color:#333;
+	line-height:140%;
+	
+}
+h1, h2, h3, h4, h5, h6, b, strong { font-size: 100%; font-weight:bold; }
+em,cite{font-style:normal;}
+
+table { border-collapse: collapse; border-spacing: 0; border-collapse:collapse; }
+ul,ol{ list-style:none;}
+select, img {vertical-align: middle;}
+img{ border:0px;}
+
+.clearfix:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+* html .clearfix {height: 1%;}
+
+
+.fl{float:left;}
+.fr{float:right;}
+.clear{clear:both;}
+
+.disb{display:block;}
+.disi{display:inline;}
+.disn{display:none !important;}
+
+.defaul{ cursor:default;}
+.absolute {position: absolute;}
+.relative {position: relative;}
+
+.fotbold{ font-weight:bold;}
+.textl {text-align: left;}
+.textr {text-align: right;}
+.textc {text-align: center;}
+.textindent{ text-indent:2em;}
+.textul { text-decoration:underline;}
+.offScreen {left: -9999px; position: relative;}
+
+
+.mtt{ margin-top:10px;}
+.mlt{margin-left:10px;}
+.mbt{margin-bottom:5px;}
+
+a {
+    color: #333333;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.color-blue {color:#26678E;}
+ a.color-blue:hover {color:#26678E; text-decoration:underline;}
+ 
+.lan-taobg { background:url("img/icon-small.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-small.png*/ no-repeat right 0; display:inline-block; height:19px; padding-right:15px; cursor:text; }
+.lan-taobg em { color:#FFF; font-weight:bolder; background: url("img/icon-small.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-small.png*/ no-repeat left 0; padding-left:10px;height:19px; line-height:19px; float:left; cursor:text;}
+.mspan span { margin-left:10px; margin-top:10px; display:block;clear:both;}
+
+.lan-taobg2 { background:url("img/icon-small.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-small.png*/ no-repeat right -220px; display:inline-block; height:19px; padding-right:15px; cursor:text; }
+.lan-taobg2 em { color:#FFF; font-weight:bolder; background: url("img/icon-small.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-small.png*/ no-repeat left -220px; padding-left:10px;height:19px; line-height:19px; float:left; cursor:text;}
+
+ 
+.biglan-taobg { background:url("img/icon-small.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-small.png*/ no-repeat 2px -171px; display:inline-block; height:32px; line-height:32px; padding-left:32px; font-size:14px; color:#26678E; font-weight:bolder;}
+.biglan-taobg em { font-weight:bolder; background: url("img/icon-small.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-small.png*/ no-repeat right -171px; padding-right:20px; height:32px; line-height:32px; float:left;}
+a.biglan-taobg:hover { background:url("img/icon-small.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-small.png*/  2px -119px no-repeat; display:inline-block; height:32px; line-height:32px; padding-left:32px; font-size:14px; color:#fff; font-weight:bolder;}
+a.biglan-taobg:hover em { font-weight:bolder; background: url("img/icon-small.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-small.png*/ no-repeat right -119px; padding-right:20px; height:32px; line-height:32px; float:left;}
+.liebiaoj ul { margin:0; margin-top:0; padding-top:0;}
+.liebiaoj li { background:url("img/icon-3.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-3.png*/ 0 9px no-repeat; padding-left:15px; line-height:25px;}
+.tip { margin:0 0 5px 5px; padding:0 0 0 20px; background:url("img/reg-icons.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/reg-icons.png*/ 2px -118px no-repeat; }
+
+.pdfbtn { background:url("img/icon-small.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-small.png*/ no-repeat right -74px; display:inline-block; height:25px; clear:both; margin-left:10px; padding-right:10px; }
+.pdfbtn em { background: url("img/icon-small.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-small.png*/ no-repeat left -74px; padding:0 0 0 43px; height:25px; line-height:25px; float:left; }
+
+.font16 { font-size:16px; font-weight:bolder; line-height:28px; }
+
+
+/*-----大框架 css------*/
+#content,#head,#nav-box,#con-banner .con-banner,#footmenu,.footmenu-content{
+	width:997px;
+	margin:0 auto;
+}
+#content{
+	border-left:1px solid #999; 
+	border-right:1px solid #999; 
+	overflow:hidden;
+	zoom:1;
+	width:995px;
+}
+#sidebar{
+	width:210px;
+	float:left;
+}
+#main{
+	width:754px;
+	padding:10px 15px 50px 15px;
+	border-left:1px solid #999;
+	display:inline; min-height:460px;
+    text-align: center;
+}
+
+
+/*--------#head start-----*/
+#head{
+	height:90px;
+}
+
+#logo img {
+  margin-top: 23px;
+  height: 45px; width:169px;
+}
+#top-nav{
+	width:518px;
+	float:right;
+	padding-bottom:8px;
+}
+.top-nav-body{
+	margin-top:14px;
+	float:right;
+}
+.top-nav-body li{
+	display:inline;
+	margin-right:8px;
+	height:26px;
+	line-height:26px;
+}
+.top-nav-body a{
+	display:inline-block;
+	padding:0 15px 0 22px;
+	height:26px;
+	border-radius:6px;	
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+	border:1px solid #000;
+	color:#fff;
+	background:url("img/list-icons2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/list-icons2.png*/ left 8px no-repeat #26688F;
+}
+
+.top-nav-body a:hover{		
+		background:url("img/list-icons2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/list-icons2.png*/ left 8px no-repeat #900;
+}
+.red-bt a {
+	display:inline-block;
+	padding:0 15px 0 22px;
+	height:26px;
+	border-radius:6px;	
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+	border:1px solid #000;
+	color:#fff;
+	background:url("img/list-icons2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/list-icons2.png*/ left 8px no-repeat #900;
+	}
+	
+.share {
+	width:350px;
+	float:right;
+	line-height:26px;
+	height:26px;
+	zoom:1;
+	margin-top:10px;
+}
+.wx .fudong { background: url("img/wx-sao.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/wx-sao.png*/ 0 0 no-repeat; position:absolute; width:123px; height:130px; z-index:200; left:-45px; display:none; z-index:99; }
+.share-con{
+	margin:0 15px 0 10px;
+	height:26px;
+	width:130px;
+	float:left;
+ }
+.share-con li{
+	float:left;
+	width:26px;
+	height:25px;
+	cursor:pointer;
+	margin-left:5px;
+	display:inline;	
+}
+.share-con li.wx{
+	position:relative;
+	z-index:99;
+}
+.share-con li a{
+	display:block;
+	height:26px;
+	background:url("img/share-icons.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/share-icons.png*/ no-repeat;
+}
+.share-con li.kj a,.my-media li.kj a:hover{background-position:0 0;}
+.share-con li.wx a,.my-media li.wx a:hover{ background-position:-36px 0;}
+.share-con li.wb a,.my-media li.wb a:hover{ background-position:-69px 0;}
+.share-con li.xl a,.my-media li.xl a:hover{ background-position:-102px 0;}
+.share-con li.ff a,.my-media li.ff a:hover{ background-position:-138px 0;}
+.share-con li.tw a,.my-media li.tw a:hover{ background-position:-172px 0;}
+
+/*--------脚部我的媒体------*/
+.my-media{float:right; margin:3px 0 0 10px;}
+.my-media li.kj a {background-position:0 -34px;}
+.my-media li.wx a{ background-position:-36px -35px;}
+.my-media li.wb a{ background-position:-69px -35px;}
+.my-media li.xl a{ background-position:-102px -35px;}
+.my-media li.ff a{ background-position:-138px -35px;}
+.my-media li.tw a{ background-position:-172px -35px;}
+
+.language{
+	float:left;
+	width:104px;
+	height:24px;
+	line-height:22px;
+	position:relative;
+	cursor:pointer;
+	z-index:999;
+}
+.defalut{
+	background:url("img/language_bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/language_bg.png*/ left 0 no-repeat;
+	width:74px;
+	height:24px;
+	line-height:24px;
+	padding-left:30px;
+	position:relative;
+	cursor:pointer;
+	z-index:999;
+}
+/*选择英文*/
+.languang-en{
+	background:url("img/language_bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/language_bg.png*/ left 0 no-repeat;
+}
+/*选择中文*/
+.languang-cn{
+	background:url("img/language_bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/language_bg.png*/ left -26px no-repeat;
+}
+/*选择阿拉伯*/
+.languang-ar{
+	background:url("img/language_bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/language_bg.png*/ left -51px no-repeat;
+}
+.language-select {
+	position:absolute;
+	z-index:-88;
+	width:82px;
+	border:1px solid #26688F;
+	border-top:none;
+	left:12px;
+	top:18px;
+	background:#fff;
+	display:none;
+	padding-top:10px;
+}
+.language-select li{
+	height:24px;
+	line-height:22px;
+	padding-left:19px;
+}
+.language-select li:hover{
+	background:#666;
+	color:#fff;
+}
+
+/*--------#head end-----*/
+
+/*------nav start----*/
+#index {
+	float:left;
+	width:49px;
+	height:39px;
+	line-height:39px;
+	background:url("img/index_bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/index_bg.jpg*/ no-repeat;
+}
+
+#nav{
+	width:100%;
+	min-width:1000px;
+	height:39px;
+	line-height:39px;
+	border-top:3px solid #26688F;
+	border-bottom:2px solid #26688F;
+}
+#nav-con li{
+	float:left;
+	border-right:1px solid #26688F; 
+	position:relative;
+	padding-left:1px;
+	display:inline;
+	z-index:98;
+}
+#nav-con li a{
+	display:inline-block;
+	padding:0 19px;
+	font-size:15px;
+}
+#nav-con li.hover{
+	background:url("img/menu_hover_bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/menu_hover_bg.jpg*/ left 0 no-repeat;
+}
+#nav-con li.hover a{
+	background:url("img/menu_hover_bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/menu_hover_bg.jpg*/ right 0 no-repeat;
+	color:#fff;
+}
+#nav-con .two-menu{
+	display:none;
+	width:158px;
+	border:1px solid #333;
+	padding:5px 0;
+	background:url("img/two-menu-bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/two-menu-bg.jpg*/  repeat-x; background-color:#26688F;
+	position:absolute;
+	top:39px;
+	left:-1px;
+}
+
+#nav-con .two-menu li {
+	float:none;
+	border:0;
+	padding:0;
+}
+#nav-con .two-menu li a{
+	display:block;
+	height:25px;
+	line-height:25px;
+	color:#fff;
+	padding:0 21px;
+}
+#nav-con li .two-menu li a:hover{
+	background:#90352E;
+}
+#nav-con li.hover .two-menu li,#nav-con li.hover .two-menu a{
+	background:none;
+}
+/*------nav end----*/
+
+#con-banner{
+	width:100%;
+	background:url("img/con-banner-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/con-banner-bg.png*/ top center no-repeat #26688F;
+	height:150px;
+	text-align:center;
+}
+
+/*------sidrbar start-------*/
+#sidebar{
+	padding-top:24px;
+}
+
+#sidebar .btn-blue,#sidebar .btn-red{
+	margin-left:15px;
+}
+
+/*----左侧导航---*/
+#submenu{
+	border-top:1px solid #999;
+}
+#submenu li a{
+	display:block;
+	height:35px;
+	line-height:35px;
+	border-bottom:1px solid #999;
+	text-align:left;
+	font-size:14px;
+	padding-left:10px;
+}
+#submenu li a.font13{
+	font-size:13px;
+}
+#submenu li a:hover,#submenu li a.curr{
+	background:url("img/red-icons.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/red-icons.png*/ 180px 5px no-repeat #90352E;
+	color:#fff;
+}
+.side-title{
+	font-size:14px;
+	height:30px;
+	line-height:30px;	
+	text-align:center;
+	margin:15px 0 ;
+	color:#ccc;
+	font-weight:normal;
+}
+.side-title span{
+	color:#666;
+	font-size:20px;
+	font-weight:bold;
+}
+
+/*------sidrbar end-------*/
+
+
+
+
+/*-------------btn  ist start----------*/
+.btn-red,.btn-blue{
+	height:32px;
+	line-height:32px;
+	background:url("img/btn-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/btn-bg.png*/ left -3px repeat-x;
+	padding:0 0 0 40px;
+	display:inline-block;
+	cursor:pointer;
+}
+.btn-blue { background-position:left -45px;}
+.btn-red span,.btn-blue span{
+	float:left;
+	height:32px;
+	background:url("img/btn-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/btn-bg.png*/ right -3px repeat-x;
+	color:#fff;
+	font-size:16px;
+	padding:0 40px 0 0;
+	display:inline;
+}
+.btn-blue span{background-position:right -45px;}
+
+
+
+/*------main start-----*/
+#here,#here a{
+	color:#666;
+}
+#here span{
+	font-family:"黑体";
+	padding:0 3px;
+}
+#here a:hover{
+	color:#90352E;
+	text-decoration:underline;
+}
+.main-title{
+	font-size:20px;
+	height:40px;
+	line-height:40px;
+}
+/*------main end-----*/
+
+/*-------#footer start*/
+#footer {
+	width:100%;
+	background:#f3f3f3;
+	border-top:1px solid #999;
+	border-bottom:5px solid  #26688F;
+	padding:20px 0;
+	/*position:relative;*/
+}
+#footer .yingyin { background:url("img/foot-banner-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/foot-banner-bg.png*/ center center no-repeat; -background:url("img/foot-banner-bg-ie6.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/foot-banner-bg-ie6.png*/ center center no-repeat; width:100%; height:160px;  margin:-180px 0 10px 0; *display:none;_display:none;  }
+
+.footcon{
+	width:997px;
+	margin:0 auto;
+}
+.pay{
+	position:relative;
+	z-index:999;
+	width:800px;
+}
+.pay li{
+	float:left;
+	width:89px;
+	margin:0 10px 0 0;
+	height:34px;
+	border-radius:6px;	
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+}
+.pay li a{
+	display:block;
+	border: 1px solid #999;
+	background:url("img/pay-bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/pay-bg.jpg*/ no-repeat;
+	overflow:hidden;
+	width:89px;
+	height:32px;
+	border-radius:6px;	
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+}
+.pay li a.visa{background-position:left  0;}
+.pay li a.wire{background-position:-99px 0;}
+.pay li a.card{background-position:-199px 0;}
+.pay li a.alipay {
+  background-position: -699px 0;
+}
+.pay li a.skrill{background-position:-298px 0;}
+.pay li a.casha{background-position:-397px 0;}
+.pay li a.pay{background-position:-496px 0;}
+.pay li a.jcb{background-position:-597px 0;}
+.pay li a.move{background-position:-800px 0;}
+.pay li a:hover{
+	border: 1px solid #ccc;
+	
+}
+#guild{
+	clear:both;
+	overflow:hidden;
+	zoom:1;
+	padding:30px 0 0 0;
+}
+#guild dl{
+	float:left;
+}
+#guild dt{
+	font-size:14px;
+	color:#26668D;
+	border-bottom: solid 1px #999;
+	padding:0 64px 0 0;
+	line-height:30px;
+}
+#guild  dd{
+	padding:8px 8px 0 0;
+	line-height:18px;
+}
+#guild  dd li a{
+	color:#666;
+}
+
+#warning{
+	margin-top:20px;
+	color:#666;
+	font-size:11px;
+}
+#warning dt{
+	line-height:26px;
+	border-bottom:1px solid #999;
+}
+
+#footmenu { padding-top:10px; background:url("img/ft-bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/ft-bg.jpg*/ repeat-x; height:119px; width:100%; }
+.foot-menucon{
+	margin-left:260px;
+	padding-top:12px;
+}
+.foot-menucon ul{
+	overflow:hidden;
+	zoom:1;
+}
+.foot-menucon p{
+	padding:0 0 5px 10px;
+}
+.foot-menucon li{
+	float:left;
+	font-size:11px;
+}
+.foot-menucon li a{
+	padding:0 10px;
+}
+/*-------#footer end*/
+
+
+
+
+
+/*弹出层样式*/
+.title{
+	padding:8px 0;
+	position:relative;
+	width:auto;
+	font-size:15px;
+	color:#fff;
+}
+.close{
+	width:47px;
+	height:20px;
+	overflow:hidden;
+	position:absolute;
+	background:url("img/pop-close-btn.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/pop-close-btn.png*/ no-repeat;
+	right:0;
+	top:0;	
+}
+.close:hover{
+	background-position:left -20px;
+}
+.pop-window{
+	padding:0 20px 28px 20px;
+	background:#26688F;
+	width:600px;
+}
+.pop-content{
+	background:#fff;
+	padding:15px 10px;
+}
+.pop-content h1{
+	color:#90332C;
+	font-size:16px;
+	margin-top:1.6em;
+}
+.pop-content h2{
+	color:#000;
+	font-size:12px;
+	margin-top:1em;
+}
+.color-red{
+	color:red;
+}
+.button{
+	margin-top:10px;
+	height:26px;
+}
+.button input{
+    height: 26px;
+    padding: 0 19px;
+	cursor:pointer;
+}
+.tc-foot{
+	color:#fff;
+	padding-top:8px;
+}
+.pop-tc{
+	height:510px;
+	overflow:auto;
+}
+
+.file-box .input{
+	height: 22px;
+    line-height: 22px;
+    width: 250px;
+	border: 1px solid #999999;
+    border-radius: 4px;
+    padding: 4px;
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+}
+.file-box {
+	width: 396px;
+	height: 36px;
+	position: relative;
+	overflow: hidden;
+}
+.file-box .upload-file {
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	font-size: 110px;
+}
+.file-box .file-btn {
+	display: inline-block;
+	width: 111px;
+	height: 22px;
+	line-height: 22px;
+	text-decoration: none;	
+	text-align: center;
+	color: #333;
+	margin:2px 0 0 10px;
+	border: 1px solid #999999;
+    border-radius: 4px;
+    padding: 4px;
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+}
+
+
+/*登录后头部导航样式*/
+	#top-nav-login{
+	width:650px;
+	float:right;
+	padding-bottom:8px;
+	display:inline;
+}
+.top-nav-body-login{
+	float:right;
+	display:inline;
+	margin-top:14px;
+	padding-right:10px;
+	height:28px;
+}
+.top-nav-body-login li{
+	float:left;
+	display:inline;
+}
+
+.role,.profile,.quit{
+	float:left;
+	height:22px;
+	line-height:22px;
+	position:relative;
+	cursor:pointer;
+	z-index:999;
+}
+.profile,.role{
+	border-right:1px solid #999;
+	margin-right:10px;
+	padding-right:10px;
+}
+.profile div{
+	padding:0 15px 0 10px;
+	background:url("img/top-nav-icons.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/top-nav-icons.png*/ 68px -140px no-repeat;
+	border:1px solid #fff;
+	_display: inline;
+	_zoom: 1;
+}
+.profile div.over,.profile div:hover{
+	border:1px solid #26688F;
+	height:22px;
+}
+.profile-select{
+	position:absolute;
+	top:23px;
+	border:1px solid #26688F;
+	width:85px;
+	background:#fff;	
+	display:none;
+}
+
+/*-----profile start------*/
+.profile div{
+	background:none;
+	display:inline;
+	padding:0 0 0 10px;
+}
+
+.profile i{
+	margin-left:5px;
+	display:inline;
+	float:left;
+	width:20px;
+	height:20px;
+	background:url("img/top-nav-icons.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/top-nav-icons.png*/ left -140px no-repeat;
+}
+.profile div a{
+	display:inline;
+	float:left;
+	height:22px;
+}
+.profile-select{
+	right:-1px;
+	_right:-2px;
+	top:22px;
+	width:66px;
+	background:#fff;
+	border-top:none;
+	border-radius:0 0 4px 4px;
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;	
+	-webkit-box-shadow: #666 2px 4px 4px;
+	-moz-box-shadow: #666 2px 4px 4px;
+	box-shadow: #666 2px 4px 4px;
+}
+.profile-select li a{
+	display:block;
+	padding:0 8px;
+	width:50px;
+}
+.profile-select li a:hover{
+	color:#fff;
+	background:#999;
+}
+
+/*-----profile end------*/
+
+/*------role start----------*/
+.role .default{
+	/*background:url(img/role-bg.png) 66px 1px #26688F no-repeat;*/
+	background: url("img/btn-right-bg.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/btn-right-bg.png*/ 94px 3px no-repeat #26688F;
+	height:22px;
+	line-height:22px;
+	width:74px;
+	display:block;
+	padding: 0 26px 0 13px;
+	position:relative;
+	cursor:pointer;
+	z-index:999;
+	border:1px solid #26688F;
+	border-radius:12px;
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;	
+	color:#fff;
+}
+
+/*------role end----------*/
+
+
+
+/*---------退出 start----------*/
+.quit{
+	padding-left:22px;
+	background:url("img/top-nav-icons.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/top-nav-icons.png*/ 0 4px no-repeat;
+}
+.quit a:hover{
+	text-decoration:underline;
+	color:#09C;
+}
+/*---------退出 end----------*/
+
+
+/*右侧漂浮框*/
+.sidepanel {
+	position: fixed !important;
+	position: absolute;
+	top: 290px !important;
+	top: 290px;
+	left: 50%;
+	margin-left:510px;
+	width: 70px;
+	height: 320px;
+	z-index: 1000;
+	_position:absolute;
+	_bottom:auto;
+	_top:expression(eval(document.documentElement.scrollTop));
+	_margin-top:290px;
+}
+.sidepanel-item{
+	margin-top:3px;
+}
+.sidepanel-item a{
+	background:#900;
+	width:62px;
+	height:36px;
+	line-height:16px;
+	display:block;
+	text-align:center;
+	border:2px solid #fff;
+	color:#fff;
+	border-radius:4px;
+	behavior:url("PIE.htc")/*tpa=http://www.aetoscg.com/cn/static/css/PIE.htc*/;
+	-webkit-box-shadow: #999 4px 5px 2px;
+	-moz-box-shadow: #999 4px 5px 2px;
+	box-shadow: #999 4px 5px 2px;
+	padding-top:3px ;
+
+}
+
+/*分页样式*/
+
+.page{
+	text-align:right;
+}
+.page a{
+		border: 1px solid #26688F;
+		border-radius: 3px;
+		color: #0066CC;
+		display: inline-block;
+		height: 20px;
+		line-height: 20px;
+		margin: 0 1px;
+		text-align:center;
+		text-decoration:none;
+	}
+.page .page-btn{
+	width: 28px;
+}
+/*第一页最后一页上一页下一页*/
+.page .page-nextprev-btn,.page .page-firstlast-btn{
+	width:45px;
+}
+
+/*高亮显示，鼠标划过*/
+.page .page-curpage-btn, .page a:hover{
+    background-color: #26688F;
+    border: 1px solid #26688F;
+    color: #FFFFFF;
+}
+
+.link-pow .link-box-label{
+	width:119px;
+}
+.link-pow .link-box-label span{
+	width:93px;
+	border-radius:4px;
+	cursor:pointer;
+}
+
+.add-more{	
+	text-align:center;
+	border-bottom:1px solid #ccc;	
+	border-top:1px solid #ccc;
+	height:40px;
+	line-height:40px;
+	font-size:15px;
+	font-weight:bold;
+	margin-top:25px;
+	background:#efefef;
+	display:block; clear:both;
+}
+
+.add-more:hover{
+	background:#fff;
+}
+.replaceImg { background:url("../images/zhuanzhuan-guan.gif")/*tpa=http://www.aetoscg.com/cn/static/images/zhuanzhuan-guan.gif*/ center 0 no-repeat; width:auto; min-height:41px; line-height:41px; display:block;}
+
+/*页面友情提示*/
+.tip-box{
+	line-height:45px;	
+	font-size:15px;
+	padding:60px 0;
+}
+.tip-box img{
+	margin-right:5px;
+}
+.back{
+	text-align:center;	
+	height:34px;
+	line-height:34px;
+	border-top:1px solid #999;
+}
+.back a{
+	text-decoration:underline;
+	color:#444;
+}
+.agreement{
+	background:#fff;
+	color: #333;
+}
+.pop-window2{
+	padding:35px 20px 28px 20px;
+}
+
+/*最新小图标提示*/
+.menu_new { background:url("img/niu.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/niu.png*/ 0 -1px no-repeat; width:35px; height:19px; position:absolute; margin-top:-15px; -margin-top:-20px;}
+.menu_li_new { background:url("img/niu.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/niu.png*/ 2px -137px no-repeat; width:35px; height:16px; position: relative; display: inline-block; top: 5px; -top: 5px; left:5px;   }
+.sidebar_new { background:url("img/niu.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/niu.png*/ 0 -55px no-repeat; width:40px; height:20px; position: relative; display: inline-block; top: 5px; -top: 10px; _top: -30px; *top: 0; left:5px;  }
+
+/*2015-4-7 pn*/
+.txt{ width:547px; margin:0 auto;background: url("img/jiaoyishi.gif")/*tpa=http://www.aetoscg.com/cn/static/css/img/jiaoyishi.gif*/ 0 0 no-repeat;
+width: 430px;
+height: 244px;
+margin-left: 110px;
+line-height: 230%; padding-left:60px; padding-right:60px;}
+.other-sites{ text-align:right; line-height:24px;width: 700px; margin: 0 auto; float:right;}
+.other-sites img{ float:right; margin-left:5px; border:1px solid #ccc; }

@@ -13,11 +13,11 @@
 <body class="success">
 <div class="page-wrap">
     <div class="download">
-        <h3 class="entry-hd">立即下载MT4 ANDROID</h3>
+        <h3 class="entry-hd">立即下载MT4</h3>
         <p class="entry-con">即可享受畅快交易</p>
         <div class="download-btn">
-            <a href="#"><img src="images/ios-btn.png" alt="苹果版下载"></a>
-            <a href="http://7xtjmz.com1.z0.glb.clouddn.com/sirix-android-senseleader-1.12.2.00000.apk" class="android-btn" id="J_weixin"><img src="images/android-btn.png" alt="安卓版下载"></a>
+            <a href="https://itunes.apple.com/us/app/metatrader-4/id496212596?mt=8" id="J_weixin_ios"><img src="images/ios-btn.png" alt="苹果版下载"></a>
+            <a href="https://download.mql5.com/cdn/web/metaquotes.software.corp/mt4/metatrader4.apk" class="android-btn " id="J_weixin_android"><img src="images/android-btn.png" alt="安卓版下载"></a>
         </div>
     </div>
    <!--<div class="app">
@@ -41,15 +41,21 @@
     })();
     window.onload = function () {
         var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
-        var btn = document.getElementById('J_weixin');
+        var btn1 = document.getElementById('J_weixin_android');
+        var btn2 = document.getElementById('J_weixin_ios');
         var tip = document.getElementById('weixin-tip');
         var close = document.getElementById('close');
         if (is_weixin) {
-            btn.onclick = function (e) {
+            btn1.onclick = function (e) {
                 tip.style.height = winHeight + 'px';
                 tip.style.display = 'block';
                 return false;
-            }
+            };
+            btn2.onclick = function (e) {
+                tip.style.height = winHeight + 'px';
+                tip.style.display = 'block';
+                return false;
+            };
             close.onclick = function () {
                 tip.style.display = 'none';
             }

@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* CSS Document */
+
+#main p { line-height:180%;}
+
+
+.platform-btn { height: 230px; margin:10px 0 10px 0;}
+.platform-btn a.a1 { background:url("img/platform-icon.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/platform-icon.jpg*/ 0 0 no-repeat; width:371px; height:215px; display:inline-block; float:left;}
+.platform-btn a.a2 { background:url("img/platform-icon.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/platform-icon.jpg*/ right 0 no-repeat; width:371px; height:215px; display:inline-block; float:right;}
+
+
+#main h4 { font-size:16px; line-height:16px; padding-bottom:10px; font-weight:bolder; border-bottom:1px #999999 solid; margin:20px 0 10px 0; }
+
+.download1 { height:175px; background:#FFFFE6; border:1px #26688F solid; }
+
+.biao { float:left; width:412px; height:146px;}
+
+.partnerslogo { min-height:64px; background:#FFFFE6; border:1px #26688F solid; margin:10px 0 10px 0; padding:6px 0 6px 0; width:99%;  }
+.rcont  { margin-left:10px; width:100%; text-align:left;}
+.partnerslogo .rcont .jiantou { background:url("img/icon-2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-2.png*/ 0 -274px no-repeat; position:absolute; margin-left:703px; margin-top:25px; width:21px; height:21px;}
+.partnerslogo .rcont a.linkkk  { background:url("img/icon-2.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/icon-2.png*/ 0 -134px no-repeat; display:block; height:25px; padding-left:35px; line-height:25px; font-size:12px;} 
+.partnerslogo .rcont a.linkkk:hover  { text-decoration:underline;}
+
+.p1 { background:url("img/faq.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/faq.png*/ 0 7px no-repeat; padding-left:20px; font-size:14px;  font-weight:bolder; margin-top:13px; }
+.p2 { background:#FFFFE6; border:#CCC 1px solid; padding:5px;}
+
+.contact-faq { background:url("img/faq.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/faq.png*/ -3px -149px no-repeat;  height:145px; margin:0 auto; }
+.contact-faq .linpu { float:left; width:460px; padding-left:155px; padding-top:12px}
+.contact-faq a.btn { float:right; background:url("img/faq.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/faq.png*/ -24px -365px; width:107px; height:107px; position:relative; right:20px; top:19px; text-align:center; line-height:107px;}
+.contact-faq a.btn:hover { float:right; background:url("img/faq.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/faq.png*/ -191px -365px; width:107px; height:107px;}
+
+.zhiyin { width:710px; min-height:300px; display:block; margin:20px auto;}
+.zhiyin .ab1 { float:left; text-align:center;}
+.zhiyin .ab2 { float:right; text-align:center;}
+
+
+
+
+
+.biao th,.biao td{
+	text-align:left;
+	line-height:20px;
+	padding-left:10px;
+}
+.biao thead th{
+	line-height:30px;
+}
+
+.download dd{
+	border:none;
+}
+
+.download2{
+	margin:50px 0 0 36px;
+}
+.download div span{
+	display:inline-block;
+	height:30px;
+	line-height:30px;
+	padding-left:24px;
+	background:url("img/down-load-bg.jpg")/*tpa=http://www.aetoscg.com/cn/static/css/img/down-load-bg.jpg*/ left 2px no-repeat;
+	font-weight:bold;
+}
+.download div.ios{
+	width:198px; float:left; text-align:center;
+	margin-right:66px;
+}
+.download div.android{
+	width:100px; float:left; text-align:center;
+	margin-right:48px;
+}
+.download div.windows-moblie{
+	width:130px; float:left; text-align:center;
+	margin-right:10px;
+}
+.download div.weixin span{
+	padding-left:0; 
+	background:none;	
+}
+.download div.weixin{
+	width:150px; float:left; text-align:center;
+	margin-right:0;
+}
+.download dd{
+	overflow:hidden;
+	zoom:1;
+	padding:0 0 20px 0;
+}
+
+.download-mt4{
+	float:right; 
+	margin:15px 20px 15px 0; 
+	border-left:1px #999999 solid;
+	height:115px;
+	padding:30px 0 0 36px;
+	display:inline;
+}
+.down-mt4-btn{
+	display:inline-block;
+	font-size:14px;
+}
+.down-mt4-btn span{
+	display:inline;
+}
+.down-mt4-btn .down{
+	float:left;
+	width:40px;
+	height:48px;
+	background:url("img/down-blue.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/down-blue.png*/ no-repeat;
+}
+.down-mt4-btn .text,.down-mt4-btn .mt4{
+	float:left;
+	padding:0 15px;
+	height:30px;
+	line-height:30px;
+	border:3px solid #276D98;
+	
+}
+.down-mt4-btn .text{
+	margin:12px 0 0 4px;
+	color:#276D98;
+}
+.down-mt4-btn .mt4{
+	background:url("img/mt4.png")/*tpa=http://www.aetoscg.com/cn/static/css/img/mt4.png*/  center center no-repeat;
+	margin-top:12px;
+	border-left:none;
+}
+
+.download dt{
+	height:40px;
+	line-height:40px;
+	border-bottom:1px solid #999;
+	font-size:16px;
+	margin-bottom:18px;
+	font-weight:bold;
+}
+
+.download dd{
+	border:none;
+	border-bottom:1px solid #999;
+	margin-bottom:10px;
+}
+
+
+
