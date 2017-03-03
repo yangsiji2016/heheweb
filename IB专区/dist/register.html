@@ -2,9 +2,234 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>IB注册</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="lib/js/jquery-1.12.3.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css">
+    <script src="//cdn.bootcss.com/jquery.form/3.51/jquery.form.min.js"></script>
+    <link rel="stylesheet" href="css/webuploader.css">
+    <script src="lib/js/webuploader.js"></script>
 </head>
 <body>
+
+<!--banner-->
+<div class="banner visible-lg">
+</div>
+
+
+<!--webuploader-test-->
+<div class="container">
+    <div id="uploader-demo" class="col-md-6">
+        <!--用来存放item-->
+        <div id="thelist" class="uploader-list"></div>
+        <div>
+            <div id="filePicker">选择图片</div>
+            <button id="ctlBtn" class="btn btn-default">开始上传</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        /*init webuploader*/
+        var $list = $("#thelist");   //这几个初始化全局的百度文档上没说明，好蛋疼。
+        var $btn = $("#ctlBtn");   //开始上传
+        var thumbnailWidth = 200;   //缩略图高度和宽度 （单位是像素），当宽高度是0~1的时候，是按照百分比计算，具体可以看api文档
+        var thumbnailHeight = 200;
+
+        var uploader = WebUploader.create({
+            // 选完文件后，是否自动上传。
+            auto: false,
+
+            // 上传文件数量限制
+            fileNumLimit: 1,
+
+            // swf文件路径
+            swf: 'lib/swf/Uploader.swf',
+
+            // 文件接收服务端。
+            server: 'http://webuploader.duapp.com/server/fileupload.php',
+
+            // 选择文件的按钮。可选。
+            // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+            pick: {
+                id:$("#filePicker"), // id
+                multiple: false  // false  单选
+            },
+
+            // 只允许选择图片文件。
+            accept: {
+                title: 'Images',
+                extensions: 'gif,jpg,jpeg,bmp,png',
+                mimeTypes: 'image/*'
+            },
+            method: 'POST',
+        });
+        // 当有文件添加进来的时候
+        uploader.on('fileQueued', function (file) {  // webuploader事件.当选择文件后，文件被加载到文件队列中，触发该事件。等效于 uploader.onFileueued = function(file){...} ，类似js的事件定义。
+            var $li = $(
+                            '<div id="' + file.id + '" class="file-item thumbnail">' +
+                            '<img>' +
+                            '<div class="info">' + file.name + '</div>' +
+                            '</div>'
+                    ),
+                    $img = $li.find('img');
+
+
+            // $list为容器jQuery实例
+            $list.append($li);
+
+            // 创建缩略图
+            // 如果为非图片文件，可以不用调用此方法。
+            // thumbnailWidth x thumbnailHeight 为 100 x 100
+            uploader.makeThumb(file, function (error, src) {   //webuploader方法
+                if (error) {
+                    $img.replaceWith('<span>不能预览</span>');
+                    return;
+                }
+
+                $img.attr('src', src);
+            }, thumbnailWidth, thumbnailHeight);
+        });
+        // 文件上传过程中创建进度条实时显示。
+        uploader.on('uploadProgress', function (file, percentage) {
+            var $li = $('#' + file.id),
+                    $percent = $li.find('.progress span');
+
+            // 避免重复创建
+            if (!$percent.length) {
+                $percent = $('<p class="progress"><span></span></p>')
+                        .appendTo($li)
+                        .find('span');
+            }
+
+            $percent.css('width', percentage * 100 + '%');
+        });
+
+        // 文件上传成功，给item添加成功class, 用样式标记上传成功。
+        uploader.on('uploadSuccess', function (file) {
+            $('#' + file.id).addClass('upload-state-done');
+        });
+
+        // 文件上传失败，显示上传出错。
+        uploader.on('uploadError', function (file) {
+            var $li = $('#' + file.id),
+                    $error = $li.find('div.error');
+
+            // 避免重复创建
+            if (!$error.length) {
+                $error = $('<div class="error"></div>').appendTo($li);
+            }
+
+            $error.text('上传失败');
+        });
+
+        // 完成上传完了，成功或者失败，先删除进度条。
+        uploader.on('uploadComplete', function (file) {
+            $('#' + file.id).find('.progress').remove();
+        });
+        $btn.on('click', function () {
+            console.log("上传...");
+            uploader.upload();
+            console.log("上传成功");
+        });
+    });
+</script>
+
+
+<!--表单-->
+<div class="container">
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">IB性质</label>
+            <div class="checkbox-inline">
+                <label>
+                    <input type="checkbox" value="individual" name="IBtype">
+                    个人
+                </label>
+            </div>
+            <div class="checkbox-inline">
+                <label>
+                    <input type="checkbox" value="institution" name="IBtype">
+                    机构
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">称谓</label>
+            <div class="checkbox-inline">
+                <label>
+                    <input type="checkbox" value="male" name="sex">
+                    先生
+                </label>
+            </div>
+            <div class="checkbox-inline">
+                <label>
+                    <input type="checkbox" value="female" name="sex">
+                    女士
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="payee" class="col-sm-2 control-label">姓名</label>
+            <div class="col-md-4">
+                <input class="form-control" type="text" id="payee" name="name">
+            </div>
+            <label for="recipientAccount" class="col-sm-2 control-label">英文名</label>
+            <div class="col-md-4">
+                <input class="form-control" type="text" id="recipientAccount" name="englishName">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="payee" class="col-sm-2 control-label">联系方式</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="phone">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="payee" class="col-sm-2 control-label">电子邮箱</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="payee" class="col-sm-2 control-label">验证码</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="verificationCode">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="payee" class="col-sm-2 control-label">家庭住址</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="address">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="payee" class="col-sm-2 control-label">身份证号</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="identityCard">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="payee" class="col-sm-2 control-label">联系方式</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="phone">
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-10 col-md-offset-2">
+                <button type="submit" id="submitBtn" class="btn btn-default col-lg-3 col-md-3 col-xs-12 col-lg-offset-3 input-lg draw">提交</button>
+            </div>
+        </div>
+    </form>
+</div>
 
 </body>
 </html>

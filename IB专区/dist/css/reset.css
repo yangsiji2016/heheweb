@@ -95,7 +95,7 @@ input:focus::-webkit-input-placeholder {
 
 img {
     -webkit-touch-callou: none;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 * {
