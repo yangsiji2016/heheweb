@@ -11,23 +11,43 @@
 <body>
 
 <!--客服-->
-<div class="kf">
+<div class="kf" style="display: block">
     <a href="javascript:;" class="kf_a1"></a>
     <a href="http://www.idsforex.cn/page/lxwm7.html" class="kf_a2">
         <span>联系我们</span>
         <img src="http://www.idsforex.cn/skin/ids/images/kf_07.png" title="" alt=""/>
         <i></i>
     </a>
-    <a href="javascript:;" class="kf_a6" id="BizQQWPA">
-        <span>咨询</span>
+    <a href="tencent://message/?uin=3547482925&Site=&Menu=yes" class="kf_a6" style="height: 50px">
+        <span style="padding: 0;margin: 0">一号客服</span>
         <img src="http://www.idsforex.cn/skin/ids/images/qq.png" title="" alt=""/>
         <i></i>
     </a>
-    <a href="http://www.idsforex.cn/sitemap.htm" class="kf_a3">
+    <a href="tencent://message/?uin=3531118577&Site=&Menu=yes" class="kf_a6" style="height: 50px">
+        <span style="padding: 0;margin: 0">二号客服</span>
+        <img src="http://www.idsforex.cn/skin/ids/images/qq.png" title="" alt=""/>
+        <i></i>
+    </a>
+    <a href="tencent://message/?uin=1879633621&Site=&Menu=yes" class="kf_a6" style="height: 50px">
+        <span style="padding: 0;margin: 0">三号客服</span>
+        <img src="http://www.idsforex.cn/skin/ids/images/qq.png" title="" alt=""/>
+        <i></i>
+    </a>
+    <a href="tencent://message/?uin=3572155614&Site=&Menu=yes" class="kf_a6" style="height: 50px">
+        <span style="padding: 0;margin: 0">四号客服</span>
+        <img src="http://www.idsforex.cn/skin/ids/images/qq.png" title="" alt=""/>
+        <i></i>
+    </a>
+    <a href="tencent://message/?uin=1953105590&Site=&Menu=yes" class="kf_a6" style="height: 50px">
+        <span style="padding: 0;margin: 0">五号客服</span>
+        <img src="http://www.idsforex.cn/skin/ids/images/qq.png" title="" alt=""/>
+        <i></i>
+    </a>
+    <!--<a href="http://www.idsforex.cn/sitemap.htm" class="kf_a3">
         <span>网站导航</span>
         <img src="http://www.idsforex.cn/skin/ids/images/kf_11.png" title="" alt=""/>
         <i></i>
-    </a>
+    </a>-->
     <a href="javascript:;" class="kf_a4">
         <span>官方微信</span>
         <img src="http://www.idsforex.cn/skin/ids/images/kf_15.png" title="" alt=""/>
@@ -47,16 +67,16 @@
 <script>
     //客服
     //下拉显示客服
-    $(window).scroll(function () {
+    /*$(window).scroll(function () {
         var t = $(window).scrollTop();
         if (t > 10) {
             $(".kf").show();
         } else {
             $(".kf").hide();
         }
-    });
+    });*/
 
-    $(".kf a").hover(function () {
+    $(".kf > a").hover(function () {
         $(this).find("div").stop(true, true).fadeIn();
     }, function () {
         $(this).find("div").stop(true, true).fadeOut();
