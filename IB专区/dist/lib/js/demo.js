@@ -69,6 +69,9 @@ jQuery(function() {
         dnd: '#uploader .queueList',
         paste: document.body,
 
+        // 选完文件后，是否自动上传。
+        auto: true,
+
         accept: {
             title: 'Images',
             extensions: 'gif,jpg,jpeg,bmp,png',
