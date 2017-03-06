@@ -1,9 +1,9 @@
 <?php
 
-$amount = $_POST['amount'];
+$agentNumber = $_POST['agentNumber'];
 
-if($amount == "123"){
-        echo '"出金申请成功"';
+if($agentNumber == "1234567"){
+        echo '"1234567"';
     } else {
         echo '0';
         }
