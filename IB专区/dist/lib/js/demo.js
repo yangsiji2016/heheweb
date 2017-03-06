@@ -70,7 +70,7 @@ jQuery(function() {
         paste: document.body,
 
         // 选完文件后，是否自动上传。
-        auto: true,
+        //auto: true,
 
         accept: {
             title: 'Images',
@@ -87,8 +87,8 @@ jQuery(function() {
         // server: 'http://webuploader.duapp.com/server/fileupload.php',
         server: 'http://2betop.net/fileupload.php',
         fileNumLimit: 1,
-        fileSizeLimit: 5 * 1024 * 1024,    // 200 M
-        fileSingleSizeLimit: 1 * 1024 * 1024    // 50 M
+        fileSizeLimit: 5 * 1024 * 1024,    // 5M
+        fileSingleSizeLimit: 200 * 1024    // 200K
     });
 
     // 添加“添加文件”的按钮，
@@ -410,9 +410,20 @@ jQuery(function() {
         }
     });
 
-    uploader.onError = function( code ) {
+    /*uploader.onError = function( code ) {
         alert( 'Eroor: ' + code );
-    };
+    };*/
+
+    //  验证大小 错误提示
+    uploader.on("error",function (type){
+
+        if(type == "F_DUPLICATE"){
+            alert("请不要重复选择文件！");
+        }else if(type == "F_EXCEED_SIZE"){
+            alert("所选图片大小不可超过200K哦！换个小点的文件吧！");
+        }
+
+    });
 
     $upload.on('click', function() {
         if ( $(this).hasClass( 'disabled' ) ) {
