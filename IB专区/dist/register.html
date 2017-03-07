@@ -64,7 +64,7 @@
         <div class="form-group">
             <label class="col-sm-2 control-label">代理编号</label>
             <div class="col-md-10">
-                <input class="form-control" type="text" name="agentNumber" placeholder="请填写7位代理编号" maxlength="7">
+                <input id="agentNumber" class="form-control" type="text" name="agentNumber" placeholder="请填写7位代理编号" maxlength="7">
             </div>
         </div>
         <div class="form-group">
@@ -189,37 +189,21 @@
 <!--表单ajax提交-->
 <script>
     $(function () {
-        var ajaxFormOption = {
-            type: "post",  //提交方式
-            dataType: "json", //数据类型
-            data: $('form').serialize(),//自定义数据参数，视情况添加
-            resetForm: true,
-            url: "test3.php", //请求url
-            success: function (data) { //提交成功的回调函数
-                layer.open({
-                    type: 1
-                    , title: false //不显示标题栏
-                    , closeBtn: false
-                    , area: '300px;'
-                    , shade: 0.8
-                    , id: 'LAY_layuipro' //设定一个id，防止重复弹出
-                    , resize: false
-                    , btn: ['继续填写注册资料']
-                    , btnAlign: 'c'
-                    , moveType: 1 //拖拽模式，0或者1
-                    , content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">请点击下面按钮继续完善注册资料</div>'
-                    , success: function (layero) {
-                        var btn = layero.find('.layui-layer-btn');
-                        btn.find('.layui-layer-btn0').attr({
-                            href: 'http://crm.sldforex.com/apply/agent.html?agent=' + data
-                        });
-                    }
-                });
-            }
-        };
+        /*var ajaxFormOption = {
+         type: "post",  //提交方式
+         dataType: "json", //数据类型
+         data: $('form').serialize(),//自定义数据参数，视情况添加
+         resetForm: true,
+         url: "test3.php",//请求url
+         success: function (data) { //提交成功的回调函数
+         console.log(data);
+         }
+         };*/
+
 
         //form中有submit按钮——方式1
-        $('form').ajaxForm(ajaxFormOption);
+//        $('form').ajaxForm(ajaxFormOption);
+
 
         //form中有submit按钮——方式2
         /*$("form").submit(function () {
@@ -228,10 +212,48 @@
          });*/
 
         //不需要submit按钮，可以是任何元素的click事件
-        /*$("#submitBtn").click(function () {
-         $("form").ajaxSubmit(ajaxFormOption);
-         return false;
-         });*/
+        $("#submitBtn").click(function () {
+            var value = $('#agentNumber:text').fieldValue();
+            var ajaxFormOption = {
+                type: "post",  //提交方式
+                dataType: "json", //数据类型
+                data: $('form').serialize(),//自定义数据参数，视情况添加
+                resetForm: true,
+                url: "test3.php",//请求url
+                success: function (data) { //提交成功的回调函数
+                    console.log(data);
+                    layer.open({
+                        type: 1
+                        , title: false //不显示标题栏
+                        , closeBtn: false
+                        , area: '300px;'
+                        , shade: 0.8
+                        , id: 'LAY_layuipro' //设定一个id，防止重复弹出
+                        , resize: false
+                        , btn: ['继续填写注册资料']
+                        , btnAlign: 'c'
+                        , moveType: 1 //拖拽模式，0或者1
+                        , content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">请点击下面按钮继续完善注册资料</div>'
+                        , success: function (layero) {
+                            var btn = layero.find('.layui-layer-btn');
+                            btn.find('.layui-layer-btn0').attr({
+                                href: 'http://crm.sldforex.com/apply/agent.html?agent=' + value
+                            });
+                        }
+                    });
+                },
+                error: function () {
+                    console.log('error');
+                }
+            };
+
+
+
+            $("form").ajaxSubmit(ajaxFormOption);
+
+
+            return false;
+        });
 
     });
 </script>
